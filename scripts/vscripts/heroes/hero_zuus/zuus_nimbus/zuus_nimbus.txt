@@ -1,0 +1,44 @@
+"DOTAAbilities"
+{
+	"zuus_nimbus"
+	{
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                    "heroes/hero_zuus/zuus_nimbus/zuus_nimbus.lua"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"                      "1"
+		"AbilityTextureName"            "zuus_cloud"
+
+		"AbilityCastRange"              "0"
+		"AbilityCastPoint"              "0.2"
+		"AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastRange"				"3000"
+		"AbilityCooldown"               "20"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"cloud_duration"        "30"
+			}
+			"02"
+			{
+				"var_type"              "FIELD_FLOAT"
+				"cloud_interval"   		"2"
+			}
+			"03"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"cloud_radius"          "400"
+			}
+			"03"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"cast_range"          	"1000"
+			}
+		}
+		
+	}
+}

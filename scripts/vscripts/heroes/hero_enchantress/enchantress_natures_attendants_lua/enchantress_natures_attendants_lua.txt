@@ -1,0 +1,28 @@
+"DOTAAbilities"
+{
+	"enchantress_natures_attendants_lua"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_enchantress/enchantress_natures_attendants_lua/enchantress_natures_attendants_lua"
+		"AbilityTextureName"			"enchantress_natures_attendants"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"15"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.3"
+		"AbilityDuration"				"12"
+
+		"AbilityCooldown"				"30"
+
+		"AbilityValues"
+		{
+			"heal_interval"			"1.0"
+			"heal"					"0.5 0.75 1.0 1.25 1.5 1.75 2.0 2.25 2.5 2.75 3.0 3.25 3.5 3.75 4.0"
+			"radius"				"500"
+		}
+	}
+}

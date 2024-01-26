@@ -1,0 +1,87 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Spirit Breaker: Greater Bash (Lua version)
+	//=================================================================================================================
+	"spirit_breaker_greater_bash_lua"
+	{
+		// Ability Technical Aspect
+		// base script folder	: scripts/vscripts
+		// base texture folder	: resource/flash3/images/spellicons
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_spirit_breaker/spirit_breaker_greater_bash_lua/spirit_breaker_greater_bash_lua"
+		"AbilityTextureName"			"spirit_breaker_greater_bash"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"15"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1.5 1.5 1.5 1.5"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"chance_pct"			"17"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage"				"30 60 90 120 150 190 230 270 310 360 410 460 510 560 610"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"speed_damage"			"4 6 8 10 12 14 16 18 20 22 24 26 28 30 32"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"0.5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"knockback_duration"	"0.5"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"knockback_distance"	"0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"knockback_height"		"50"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movespeed_pct"	"17"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"movespeed_duration"	"3.0"
+			}
+		}
+	}
+}

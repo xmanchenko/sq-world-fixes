@@ -1,0 +1,77 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Necrolyte's Heartstopper Aura
+	//=================================================================================================================
+	"necrolyte_heartstopper_aura_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"necrolyte_heartstopper_aura"
+		"ScriptFile"					"heroes/hero_necrolyte/necrolyte_heartstopper_aura/necrolyte_heartstopper_aura"
+		"MaxLevel"						"15"
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"					"particles/auras/aura_heartstopper.vpcf"
+		}
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"900"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage"					"5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"heal_regen_to_damage"		"10"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"health_regen"				"4 8 12 16 20 24 28 32 36 40 44 48 52 56 60"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"mana_regen"				"4 5 6 7 8 9 10 11 12 13 14 15 16 17 18"
+			} 
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"boss_multiplier"				"6"
+			} 
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"regen_duration"				"8"
+			} 
+			"08"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"tick_rate"					"0.2"
+			}
+		}
+	}
+}

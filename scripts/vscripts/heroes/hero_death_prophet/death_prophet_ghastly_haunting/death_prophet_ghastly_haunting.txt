@@ -1,0 +1,63 @@
+"DOTAAbilities"
+{
+    	"death_prophet_ghastly_haunting"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_death_prophet/death_prophet_ghastly_haunting/death_prophet_ghastly_haunting"
+		"AbilityTextureName"			"death_prophet_silence"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"                      "15"
+		
+		// Talents		
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.5"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120"
+	
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"425"
+				"LinkedSpecialBonus"			"special_bonus_unique_death_prophet_ghastly_haunting_2"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"duration"						"1.0 1.2 1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8 3 3.2 3.4 3.6 3.8"
+				"LinkedSpecialBonus"			"special_bonus_unique_death_prophet_ghastly_haunting_2"
+				"LinkedSpecialBonusField"		"duration"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"damage_amp"					"20"
+			}
+		}
+	
+		"precache"
+		{
+			"particle" 	"particles/units/heroes/hero_death_prophet/death_prophet_silence.vpcf"
+			"particle"	"particles/units/heroes/hero_death_prophet/death_prophet_silence_impact.vpcf"
+			"particle"	"particles/dp_weaken.vpcf"
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts"
+		}
+	}
+}

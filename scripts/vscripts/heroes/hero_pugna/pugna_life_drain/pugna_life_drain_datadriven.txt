@@ -1,0 +1,24 @@
+"DOTAAbilities"
+{
+	"health_life_drain"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_pugna/pugna_life_drain/life_drain"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilityTextureName"			"pugna_life_drain"
+		"MaxLevel"						"10"
+		"AbilityCastRange"				"700"
+
+		"AbilityValues"
+		{
+			"aura_radius"				"700"
+			"aura_damage"				"0.2 0.4 0.6 0.8 1.0 1.2 1.4 1.6 1.8 2.0" 
+			"aura_damage_interval"		"0.1"
+			"find_interval"				"3.0 2.8 2.6 2.4 2.2 2.0 1.8 1.6 1.4 1.2"
+		}
+	}
+}

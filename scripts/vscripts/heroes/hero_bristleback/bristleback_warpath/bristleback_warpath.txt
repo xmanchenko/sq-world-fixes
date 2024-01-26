@@ -1,0 +1,23 @@
+"DOTAAbilities"
+{
+	"bristleback_warpath_lua"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_bristleback/bristleback_warpath/bristleback_warpath.lua"
+		"AbilityTextureName"			"bristleback_warpath"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityDuration"				"30"
+		"MaxLevel"						"10"
+				
+		"AbilityValues"
+		{
+			"damage_per_stack"				"20 30 40 50 60 70 80 90 100"
+			"move_speed_per_stack"			"3 4 5 6 7 8 9 10"
+			"stack_duration"				"30"
+			"max_stacks"					"5 6 7 8 9 10 11 12 13 14"
+		}
+	}
+}

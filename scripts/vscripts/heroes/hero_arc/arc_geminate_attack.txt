@@ -1,0 +1,36 @@
+"DOTAAbilities"
+{
+	"arc_geminate_attack"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_arc/arc_geminate_attack"
+		"AbilityTextureName"			"arc_warden_tempest_double"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"						"10"
+		"AbilityCooldown"				"4.0 3.6 3.2 2.8 2.4 2.0 1.6 1.2 0.8 0.4"
+			
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"delay"					"0.1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_attack"		"1"
+				"LinkedSpecialBonus"	"npc_dota_hero_arc_warden_agi9"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"10 15 20 25 30 35 40 45 50 55"
+			}
+		}		
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+}

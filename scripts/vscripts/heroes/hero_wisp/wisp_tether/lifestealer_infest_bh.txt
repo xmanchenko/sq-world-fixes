@@ -1,0 +1,46 @@
+"DOTAAbilities"
+{
+    	"lifestealer_infest_bh"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_wisp/wisp_tether/lifestealer_infest_bh.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO" //DOTA_ABILITY_BEHAVIOR_HIDDEN
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NONE"
+		"AbilityTextureName"			"life_stealer_infest"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        "AbilityStartLevel"     "1"
+        "MaxLevel"              "1"  // Установите максимальный уровень на 1
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+
+		// Cost
+		//---------------------------------------------------------- ---------------------------------------------------
+		"AbilityManaCost"				"0"
+	
+		"precache"
+		{
+			"particle"                  "particles/units/heroes/hero_life_stealer/life_stealer_infest_emerge_bloody.vpcf"
+			"particle"  				"particles/units/heroes/hero_life_stealer/life_stealer_infested_unit.vpcf"
+			"particle"  				"particles/units/heroes/hero_life_stealer/life_stealer_loadout.vpcf"
+
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
+		}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			
+		}
+	}
+}

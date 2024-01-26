@@ -1,0 +1,58 @@
+"DOTAAbilities"
+{
+	"magnataur_reverse_polarity_lua"
+	{
+
+        "BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_magnataur/magnataur_reverse_polarity_lua/magnataur_reverse_polarity_lua"
+        "AbilityTextureName"			"magnataur_reverse_polarity"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Magnataur.ReversePolarity.Cast"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"AbilityCooldown"				"130"
+		"AbilityManaCost"				"200"
+		"AbilityCastRange"				"410"
+		"MaxLevel"						"10"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"pull_radius"					"410"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"polarity_damage"		"500 900 1300 1700 2100 2500 2900 3300 3700 4100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hero_stun_duration"	"2.0 2.2 2.4 2.6 2.8 3.0 3.20 3.4 3.6 3.8"
+				"LinkedSpecialBonus"	"special_bonus_unique_magnus_5"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"pull_duration"			"0.0 0.0 0.0"
+			}
+		}
+    }
+}

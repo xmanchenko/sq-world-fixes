@@ -1,0 +1,28 @@
+"DOTAAbilities"
+{
+	"bloodseeker_mist_lua"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_bloodseeker/bloodseeker_mist_lua/bloodseeker_mist_lua"
+		"AbilityTextureName"			"bloodseeker_blood_mist"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"10"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		"AbilityCastRange"				"250"
+
+		"AbilityValues"
+		{
+			"damage"					"80 160 240 320 400 480 560 640 720 800"
+			"agility_dmg"				"0.2 0.4 0.6 0.8 1.0 1.2 1.4 1.6 1.8 2.0"
+			"self_hit"					"5"
+			"slow"						"25"
+			"radius"					"250"
+			"tick"						"0.2"
+		}
+	}
+}

@@ -1,0 +1,45 @@
+"DOTAAbilities"
+{
+    "viper_viper_strike_lua"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/hero_viper/viper_strike/viper_strike.lua"
+        "AbilityTextureName"            "viper_viper_strike"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "FightRecapLevel"               "2"
+        "MaxLevel"						"10"
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "500 520 540 560 580 600 620 640 660 680 700 720 740 760 780"
+        "AbilityCastPoint"              "0.3 0.3 0.3"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "53 49 46 43 40 37 34 31 28 25"
+    
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "125 175 250"
+        
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+		{
+            "duration"              "5"
+            "damage"                "400 500 600 750 900 1100 1350 1500 1750 2000"
+            "bonus_movement_speed"  "-35 -40 -45 -50 -55 -60 -65 -70 -75 -80"
+            "bonus_attack_speed"    "-40 -60 -80 -100 -120 -140 -160 -180 -200 -220"
+            "projectile_speed"  "1200"
+            "AbilityCharges"            "0"
+            "AbilityChargeRestoreTime"      "53 49 46 43 40 37 34 31 28 25"
+        }
+    }
+}

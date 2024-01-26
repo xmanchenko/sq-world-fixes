@@ -1,0 +1,63 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Dawnbreaker: Starbreaker (Lua version)
+	//=================================================================================================================
+	"dawnbreaker_starbreaker_lua"
+	{
+		// Ability Technical Aspect
+		// base script folder	: scripts/vscripts
+		// base texture folder	: resource/flash3/images/spellicons
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_dawnbreaker/dawnbreaker_starbreaker_lua/dawnbreaker_starbreaker_lua"
+		"AbilityTextureName"			"dawnbreaker_fire_wreath"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"4"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		//"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.2"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		// "AbilityCooldown"				"17 15 13 11"
+		"AbilityManaCost"				"80"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityValues"
+		{
+			"duration"					"1.1"
+			"swipe_radius"				"300"		
+			"swipe_damage"				"25 35 45 55"
+			"smash_radius"				"300"
+			"smash_damage"				"40 65 90 115"
+			"movement_speed"				"215"
+			"total_attacks"				"3"
+			"smash_stun_duration"			"0.8 1.0 1.2 1.4"
+			"sweep_stun_duration"			"0.12"
+			"self_stun_duration"			"0.2"
+			"swipe_slow"				"-100"
+			"smash_distance_from_hero"	"120"
+			"animation_rate"			"0"
+			"turn_rate"					"90"
+			"AbilityCharges"			"0"
+			"AbilityChargeRestoreTime"	"17 15 13 11"
+		}	
+	}
+}

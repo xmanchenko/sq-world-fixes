@@ -1,0 +1,24 @@
+"DOTAAbilities"
+{
+	"bloodseeker_thirst_lua"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_bloodseeker/bloodseeker_thirst_lua/bloodseeker_thirst_lua"
+		"AbilityTextureName"			"bloodseeker_thirst"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"15"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+
+		"AbilityValues"
+		{
+			"duration"					"40"
+			"bonus_agility"				"2 4 6 8 10 12 14 16 18 20 22 24 26 28 30"
+			"bonus_lifesteal"			"7 9 11 13 15 17 19 21 23 25 27 29 31 33 35"
+			"bonus_movespeed"			"1 2 3 4 5 6 7 8 9 10 11 12 13 14 15"
+		}
+	}
+}

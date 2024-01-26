@@ -1,0 +1,47 @@
+"DOTAAbilities"
+{
+	"doom_devour_lua"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_doom_bringer/devour/devour_lua"
+		"AbilityTextureName"			"doom_bringer_devour"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"15"
+		"AbilityCooldown"				"70"
+		"AbilityCastRange"				"300"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_NOT_SUMMONED"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		"AbilitySpecial"
+		{
+
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_gold" 		    "100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"regen"				    "3 6 9 12 15 18 21 24 27 30 40 50 100 150 200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"devour_time"		    "70"
+			}
+            "04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"devour_damage"		    "2 5 8 11 14 17 21 25 29 34 39 44 50 56 62"
+			}
+		}
+	}
+}

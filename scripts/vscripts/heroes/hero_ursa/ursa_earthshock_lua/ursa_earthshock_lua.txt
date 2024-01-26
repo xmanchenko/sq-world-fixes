@@ -1,0 +1,84 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Ursa: Earthshock (lua version)
+	//=================================================================================================================
+	"ursa_earthshock_lua"
+	{
+		// Ability Technical Aspect
+		// base script folder	: scripts/vscripts
+		// base texture folder	: resource/flash3/images/spellicons
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_ursa/ursa_earthshock_lua/ursa_earthshock_lua"
+		"AbilityTextureName"			"ursa_earthshock"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"15"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+			"particle"	"particles/units/heroes/hero_ursa/ursa_earthshock.vpcf"
+			"particle"	"particles/units/heroes/hero_ursa/ursa_earthshock_modifier.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"385"
+		"AbilityCastPoint"				"0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5"
+		"AbilityManaCost"				"75"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shock_radius"				"385"
+			}
+            "02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hop_distance"				"250"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_slow"				"-27 -29 -31 -33 -35 -37 -39 -41 -43 -45 -47 -49 -51 -53 -55"
+			}
+            "04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"duration"				    "4"
+			}
+            "05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"				    "50 100 150 200 250 300 350 400 450 500 550 600 650 700 750"
+			}
+            "06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"speed"				    "1000"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"add_fury"				    "2"
+			}
+		}
+        "AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+}

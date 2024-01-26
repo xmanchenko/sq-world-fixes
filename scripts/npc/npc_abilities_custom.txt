@@ -1,0 +1,2105 @@
+"DOTAAbilities"
+{
+"enchantress_bunny_hop"						"REMOVE"	
+"tinker_keen_teleport"						"REMOVE"
+"doom_bringer_empty1"						"REMOVE"	
+"doom_bringer_empty2"						"REMOVE"
+"techies_minefield_sign"					"REMOVE"
+"techies_focused_detonate"					"REMOVE"
+"remote_mines_self_detonate"				"REMOVE"
+"dazzle_good_juju"							"REMOVE"
+
+//======================================================================================================================================================================================================================================================
+
+	"ursa_lapki"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/ursa_lapki"
+		"AbilityTextureName"			"backdoor_protection"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"base_damage"				"1500"
+			"hp_percent"				"2"
+		}
+	}
+	"instant_respawn"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/instant_respawn"
+		"AbilityTextureName"			"backdoor_protection"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	}
+	"tower_kill"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/tower_kill"
+		"AbilityTextureName"			"backdoor_protection"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+	"move_passive"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/bosses/move_passive"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+
+"treant_overgrowth_tron"
+	{
+        "BaseClass"                     "treant_overgrowth"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"		
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Treant.Overgrowth.Cast"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCooldown"				"99999"
+		"AbilityManaCost"				"0"
+		"AbilityValues"
+		{
+			"duration"						"5"
+			"radius"						"1000"
+			"eyes_radius"					"1000"
+			"damage"			"1000"
+		}
+	}
+	
+"tidehunter_ravage_tron"
+	{
+        "BaseClass"                     "tidehunter_ravage"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Ability.Ravage"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+	
+		"AbilityCooldown"				"99999"
+		"AbilityDamage"					"1000"
+		"AbilityManaCost"				"0"
+		"AbilityValues"
+		{
+			"radius"			"1000"
+			"speed"				"725"
+			"duration"			"5"
+		}
+	}
+	
+//======================================================================================================================================================================================================================================================
+"magic_weakness" 
+		{	
+		   	"BaseClass"           		"ability_lua"
+			"ScriptFile"				"abilities/bosses/new_year_event.lua"
+		    "AbilityBehavior"        	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		    "AbilityTextureName"     	"crystal_maiden_arcane_aura"
+		}
+"cm_kolba" 
+		{	
+		   	"BaseClass"           		"ability_lua"
+			"ScriptFile"				"abilities/bosses/new_year_event.lua"
+		    "AbilityBehavior"        	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		    "AbilityTextureName"     	"crystal_maiden_arcane_aura"
+		}
+"crystal_maiden_crystal_nova_lua" 
+		{	
+		   	"BaseClass"           		"ability_lua"
+			"ScriptFile"				"abilities/bosses/new_year_event.lua"
+		    "AbilityBehavior"        	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		    "AbilityTextureName"     	"crystal_maiden_arcane_aura"
+		}
+	"npc_dota_hero_enigma_permanent_ability"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/new_year_event.lua"
+		"AbilityTextureName"			"enigma_black_hole"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		"AbilityValues"
+		{
+			"far_damage"			"50 100 150"
+			"far_radius"			"900"
+			"pull_radius"			"420"
+			"pull_speed"			"10"
+			"near_radius"			"200"
+			"near_damage"			"50 100 150"
+			"tick_rate"				"0.1 0.1 0.1"
+			"duration"				"8"
+			"vision_radius"			"800 800 800"
+			"pull_rotate_speed"		"0.25"
+			"animation_rate"		"0.2"
+		}
+	}
+	"disruptor_krug"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/new_year_event.lua"
+		"AbilityTextureName"			"disruptor_kinetic_field"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityValues"
+		{
+			"radius"					"150"
+			"formation_time"			"0.2"
+			"duration"					"7"
+			"damage_radius"				"150"
+			"strikes"					"4"
+			"strike_interval"			"0.5"
+			"strike_damage"				"50"
+			"ministun"					"0.3"
+		}
+	}
+	"raid_aura" 
+	{	
+		"BaseClass"           		"ability_lua"
+		"ScriptFile"				"abilities/bosses/raid_boss.lua"
+		"AbilityBehavior"        	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"AbilityTextureName"     	"gyrocopter_rocket_barrage"
+	}	
+"raid_drop1"
+	{
+		"BaseClass"                 "ability_datadriven"
+		"AbilityBehavior"       	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"OnOwnerDied"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"abilities/bosses/raid_boss.lua"
+				"Function"				"gems1"			
+			}
+		}
+	}		
+	
+"raid_drop2"
+	{
+		"BaseClass"                 "ability_datadriven"
+		"AbilityBehavior"       	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"OnOwnerDied"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"abilities/bosses/raid_boss.lua"
+				"Function"				"gems2"			
+			}
+		}
+	}	
+
+"raid_drop3"
+	{
+		"BaseClass"                 "ability_datadriven"
+		"AbilityBehavior"       	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"OnOwnerDied"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"abilities/bosses/raid_boss.lua"
+				"Function"				"gems3"			
+			}
+		}
+	}		
+	"fire_raze" 
+	{	
+		"BaseClass"           		"ability_lua"
+		"ScriptFile"				"abilities/bosses/raid_boss.lua"
+		"AbilityBehavior"        	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"     	"gyrocopter_rocket_barrage"
+		"AbilityCooldown"			"15"
+	}	
+	"fire_storm"
+	{ 
+		"BaseClass"           		"ability_lua"
+		"ScriptFile"				"abilities/bosses/raid_boss.lua"
+		"AbilityBehavior"        	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"    	"invoker_chaos_meteor"
+		"AbilityCooldown"			"14"	
+	}
+	"ability_thdots_nue04"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"custom/ability_thdots_nue04"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+		"AbilityCastPoint"			"1"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AnimationPlaybackRate"		"2"
+		"AbilityCooldown"			"15"
+		"AbilityCastRange"		"1000"
+		"AOERadius"				"%radius"
+		"AbilityType"			"DOTA_ABILITY_TYPE_ULTIMATE"
+		"precache"
+		{
+			"particle"	"particles/heroes/nue/ability_nue_04.vpcf"
+			"particle"	"particles/heroes/nue/ability_nue_04_light_ufo.vpcf"
+			"particle"	"particles/heroes/nue/ability_minoriko_04_ufo_move.vpcf"
+		}
+		"OnAbilityPhaseStart"
+		{
+			"FireSound"
+			{
+				"EffectName"				"Nue.AbilityNue04_channel"
+				"Target"					"CASTER"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"abilities/bosses/raid_boss.lua"
+				"Function"		"OnNue04PhaseStart"
+			}
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"abilities/bosses/raid_boss.lua"
+				"Function"		"OnNue04Start"
+				"Radius"		"%radius"
+				"Target"		"POINT"
+				"stun_duration"	"%stun_duration"
+			}
+			"ApplyModifier"
+			{
+				"Target"		"CASTER"
+				"ModifierName"	"modifier_thdots_nue04_states"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_thdots_nue04_states"
+			{
+				"Duration"	"1.5"
+				"States"
+				{
+					"MODIFIER_STATE_ATTACK_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MAGIC_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"radius"	"350"
+			"stun_duration"	"1.5"
+		}
+	}				
+			
+"custom_sustrike_delay"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastPoint"				"0.0"
+		"AbilityTextureName"			"naga_siren_rip_tide"
+		"GameSoundsFile"				"soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+		"AbilityCooldown"				"25"
+		"AbilityValues"
+		{
+			"damage"						"3500"
+			"interval"						"0.5"
+			"range"							"900"
+			"duration"						"6.0"
+			"delay"							"2"
+			"damage_radius"					"225"
+		}
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"			"modifier_torrential_waters"
+				"Target"				"CASTER"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_torrential_waters"
+			{
+				"IsHidden"				"0"
+				"Duration"				"%duration"
+				"OverrideAnimation"		"ACT_DOTA_TELEPORT"
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"ThinkInterval"				"%interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"abilities/bosses/raid_boss.lua"
+						"Function"			"custom_sustrike_delay"
+					}
+					"FireSound"
+					{
+						"EffectName"			"Hero_Invoker.SunStrike.Charge"
+						"Target"				"TARGET"
+					}
+				}
+			}
+			"modifier_dummy"
+			{
+				"ThinkInterval"		"0.01"
+				"OnIntervalThink"	
+				{
+					"Damage"
+					{
+						"Damage"		"3500"
+						"Type"			"DAMAGE_TYPE_PURE"
+						"Target"		"TARGET"
+					}
+				}
+				"States"
+				{
+					//"MODIFIER_STATE_INVULNERABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}	
+	"custom_sunray"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE"
+		"AbilityCastAnimation"			"ACT_DOTA_CHANNEL_ABILITY_3"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"phoenix_sun_ray"
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.3"
+		"AbilityChannelTime"			"5.0"
+		"AbilityCooldown"				"15"
+		"AbilityValues"
+		{
+			"duration"					"5.0"
+			"damage_per_second"			"10000"
+			"slow_amount"				"-35"
+			"break_distance"			"1000"
+			"illusion_kill_time"		"0.25"
+			"tick_interval"				"0.25"
+		}
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_Phoenix.SunRay.Cast"
+				"Target"		"TARGET"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"		"modifier_sunray"
+				"Target"			"TARGET"
+			}
+		}
+		"OnChannelInterrupted"
+		{
+			"RemoveModifier"
+			{
+				"ModifierName"		"modifier_sunray"
+				"Target"			"TARGET"
+			}
+		}
+		"OnChannelFinish"
+		{
+			"RemoveModifier"
+			{
+				"ModifierName"		"modifier_sunray"
+				"Target"			"TARGET"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_sunray"
+			{
+				"IsDebuff"	"1"
+				"Duration"	"%duration"
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"		"particles/units/heroes/hero_phoenix/phoenix_sunray.vpcf"
+						"EffectAttachType"	"start_at_customorigin"
+						"Target"			"TARGET"
+						"ControlPointEntities"
+						{
+							"TARGET"	"attach_hitloc"
+							"CASTER"	"attach_hitloc"
+						}
+					}
+					"FireSound"
+					{
+						"EffectName"	"Hero_Phoenix.SunRay.Loop"
+						"Target"		"TARGET"
+					}
+				}
+				"ThinkInterval"	"%tick_interval"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"		"TARGET"
+						"Type"			"DAMAGE_TYPE_PURE"
+						"Damage"		"%damage_per_second"		
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" 	"slow_amount"
+				}
+			}
+		}
+	}	
+
+//======================================================================================================================================================================================================================================================
+
+	"boss_split"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss2.lua"
+		"AbilityTextureName"			"brewmaster_primal_split"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityCooldown"				"99999"
+		"AbilityCastPoint"				"0.65"
+		"AbilityValues"
+		{
+			"split_duration"			"0.6"
+		}
+	}
+	"raid_boss_tornado"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"invoker_tornado"
+		"AbilityCastAnimation" 			"ACT_DOTA_CAST_TORNADO"
+		"ScriptFile"					"abilities/bosses/raid_boss2.lua"
+		"AbilityCastRange"				"2000"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"10"
+		"AbilityValues"
+		{
+			"travel_distance"			"2000"
+			"travel_speed"				"1000"
+			"area_of_effect"			"200"
+			"vision_distance"			"200"
+			"end_vision_duration"		"3"
+			"lift_duration"				"2"
+			"cyclone_initial_height"	"400"
+			"cyclone_min_height"		"350"
+			"cyclone_max_height"		"450"
+		}
+	}	
+	"raid_thunder_clap"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss2.lua"
+		"AbilityTextureName"			"brewmaster_thunder_clap"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Brewmaster.ThunderClap"
+		"AbilityCooldown"				"15"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityValues"
+		{
+			"radius"					"400"
+			"movement_slow"				"25"
+			"attack_speed_slow"			"50"
+			"duration"					"2.0"
+		}	
+	}
+	"fallen_meteor"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss2.lua"
+		"AbilityTextureName"			"item_meteor_hammer"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilityChannelTime"			"0"
+		"AbilityCooldown"				"12.0"
+		"AbilityManaCost"				"0"
+		"AbilityValues"
+		{
+			"damage"				"100000"
+			"duration"				"1"
+			"land_time"				"0.5"
+			"impact_radius"			"315"
+		}
+	}	
+	"raid_crit"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss2.lua"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityValues"
+		{
+			"crit_chance"				"5"
+			"crit_bonus"				"10000"
+		}
+	}		
+	"raid_bkb"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss2.lua"	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	}			
+//======================================================================================================================================================================================================================================================
+
+"raid_clap"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss3.lua"	
+		"AbilityTextureName"			"ursa_earthshock"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityDuration"				"2.0"
+		"AbilityCooldown"				"12"
+		"AbilityValues"
+		{
+			"shock_radius"				"200"
+			"movement_slow"				"-95"
+		}
+	}
+	"raid_enrage"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss3.lua"	
+		"AbilityTextureName"			"ursa_enrage"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCooldown"				"12"
+		"AbilityValues"
+		{
+			"duration"				"6"
+		}
+	}	
+	"raid_berserk"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss3.lua"	
+		"AbilityTextureName"			"huskar_berserkers_blood"
+		"FightRecapLevel"				"1"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"damage"				"10000"
+			"hp_threshold_max"		"10"
+		}
+	}	
+	"raid_shadow"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss3.lua"	
+		"AbilityTextureName"			"ursa_enrage"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCooldown"				"15"
+		"AbilityValues"
+		{
+			"duration"				"6"
+		}
+	}		
+//======================================================================================================================================================================================================================================================
+"raid_splinter_blast"
+	{
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                   	"abilities/bosses/raid_boss4.lua"	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"winter_wyvern_splinter_blast"
+		"FightRecapLevel"				"1"
+		"AbilityCastRange"				"1200"
+		"AbilityCooldown"				"12.0"
+		"AbilityValues"
+		{
+
+			"projectile_speed"		"650"
+			"projectile_max_time"	"1.0"
+			"split_radius"			"500"
+			"duration"				"4.0"
+			"damage"				"25000"
+			"secondary_projectile_speed"	"800"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+	"raid_touch"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss4.lua"	
+		"AbilityTextureName"			"huskar_berserkers_blood"
+		"FightRecapLevel"				"1"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"damage"				"5000"
+		}
+	}	
+	"raid_ice_skin"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/raid_boss4.lua"	
+		"AbilityTextureName"			"huskar_berserkers_blood"
+		"FightRecapLevel"				"1"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"skin"				"25"
+		}
+	}		
+	"custom_arctic_field"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"crystal_maiden_crystal_nova"
+		"AbilityCooldown"				"15"
+		"AbilityValues"
+		{
+			"damage"						"20000"
+			"delay"							"4.0"
+			"range"							"1000"
+			"damage_radius"					"400"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"abilities/bosses/raid_boss4.lua"
+				"Function"			"arctic_field"
+			}
+			"FireSound"
+			{
+				"EffectName"		"lich_lich_move_12"
+				"Target"			"CASTER"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_dummy"
+			{
+				"ThinkInterval"		"0.01"
+				"OnIntervalThink"	
+				{
+					"Damage"
+					{
+						"Damage"		"9999"
+						"Type"			"DAMAGE_TYPE_PURE"
+						"Target"		"TARGET"
+					}
+				}
+				"States"
+				{
+					//"MODIFIER_STATE_INVULNERABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}	
+	
+"raid_curse"
+	{
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                   	"abilities/bosses/raid_boss4.lua"	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"winter_wyvern_splinter_blast"
+		"FightRecapLevel"				"1"
+		"AbilityCastRange"				"800"
+		"AbilityCooldown"				"18.0"
+		"AbilityValues"
+		{
+			"duration"				"4.0"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}	
+
+	"shapeshifter_ability1"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/bosses/shapeshifter/shapeshifter_ability1.lua"
+        "AbilityTextureName"            "bloodseeker_rupture"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"  
+        "FightRecapLevel"               "2"
+        "HasScepterUpgrade"         	"1"
+        "AbilityCastPoint"              "0.0"
+        "AbilityCastAnimation"      	"ACT_DOTA_CAST_ABILITY_4"
+        "AbilityCooldown"               "20"
+        "AbilityManaCost"               "0"       
+        "AbilityCastRange"              "800"
+        "AbilityModifierSupportValue"   "0.0"   // Only does damage
+        "AbilityValues"
+        {
+			"duration"                  "10"
+			"movement_damage_pct"       "60"
+			"damage_cap_amount"         "200"
+        }
+    }
+	"shapeshifter_ability2"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/shapeshifter/shapeshifter_ability2.lua"
+		"AbilityTextureName"			"ursa_fury_swipes"
+		"FightRecapLevel"				"1"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityValues"
+		{
+			"bonus_reset_time"				"20"
+			"bonus_reset_time_roshan"		"10"
+			"damage_per_stack"				"36"
+		}
+	}
+	"shapeshifter_ability3"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/shapeshifter/shapeshifter_ability3.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityTextureName"			"lycan_howl"
+		
+		"AbilityCastPoint"				"0.3"
+	
+		"AbilityCooldown"				"20"
+		"AbilityDuration"				"10"
+		"AbilityCastRange"				"700"
+		"AbilityManaCost"				"100"
+	
+		"AbilityValues"
+		{
+			"duration"			"10.0"		
+			"as"				"100"
+			"movespeed"			"60"
+			"radius"			"700"
+		}
+	}
+
+	"shapeshifter_ability4"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/bosses/shapeshifter/shapeshifter_ability4.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"lycan_feral_impulse"
+
+		"AbilityValues"
+		{	
+			"damage"					"80"
+			"armor"						"20"
+		}
+	}
+	
+//======================================================================================================================================================================================================================================================
+
+"slot1"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	}
+"slot2"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	}
+"slot3"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	}
+"slot4"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	}
+"slot5"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	}
+"slot6"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	}	
+
+//=============================================================================================================
+	"hp_regen_ability"
+	{
+		"BaseClass"           			"ability_lua"
+		"ScriptFile"					"abilities/hp_regen_ability"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE |DOTA_ABILITY_BEHAVIOR_HIDDEN"			
+	}
+	"ability_magma_creep_1"
+	{
+		"BaseClass"           			"ability_lua"
+		"ScriptFile"					"abilities/ability_magma_creep_1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE |DOTA_ABILITY_BEHAVIOR_HIDDEN"			
+	}
+	"ability_magma_creep_2"
+	{
+		"BaseClass"           			"ability_lua"
+		"ScriptFile"					"abilities/ability_magma_creep_2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE |DOTA_ABILITY_BEHAVIOR_HIDDEN"			
+	}
+	"hp_regen_ability_raid"
+	{
+		"BaseClass"           			"ability_lua"
+		"ScriptFile"					"abilities/hp_regen_ability_raid"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE |DOTA_ABILITY_BEHAVIOR_HIDDEN"			
+	}
+	"pet_ability"
+	{
+		"BaseClass"           			"ability_lua"
+		"ScriptFile"					"items/pets/pet_ability"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"			
+	}
+	"breathe_poison"
+	{
+		"BaseClass"           			"ability_lua"
+		"ScriptFile"					"traps/breathe_poison"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"			
+		"AbilityCastRange"				"2000"
+		"AbilityCastPoint"				"0"
+		"AbilityValues"
+		{
+			"start_radius"			"100"
+			"end_radius"			"100"
+			"range"					"2000"
+			"speed"					"1100"
+			"strike_damage"			"2000000"
+		}
+	}
+"trap_unselectable"
+  	{
+	    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"   
+	    "BaseClass"             "ability_datadriven"   
+	    "Modifiers"
+	    {
+			"modifier_unselectable"
+			{
+				"Passive" "1"
+				"States"
+				{
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_PROVIDES_VISION"		"MODIFIER_STATE_VALUE_DISABLED"
+					"MODIFIER_STATE_ROOTED"					"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"				"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_LOW_ATTACK_PRIORITY"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING"					"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_BLOCK_DISABLED"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_OUT_OF_GAME"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_BLIND"					"MODIFIER_STATE_VALUE_ENABLED"
+		        }
+	      	}
+	    }
+	}	
+	
+//======================================================================================================================================================================================================================================================
+	"status_resist"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/status"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}	
+	"fontan_aura"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/fontan_aura"
+		"AbilityTextureName"			"witch_doctor_voodoo_restoration"
+		"MaxLevel" 						"2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"aura_radius"		"500"
+			"health_regen_aura"	"4"
+			"mana_regen_aura"	"2"
+		}
+	}
+	"gold_treasure"
+		{
+			"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+			"BaseClass"                     "ability_datadriven"
+			"AbilityTextureName"            "item_hand_of_midas"
+			"AbilityValues"
+			{
+				"gold_value"            "100"
+			}
+			
+			"Modifiers"
+			  {
+				"gold_modifier"
+				{
+				  "Passive" "1"
+					"IsHidden" "1"
+					"OnTakeDamage"
+				  {
+					  "CreateItem"
+						{
+							"Target"
+							{
+								"Center"    "CASTER"
+				
+							}           
+							"ItemName"          "item_bag_of_gold"
+							"ItemCount"         "1"
+							"SpawnRadius"       "25"
+							"ItemChargeCount"   "%gold_value"
+							"AutoUse"           "1"
+							"LaunchHeight"      "200"
+							"LaunchDistance"    "150 250"
+							"LaunchDuration"    "0.75"
+						}
+				  }
+				}
+			}
+		}
+
+//======================================================================================================================================================================================================================================================
+		
+	"shop_ability"
+		{
+		  "AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		  "BaseClass"           		"ability_datadriven"
+		  "MaxLevel"					"1"
+		  "AbilityTextureName"     		""
+		  
+		  "Modifiers"
+		  {
+			"modifier_animated_tower"
+			{
+			  "Passive"						"1"
+			  "IsHidden"					"1"
+			  "Priority"					"MODIFIER_PRIORITY_ULTRA"
+			  "Attributes" 					"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"  
+			  "States"
+			  {
+				"MODIFIER_STATE_MAGIC_IMMUNE" 					"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_UNIT_COLLISION"  			"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_INVULNERABLE"					"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NO_HEALTH_BAR"					"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_NOT_ON_MINIMAP"					"MODIFIER_STATE_VALUE_ENABLED"
+				"MODIFIER_STATE_COMMAND_RESTRICTED"				"MODIFIER_STATE_VALUE_ENABLED"
+			  }
+			  "Properties"
+			  {
+				"MODIFIER_PROPERTY_DISABLE_TURNING" "0"
+				"MODIFIER_PROPERTY_IGNORE_CAST_ANGLE" "0"
+				"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE" "0"
+			  }
+			}
+		  }
+		}
+
+//======================================================================================================================================================================================================================================================
+
+	"tower_ability"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/tower.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	}
+	
+	"dummy_ability"
+    {
+        "BaseClass"                        	"ability_lua"                                    
+        "ScriptFile"                    	"abilities/dummy"                                            
+        "AbilityBehavior"                	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    }
+	
+//======================================================================================================================================================================================================================================================
+
+	"creature_split_shot"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"FightRecapLevel"				"1"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"medusa_split_shot"
+		"MaxLevel"						"1"
+
+		"AbilityValues"
+		{
+			"arrow_count"			"2"
+		}
+
+		"Modifiers"
+		{
+			"modifier_split"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"IsDebuff"	"0"
+				"IsPurgable"	"0"
+				"OnAttack"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"abilities/split_shot"
+						"Function"			"SplitShot"
+					}
+				}
+			}
+		}
+	}
+	
+//======================================================================================================================================================================================================================================================
+
+	"manacost_spell"
+	{
+        "BaseClass"                        	"ability_lua"                                    
+        "ScriptFile"                    	"abilities/manacost_spell"                                            
+        "AbilityBehavior"                	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	}
+	
+	"gold_drop"
+    {
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "item_hand_of_midas"
+		"Modifiers"
+		{
+			"modifier_drop"
+			{
+				"IsHidden"				"1"
+				"Passive"				"1"
+				"ThinkInterval" 		"60"	
+				"OnIntervalThink"
+					{	  
+						"RunScript"
+						{
+							"ScriptFile"			"items/tree_gold.lua"
+							"Function"				"aaaa"
+						}
+					}
+			} 
+		}
+	}
+	
+//======================================================================================================================================================================================================================================================
+	"respawn_creeps"
+	{
+		"BaseClass"             		"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	 	"ScriptFile"					"abilities/respawn_creeps"
+	}	
+	"black_dragon_splash_attack"
+    {
+        "MaxLevel"                      "1"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityValues"
+        {
+            "range"         "250"
+            "damage_percent"            "100"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }	
+	"drake_corrosive_skin"
+	{
+		"BaseClass" 					"viper_corrosive_skin"
+		"AbilityTextureName" 			"viper_corrosive_skin"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilitySound"                  "hero_viper.CorrosiveSkin"
+        "AbilityModifierSupportBonus"   "10"
+        "AbilityValues"
+        {
+			"duration"                  "3.0"
+			"bonus_attack_speed"        "400"
+			"bonus_magic_resistance"    "50"
+			"damage"                    "100000"
+			"max_range_tooltip"         "1400"
+        }
+	}	
+	"respawn_creeps_belka"
+	{
+		"BaseClass" "ability_datadriven"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE|DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"OnOwnerDied"
+		{
+		"RunScript"
+			{
+			"ScriptFile" 	"abilities/respawn_creeps_belka.lua"
+			"Function" 		"respawncreeps"
+			}
+		}
+	}	
+	"ogreseal_flop_by"
+    {
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "ogreseal_flop"
+        "ScriptFile"                    "abilities/ogreseal_flop"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "FightRecapLevel"               "1"
+        "IsOnCastBar"                   "0"
+        "AbilityCastRange"              "700"
+        "AbilityCastPoint"              "0.3"
+        "AbilityCooldown"               "7"
+        "AbilityManaCost"               "0"
+        "AbilityValues"
+        {
+			"radius"                    "275"
+			"damage"                    "50"
+			"stun_duration"             "0.8"
+        }
+    }
+	
+//======================================================================================================================================================================================================================================================		
+//========================================================================================================BOSSES========================================================================================================================================		
+//======================================================================================================================================================================================================================================================
+//==========================================================================================================MEGA================================================================================================================================
+	"custom_solar_flare"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityCastPoint"				"0.2"
+		"AbilityTextureName"			"invoker_sun_strike"
+		"precache"
+		{
+			"particle"					"particles/econ/items/invoker/invoker_apex/invoker_sun_strike_team_immortal1.vpcf"
+			"particle"					"particles/econ/items/invoker/invoker_apex/invoker_sun_strike_immortal1.vpcf"
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+			"particle"					"particles/units/heroes/hero_tinker/tinker_laser.vpcf"
+		}
+		"AbilityCooldown"				"12.0"
+		"AbilityManaCost"				"400"
+		"AbilityValues"
+		{
+			"damage"						"500000"
+			"delay"							"2.3"
+			"range"							"3000"
+			"damage_radius"					"175"
+			"threshold"						"65"
+		}	
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"			"modifier_solar_flare_activate"
+				"Target"				"CASTER"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_solar_flare_activate"
+			{
+				"Duration"		"1.0"
+				"IsHidden"		"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"			"abilities/bosses/mega/solar_flare.lua"
+						"Function"				"solar_flare_start"
+					}
+				}
+			}
+			"modifier_dummy"
+			{
+				"ThinkInterval"		"0.01"
+				"OnIntervalThink"	
+				{
+					"Damage"
+					{
+						"Damage"		"9999"
+						"Type"			"DAMAGE_TYPE_PURE"
+						"Target"		"TARGET"
+					}
+				}
+				"States"
+				{
+					//"MODIFIER_STATE_INVULNERABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVISIBLE"				"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+    "invoker_spfere"
+	{
+		"ScriptFile"					"abilities/bosses/invoker.lua"
+		"BaseClass"             		"ability_lua"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+	}
+	"creature_fire_breath"
+	{
+		"AbilityName"					"creature_fire_breath"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"ogre_magi_fireblast"
+		"MaxLevel"						"1"
+		"AbilityCooldown"				"16.0"
+		"AbilityChannelTime"			"1.3"
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.1"
+		"AbilityManaCost"				"400"
+		"AbilityValues"
+		{
+			"radius"				"200.0"
+			"speed"					"1000"
+			"damage"				"5000.0"
+			"rotation_angle"		"90.0"
+			"projectile_count"		"12"
+		}
+	}
+	
+	"spirit_breaker_greater_bash"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5355"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilitySound"					"Hero_Spirit_Breaker.GreaterBash"
+		"AbilityCooldown"				"1.5 1.5 1.5 1.5"
+		"AbilityModifierSupportBonus"	"40"
+		"AbilityValues"
+		{
+			"chance_pct"			"17 17 17 17"
+			"damage"				"3000"
+			"duration"				"0.3"
+			"knockback_duration"	"0.0"
+			"knockback_distance"	"0"
+			"knockback_height"		"0"
+			"bonus_movespeed_pct"	"17"
+			"movespeed_duration"	"3.0 3.0 3.0 3.0"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	"windrunner_shackleshot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5130"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Windrunner.ShackleshotCast"
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.15"
+		"AbilityCooldown"				"16 14 12 10"
+		"AbilityDamage"					"0 0 0 0"
+		"AbilityManaCost"				"70 85 100 115"
+		"AbilityValues"
+		{
+			"fail_stun_duration"	"0.2"
+			"stun_duration"			"2"
+			"shackle_distance"		"400"
+			"arrow_speed"			"1650"
+			"shackle_count"			"1"
+			"shackle_angle"			"23"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	"earth_spirit_boulder_smash"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitTargetFlag"			"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_EarthSpirit.BoulderSmash.Target"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"150"
+		"AbilityCastPoint"				"0.01"
+		"AbilityCooldown"				"14"
+		"AbilityManaCost"				"100"
+		"AbilityValues"
+		{
+			"radius"				"180"
+			"rock_search_aoe"			"200"
+			"rock_damage"			"3000"
+			"move_slow"				"60"
+			"duration"				"2"
+			"speed"					"900"
+			"unit_distance"			"500.0"
+			"rock_distance"			"2000.0"
+			"remnant_smash_radius_tooltip"			"200"		
+		}
+	}
+	"golden_passive"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/golden_units"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    }
+	"event_passive"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/event_passive"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    }
+
+	"gold_steal"
+		{
+			"BaseClass" 					"ability_datadriven"
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+			"AbilityTextureName"			""
+			
+			"AbilityValues"
+			{
+				"gold"      				"10"
+			}
+			"Modifiers"
+			{
+				"modifier_gold_steal"
+				{
+					"IsHidden"	"1"
+					"Passive"	"1"
+					"ThinkInterval" 		"1"	
+					"OnIntervalThink"
+						{	  
+							"RunScript"
+						{
+								"ScriptFile"				"abilities/golden_steal"
+								"Function"					"steal"
+						}
+					}
+				}
+			}
+		}	
+	"babka_spell"
+	{
+		"BaseClass"              		"ability_lua"
+		"ScriptFile"					"abilities/babka.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityValues"
+		{
+			"all"					"25"
+			"radius"				"35000"
+		}
+	}	
+	"custom_fireball"
+	{
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"BaseClass"						"black_dragon_fireball"
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCooldown"				"13"
+		"AbilityManaCost"				"500"
+		"AbilityValues"
+		{
+			"radius"			"250"
+			"damage"			"100"
+			"duration"			"7.0"
+			"burn_interval"		"0.5"
+		}
+	}
+    "muerta_the_calling_custom"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/hero_muerta/muerta_the_calling_custom.lua"
+        "AbilityTextureName"            "muerta_the_calling"
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "10"
+        "HasShardUpgrade" "1"
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CAN_SELF_CAST"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityCastRange"              "580"
+        "AbilityCastPoint"              "0.1"
+        "AbilityCooldown"               "30"
+        "AbilityManaCost"               "150 175 200 225 250 275 300 325 350 375"
+        "AbilityValues"
+        {
+            "duration" "14"
+            "damage" "45 105 165 225 285 345 405 465 525 585"
+            "slow" "-20"
+            "interval" "0.65"
+            "int_to_damage" "100"
+            "radius" "460"
+            "damage_increase_per_tick"
+            {
+                "value" "5.0"
+                "RequiresShard" "1"
+            }
+        }
+    }
+    "muerta_dead_shot_custom"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/hero_muerta/muerta_dead_shot_custom.lua"
+        "AbilityTextureName"            "muerta_dead_shot"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "MaxLevel" "10"
+        "AbilityCastPoint" "0.15"
+        "AbilityCastRange" "900"
+        "AbilityCooldown" "16 15 14 13 12 11 10 9 8 7"
+        "AbilityManaCost" "100 120 140 160 180 200 220 240 260 280"
+        "AbilityValues"
+        {
+            "damage" "75 150 225 300 375 450 525 600 675 750"
+            "impact_slow_pct" "100"
+            "impact_duration" "0.5"
+            "ricochet_damage" "38 76 114 152 190 228 266 304 342 380"
+            "ricochet_magic_res" "-14 -16 -18 -20 -22 -24 -26 -28 -30 -32"
+            "ricochet_magic_res_duration" "11"
+            "ricochet_radius" "600"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+}
+
+//=========================================================================================================================================================================================================================
+//=========================================================================================================================================================================================================================
+#base "../npc/npc_abilities_patrool.txt"
+
+#base "../vscripts/abilities/bosses/line/boss_1/boss_1.txt"
+#base "../vscripts/abilities/bosses/line/boss_2/boss_2.txt"
+#base "../vscripts/abilities/bosses/line/boss_3/boss_3.txt"
+#base "../vscripts/abilities/bosses/line/boss_4/boss_4.txt"
+#base "../vscripts/abilities/bosses/line/boss_5/boss_5.txt"
+#base "../vscripts/abilities/bosses/line/boss_6/boss_6.txt"
+#base "../vscripts/abilities/bosses/line/boss_7/boss_7.txt"
+#base "../vscripts/abilities/bosses/line/boss_8/boss_8.txt"
+#base "../vscripts/abilities/bosses/line/boss_9/boss_9.txt"
+#base "../vscripts/abilities/bosses/line/boss_10/boss_10.txt"
+
+#base "../vscripts/abilities/bosses/forest/forest.txt"
+#base "../vscripts/abilities/bosses/village/village.txt"
+#base "../vscripts/abilities/bosses/mines/mines.txt"
+#base "../vscripts/abilities/bosses/dust/dust.txt"
+#base "../vscripts/abilities/bosses/swamp/swamp.txt"
+#base "../vscripts/abilities/bosses/snow/snow.txt"
+
+#base "../vscripts/abilities/bosses/invoker/invoker.txt"
+
+#base "../vscripts/abilities/lane_creeps/abilities_lane_creeps.txt"
+
+
+#base "../vscripts/abilities/bosses/location8/ability_npc_boss_location8.txt"
+#base "../vscripts/abilities/bosses/npc_boss_barrack1/ability_npc_boss_barrack1.txt"
+#base "../vscripts/abilities/bosses/npc_boss_barrack2/ability_npc_boss_barrack2.txt"
+#base "../vscripts/abilities/bosses/byrocktar/abilities_byrocktar.txt"
+#base "../vscripts/abilities/bosses/bara/abilities_bara.txt"
+#base "../vscripts/abilities/bosses/sand/abilities_sand.txt"
+#base "../vscripts/abilities/bosses/monkey/abilities_monkey.txt"
+#base "../vscripts/abilities/bosses/titan/abilities_titan.txt"
+#base "../vscripts/abilities/bosses/apparition/abilities_apparition.txt"
+#base "../vscripts/abilities/bosses/crystal/abilities_crystal.txt"
+#base "../vscripts/abilities/bosses/wolf_from_rpg/abilities_wolf_from_rpg.txt"
+#base "../vscripts/abilities/bosses/miniboses/abilities_miniboses.txt"
+#base "../vscripts/abilities/bosses/mega/abilities_mega.txt"
+#base "../vscripts/abilities/bosses/magma/abilities_magma.txt"
+#base "../vscripts/abilities/bosses/plague_squirrel/ability_npc_boss_plague_squirrel.txt"
+
+//=========================================================================================================================================================================================================================
+//=========================================================================================================================================================================================================================
+
+//==================================================================================================SLARK========================================================================================================================================================
+
+#base "../vscripts/heroes/hero_slark/slark_talents.txt"
+#base "../vscripts/heroes/hero_slark/slark_dark_pact_lua.txt"
+#base "../vscripts/heroes/hero_slark/slark_pounce_lua/slark_pounce_lua.txt"
+#base "../vscripts/heroes/hero_slark/slark_passive/slark_passive.txt"
+#base "../vscripts/heroes/hero_slark/slark_shadow_dance_lua/slark_shadow_dance_lua.txt"
+
+//==================================================================================================NEVERMORE====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_nevermore/nevermore_talents.txt"
+#base "../vscripts/heroes/hero_nevermore/shadow_fiend_shadowraze_lua/shadow_fiend_shadowraze_lua_base.txt"
+#base "../vscripts/heroes/hero_nevermore/shadow_fiend_necromastery_lua/shadow_fiend_necromastery_lua_base.txt"
+#base "../vscripts/heroes/hero_nevermore/shadow_fiend_presence_of_the_dark_lord_lua/nevermore_aura.txt"
+#base "../vscripts/heroes/hero_nevermore/shadow_fiend_requiem_of_souls_lua/shadow_fiend_requiem_of_souls_lua_base.txt"
+
+//=======================================================================================================BUILDER=================================================================================================================================================
+
+#base "../vscripts/heroes/hero_builder/builder_talents.txt"
+#base "../vscripts/heroes/hero_builder/builder_tower_repair/builder_tower_repair.txt"
+#base "../vscripts/heroes/hero_builder/builder_wall/builder_wall.txt"
+#base "../vscripts/heroes/hero_builder/builder_turrel/builder_turrel.txt"
+#base "../vscripts/heroes/hero_builder/builder_upgrade/builder_tower_upgrade.txt"
+
+//=========================================================================================================================================================================================================================
+//=========================================================================================================================================================================================================================
+//=========================================================================================================================================================================================================================
+
+//=====================================================================================================AXE========================================================================================================================================================
+
+#base "../vscripts/heroes/hero_axe/axe_talents.txt"
+#base "../vscripts/heroes/hero_axe/axe_berserkers_call_lua/axe_berserkers_call_lua.txt"
+#base "../vscripts/heroes/hero_axe/axe_counter_helix_lua/axe_counter_helix_lua.txt"
+#base "../vscripts/heroes/hero_axe/axe_blood_lua/axe_blood_lua.txt"
+#base "../vscripts/heroes/hero_axe/axe_enrage_lua/axe_enrage_lua.txt"
+
+//=====================================================================================================CENTAUR===================================================================================================================================================
+
+#base "../vscripts/heroes/hero_centaur/centaur_talents.txt"
+#base "../vscripts/heroes/hero_centaur/centaur_warrunner_hoof_stomp_lua/centaur_warrunner_hoof_stomp_lua.txt"
+#base "../vscripts/heroes/hero_centaur/centaur_return/centaur_return.txt"
+#base "../vscripts/heroes/hero_centaur/centaur_repel_lua/centaur_repel_lua.txt"
+#base "../vscripts/heroes/hero_centaur/centaur_ult/centaur_ult.txt"
+
+//=====================================================================================================MARS=======================================================================================================================================================
+
+#base "../vscripts/heroes/hero_mars/mars_talents.txt"
+#base "../vscripts/heroes/hero_mars/mars_bulwark_lua/mars_bulwark_lua.txt"
+#base "../vscripts/heroes/hero_mars/mars_gods_rebuke_lua/mars_gods_rebuke_lua.txt"
+#base "../vscripts/heroes/hero_mars/mars_atrophy_aura_lua/mars_atrophy_aura_lua.txt"
+#base "../vscripts/heroes/hero_mars/mars_lil/mars_lil.txt"
+
+//=====================================================================================================SVEN=======================================================================================================================================================
+
+#base "../vscripts/heroes/hero_sven/sven_talents.txt"
+#base "../vscripts/heroes/hero_sven/sven_bringer/sven_bringer.txt"
+#base "../vscripts/heroes/hero_sven/sven_great_cleave_lua/sven_great_cleave_lua.txt"
+#base "../vscripts/heroes/hero_sven/sven_gods_strength_lua/sven_gods_strength_lua.txt"
+#base "../vscripts/heroes/hero_sven/sven_armor/sven_armor.txt"
+
+//=====================================================================================================SKELETON===================================================================================================================================================
+
+#base "../vscripts/heroes/hero_skeleton/skeleton_talents.txt"
+#base "../vscripts/heroes/hero_skeleton/wraith_king_berserker_lua/wraith_king_berserker_lua.txt"
+#base "../vscripts/heroes/hero_skeleton/wraith_king_vampiric_aura_lua/wraith_king_vampiric_aura_lua.txt"
+#base "../vscripts/heroes/hero_skeleton/wraith_king_reincarnation_lua/wraith_king_reincarnation_lua.txt"
+#base "../vscripts/heroes/hero_skeleton/wraith_king_sceleton/wraith_king_sceleton.txt"
+
+//=====================================================================================================SAND===================================================================================================================================================
+
+#base "../vscripts/heroes/hero_sand/sand_talents.txt"
+#base "../vscripts/heroes/hero_sand/sand_stun/sand_stun.txt"
+#base "../vscripts/heroes/hero_sand/sand_storm/sand_king_sand_storm_lua.txt"
+#base "../vscripts/heroes/hero_sand/sand_caustic/sand_caustic.txt"
+#base "../vscripts/heroes/hero_sand/sand_ult/sand_ult.txt"
+
+//=====================================================================================================DRAGON=================================================================================================================================================
+
+#base "../vscripts/heroes/hero_dragon/dragon_talents.txt"
+#base "../vscripts/heroes/hero_dragon/dragon_fire_ball/dragon_fire_ball.txt"
+#base "../vscripts/heroes/hero_dragon/dragon_2_skill/dragon_2_skill.txt"
+#base "../vscripts/heroes/hero_dragon/dragon_blood_lua/dragon_blood_lua.txt"
+#base "../vscripts/heroes/hero_dragon/dragon_form_lua/dragon_form_lua.txt"
+
+//=====================================================================================================BRISLEBACK=================================================================================================================================================
+
+#base "../vscripts/heroes/hero_bristleback/bristleback_talents.txt"
+#base "../vscripts/heroes/hero_bristleback/bristleback_quill_spray_lua/bristleback_quill_spray_lua_base.txt"
+#base "../vscripts/heroes/hero_bristleback/bristleback_bristleback_lua/bristleback_bristleback_lua_base.txt"
+#base "../vscripts/heroes/hero_bristleback/bristleback_passive/bristleback_passive.txt"
+#base "../vscripts/heroes/hero_bristleback/bristleback_warpath/bristleback_warpath.txt"
+
+//=====================================================================================================LEGION=================================================================================================================================================
+
+#base "../vscripts/heroes/hero_legion/legion_talents.txt"
+#base "../vscripts/heroes/hero_legion/legion_odds/legion_odds.txt"
+#base "../vscripts/heroes/hero_legion/legion_press_the_attack/legion_press_the_attack.txt"
+#base "../vscripts/heroes/hero_legion/legion_courage/legion_courage.txt"
+#base "../vscripts/heroes/hero_legion/legion_ult/legion_ult.txt"
+
+//=====================================================================================================MAGNATAUR=================================================================================================================================================
+
+#base "../vscripts/heroes/hero_magnataur/magnataur_talents.txt"
+#base "../vscripts/heroes/hero_magnataur/magnataur_empower_lua/magnataur_empower_lua.txt"
+#base "../vscripts/heroes/hero_magnataur/magnataur_reverse_polarity_lua/magnataur_reverse_polarity_lua.txt"
+#base "../vscripts/heroes/hero_magnataur/magnataur_bus_rush_lua/magnataur_bus_rush_lua.txt"
+#base "../vscripts/heroes/hero_magnataur/magnataur_shockwave_lua/magnataur_shockwave_lua.txt"
+
+//=========================================================================================================================================================================================================================
+//=========================================================================================================================================================================================================================
+
+//=======================================================================================================TERROR=================================================================================================================================================
+
+#base "../vscripts/heroes/hero_terror/terrorblade_talents.txt"
+#base "../vscripts/heroes/hero_terror/terrorblade_reflection_lua/terrorblade_reflection_lua.txt"
+#base "../vscripts/heroes/hero_terror/terrorblade_conjure_image_lua/terrorblade_conjure_image_lua.txt"
+#base "../vscripts/heroes/hero_terror/terrorblade_metamorphosis_lua/terrorblade_metamorphosis_lua.txt"
+#base "../vscripts/heroes/hero_terror/terrorblade_sunder_lua/terrorblade_sunder_lua.txt"
+
+//=======================================================================================================SNIPER=================================================================================================================================================
+
+#base "../vscripts/heroes/hero_sniper/sniper_talents.txt"
+#base "../vscripts/heroes/hero_sniper/sniper_granade/sniper_granade.txt"
+#base "../vscripts/heroes/hero_sniper/sniper_headshot_lua/sniper_headshot_lua.txt"
+#base "../vscripts/heroes/hero_sniper/sniper_shrapnel_lua/sniper_shrapnel_lua.txt"
+#base "../vscripts/heroes/hero_sniper/sniper_ult/sniper_ult.txt"
+
+//=======================================================================================================PHANTOM ASSASSIN========================================================================================================================================
+
+#base "../vscripts/heroes/hero_phantom/phantom_talents.txt"
+#base "../vscripts/heroes/hero_phantom/phantom_assassin_knifes/phantom_assassin_knifes.txt"
+#base "../vscripts/heroes/hero_phantom/phantom_assassin_phantom_strike_lua/phantom_assassin_phantom_strike_lua.txt"
+#base "../vscripts/heroes/hero_phantom/phantom_assassin_blur_lua/phantom_assassin_blur_lua.txt"
+#base "../vscripts/heroes/hero_phantom/phantom_assassin_coup_de_grace_lua/phantom_assassin_coup_de_grace_lua.txt"
+
+//=====================================================================================================JUGGERTAUT=================================================================================================================================================
+
+#base "../vscripts/heroes/hero_juggernaut/juggernaut_talents.txt"
+#base "../vscripts/heroes/hero_juggernaut/juggernaut_requiem/juggernaut_requiem.txt"
+#base "../vscripts/heroes/hero_juggernaut/juggernaut_blade_dance_lua/juggernaut_blade_dance_lua.txt"
+#base "../vscripts/heroes/hero_juggernaut/juggernaut_fervor_lua/juggernaut_fervor_lua_base.txt"
+#base "../vscripts/heroes/hero_juggernaut/juggernaut_omni_slash_lua/juggernaut_omni_slash_lua.txt"
+
+//=====================================================================================================ARC WARDEN================================================================================================================================================
+
+#base "../vscripts/heroes/hero_arc/arc_talents.txt"
+#base "../vscripts/heroes/hero_arc/arc_flux/arc_flux_lua.txt"
+#base "../vscripts/heroes/hero_arc/arc_field/arc_field.txt"
+#base "../vscripts/heroes/hero_arc/arc_spark/arc_spark.txt"
+#base "../vscripts/heroes/hero_arc/arc_geminate_attack.txt"
+
+//=====================================================================================================SPECTRE====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_spectre/spectre_talents.txt"
+#base "../vscripts/heroes/hero_spectre/spectre_step/spectre_step.txt"
+#base "../vscripts/heroes/hero_spectre/spectre_desolate_dd/spectre_desolate_dd.txt"
+#base "../vscripts/heroes/hero_spectre/spectre_dispersion_dd/spectre_dispersion_dd.txt"
+#base "../vscripts/heroes/hero_spectre/spectre_dispersion_lua/spectre_dispersion_lua.txt"
+#base "../vscripts/heroes/hero_spectre/spectre_haunt/spectre_haunt.txt"
+
+//=====================================================================================================DROW RANGER================================================================================================================================================
+
+#base "../vscripts/heroes/hero_drow_ranger/drow_talents.txt"
+#base "../vscripts/heroes/hero_drow_ranger/drow_ranger_frost_arrows_lua/drow_ranger_frost_arrows_lua.txt"
+#base "../vscripts/heroes/hero_drow_ranger/drow_ranger_powershot_lua/drow_ranger_powershot_lua.txt"
+#base "../vscripts/heroes/hero_drow_ranger/drow_ranger_aura/drow_ranger_aura.txt"
+#base "../vscripts/heroes/hero_drow_ranger/drow_ranger_marksmanship_lua/drow_ranger_marksmanship_lua.txt"
+
+//=====================================================================================================LUNA=======================================================================================================================================================
+
+#base "../vscripts/heroes/hero_luna/luna_talents.txt"
+#base "../vscripts/heroes/hero_luna/luna_moon_glaive_lua/luna_moon_glaive_lua.txt"
+#base "../vscripts/heroes/hero_luna/luna_starfall/luna_starfall.txt"
+#base "../vscripts/heroes/hero_luna/luna_lunar_blessing_lua/luna_lunar_blessing_lua.txt"
+#base "../vscripts/heroes/hero_luna/luna_moon/luna_moon.txt"
+
+//=====================================================================================================MEDUSA=======================================================================================================================================================
+
+#base "../vscripts/heroes/hero_medusa/medusa_talents.txt"
+#base "../vscripts/heroes/hero_medusa/medusa_split_shot_lua/medusa_split_shot_lua.txt"
+#base "../vscripts/heroes/hero_medusa/medusa_mana_shield_lua/medusa_mana_shield_lua.txt"
+#base "../vscripts/heroes/hero_medusa/medusa_mystic_snake_lua/medusa_mystic_snake_lua.txt"
+#base "../vscripts/heroes/hero_medusa/medusa_poison_arrow_lua/medusa_poison_arrow_lua.txt"
+#base "../vscripts/heroes/hero_medusa/medusa_stone_gaze_lua/medusa_stone_gaze_lua.txt"
+
+
+//=========================================================================================================================================================================================================================
+
+#base "../vscripts/heroes/hero_treant/treant_talents.txt"
+#base "../vscripts/heroes/hero_treant/treant_skill_1/treant_skill_1.txt"
+#base "../vscripts/heroes/hero_treant/treant_skill_2/treant_skill_2.txt"
+#base "../vscripts/heroes/hero_treant/treant_skill_3/treant_skill_3.txt"
+#base "../vscripts/heroes/hero_treant/treant_skill_ult/treant_ult.txt"
+
+//=======================================================================================================ENCHANTRESS=================================================================================================================================================
+
+#base "../vscripts/heroes/hero_enchantress/enchantress_talents.txt"
+#base "../vscripts/heroes/hero_enchantress/enchantress_natures_attendants_lua/enchantress_natures_attendants_lua.txt"
+#base "../vscripts/heroes/hero_enchantress/enchantress_natures/enchantress_natures.txt"
+#base "../vscripts/heroes/hero_enchantress/enchantress_two_shots/enchantress_two_shots.txt"
+#base "../vscripts/heroes/hero_enchantress/enchantress_impetus_lua/enchantress_impetus_lua.txt"
+
+//=======================================================================================================LINA===================================================================================================================================================
+
+#base "../vscripts/heroes/hero_lina/lina_talents.txt"
+#base "../vscripts/heroes/hero_lina/lina_dragon_slave_lua/lina_dragon_slave_lua.txt"
+#base "../vscripts/heroes/hero_lina/lina_stun/lina_stun.txt"
+#base "../vscripts/heroes/hero_lina/lina_fiery_soul_lua/lina_fiery_soul_lua.txt"
+#base "../vscripts/heroes/hero_lina/lina_laguna_blade_lua/lina_laguna_blade_lua.txt"
+
+//=====================================================================================================LION=======================================================================================================================================================
+
+#base "../vscripts/heroes/hero_lion/lion_talents.txt"
+#base "../vscripts/heroes/hero_lion/lion_earth_spike_lua/lion_earth_spike_lua.txt"
+#base "../vscripts/heroes/hero_lion/lion_soul_collector/lion_soul_collector.txt"
+#base "../vscripts/heroes/hero_lion/lion_finger_of_death_lua/lion_finger_of_death_lua.txt"
+#base "../vscripts/heroes/hero_lion/lion_mana_aura/lion_mana_aura.txt"
+
+//=====================================================================================================ZUUS=======================================================================================================================================================
+
+#base "../vscripts/heroes/hero_zuus/zuus_talents.txt"
+#base "../vscripts/heroes/hero_zuus/zuus_lighting/arc_lightning.txt"
+#base "../vscripts/heroes/hero_zuus/zuus_lighting_bolt/zuus_lighting_bolt.txt"
+#base "../vscripts/heroes/hero_zuus/zuus_nimbus/zuus_nimbus.txt"
+#base "../vscripts/heroes/hero_zuus/zuus_passive/zuus_passive.txt"
+#base "../vscripts/heroes/hero_zuus/zuus_thunder/zuus_thunder.txt"
+
+//=====================================================================================================DAZZLE=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_dazzle/dazzle_talents.txt"
+#base "../vscripts/heroes/hero_dazzle/dazzle_poison_touch/dazzle_poison_touch_lua.txt"
+#base "../vscripts/heroes/hero_dazzle/dazzle_shallow_grave/dazzle_shallow_grave_lua.txt"
+#base "../vscripts/heroes/hero_dazzle/dazzle_shadow_wave/dazzle_shadow_wave_lua.txt"
+#base "../vscripts/heroes/hero_dazzle/dazzle_juju/dazzle_juju.txt"
+
+//=====================================================================================================WARLOCK=============================================================================================================================================
+
+#base "../vscripts/heroes/hero_warlock/warlock_talents.txt"
+#base "../vscripts/heroes/hero_warlock/warlock_fatal_bonds_lua/warlock_fatal_bonds_lua.txt"
+#base "../vscripts/heroes/hero_warlock/warlock_shadow_word_lua/warlock_shadow_word_lua.txt"
+#base "../vscripts/heroes/hero_warlock/warlock_ripping/warlock_ripping.txt"
+#base "../vscripts/heroes/hero_warlock/warlock_golem/warlock_golem.txt"
+
+//=====================================================================================================SHADOW SHAMAN=============================================================================================================================================
+
+#base "../vscripts/heroes/hero_shaman/shaman_talents.txt"
+#base "../vscripts/heroes/hero_shaman/shaman_ether_shok/shadow_shaman_ether_shock_lua.txt"
+#base "../vscripts/heroes/hero_shaman/shaman_hex/shaman_hex.txt"
+#base "../vscripts/heroes/hero_shaman/shaman_shackles/shaman_shackles.txt"
+#base "../vscripts/heroes/hero_shaman/shaman_wards/shaman_wards.txt"
+
+//=====================================================================================================WINDRANGER================================================================================================================================================
+
+#base "../vscripts/heroes/hero_windranger/windrunner_talents.txt"
+#base "../vscripts/heroes/hero_windranger/windrunner_powershot_lua/windrunner_powershot_lua.txt"
+#base "../vscripts/heroes/hero_windranger/windrunner_windrun/windrunner_windrun.txt"
+#base "../vscripts/heroes/hero_windranger/windrunner_passive_lua/windrunner_passive_lua.txt"
+#base "../vscripts/heroes/hero_windranger/windrunner_arrow/windrunner_arrow.txt"
+
+//=====================================================================================================PUGNA=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_pugna/pugna_talents.txt"
+#base "../vscripts/heroes/hero_pugna/pugna_blast/pugna_blast.txt"
+#base "../vscripts/heroes/hero_pugna/pugna_decrepify/pugna_decrepify.txt"
+#base "../vscripts/heroes/hero_pugna/pugna_ward/pugna_ward.txt"
+#base "../vscripts/heroes/hero_pugna/pugna_life_drain/pugna_life_drain_datadriven.txt"
+
+//=====================================================================================================SKYMAGE=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_skywrath_mage/skywrath_mage_talents.txt"
+#base "../vscripts/heroes/hero_skywrath_mage/skywrath_mage_arcane_bolt_lua/skywrath_mage_arcane_bolt_lua.txt"
+#base "../vscripts/heroes/hero_skywrath_mage/skywrath_mage_concussive_shot_lua/skywrath_mage_concussive_shot_lua.txt"
+#base "../vscripts/heroes/hero_skywrath_mage/skywrath_mage_ancient_seal_lua/skywrath_mage_ancient_seal_lua.txt"
+#base "../vscripts/heroes/hero_skywrath_mage/skywrath_mage_mystic_flare_lua/skywrath_mage_mystic_flare_lua.txt"
+
+//=====================================================================================================DOOM=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_doom_bringer/doom_talents.txt"
+#base "../vscripts/heroes/hero_doom_bringer/blade/blade.txt"
+#base "../vscripts/heroes/hero_doom_bringer/devour/devour.txt"
+#base "../vscripts/heroes/hero_doom_bringer/earth/lina_firehell.txt"
+#base "../vscripts/heroes/hero_doom_bringer/ulti/ulti.txt"
+
+//=====================================================================================================PUDGE=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_pudge/pudge_talents.txt"
+#base "../vscripts/heroes/hero_pudge/dismember/dismember.txt"
+#base "../vscripts/heroes/hero_pudge/flesh_heap/flesh.txt"
+#base "../vscripts/heroes/hero_pudge/hook/hook.txt"
+#base "../vscripts/heroes/hero_pudge/rot/rot.txt"
+
+//=====================================================================================================TEHAS=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_techies/techies_talents.txt"
+#base "../vscripts/heroes/hero_techies/techies_suicide/suicide.txt"
+#base "../vscripts/heroes/hero_techies/techies_stasis_trap/stasis_trap.txt"
+#base "../vscripts/heroes/hero_techies/techies_remote_mines/remote_mines.txt"
+#base "../vscripts/heroes/hero_techies/techies_land_mines/land_mines.txt"
+
+//=====================================================================================================TROLL=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_troll_warlord/troll_warlord_talents.txt"
+#base "../vscripts/heroes/hero_troll_warlord/troll_warlord_rage_lua/troll_warlord_rage_lua.txt"
+#base "../vscripts/heroes/hero_troll_warlord/troll_warlord_axes_lua/troll_warlord_axes_lua.txt"
+#base "../vscripts/heroes/hero_troll_warlord/troll_warlord_fervor_lua/troll_warlord_fervor_lua.txt"
+#base "../vscripts/heroes/hero_troll_warlord/troll_warlord_battle_trance_lua/troll_warlord_battle_trance_lua.txt"
+
+//=====================================================================================================ALCHEMIST=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_alchemist/alchemist_talents.txt"
+#base "../vscripts/heroes/hero_alchemist/alchemist_acid_spray_lua/alchemist_acid_spray_lua.txt"
+#base "../vscripts/heroes/hero_alchemist/alchemist_greevils_greed_lua/alchemist_greevils_greed_lua.txt"
+#base "../vscripts/heroes/hero_alchemist/alchemist_unstable_concoction_lua/alchemist_unstable_concoction_lua.txt"
+#base "../vscripts/heroes/hero_alchemist/alchemist_chemical_rage_lua/alchemist_chemical_rage_lua.txt"
+#base "../vscripts/heroes/hero_alchemist/alchemist_corrosive_weaponry_lua/alchemist_corrosive_weaponry_lua.txt"
+
+//=====================================================================================================BLOODSEEKER=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_bloodseeker/bloodseeker_talents.txt"
+#base "../vscripts/heroes/hero_bloodseeker/bloodseeker_bloodrage_lua/bloodseeker_bloodrage_lua.txt"
+#base "../vscripts/heroes/hero_bloodseeker/bloodseeker_blood_rite_lua/bloodseeker_blood_rite_lua.txt"
+#base "../vscripts/heroes/hero_bloodseeker/bloodseeker_thirst_lua/bloodseeker_thirst_lua.txt"
+#base "../vscripts/heroes/hero_bloodseeker/bloodseeker_mist_lua/bloodseeker_mist_lua.txt"
+
+//=====================================================================================================GYROCOPTER=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_gyrocopter/gyrocopter_talents.txt"
+#base "../vscripts/heroes/hero_gyrocopter/gyrocopter_rocket_barrage_lua/gyrocopter_rocket_barrage_lua.txt"
+#base "../vscripts/heroes/hero_gyrocopter/gyrocopter_homing_missile_lua/gyrocopter_homing_missile_lua.txt"
+#base "../vscripts/heroes/hero_gyrocopter/gyrocopter_flak_cannon_lua/gyrocopter_flak_cannon_lua.txt"
+#base "../vscripts/heroes/hero_gyrocopter/gyrocopter_call_down_lua/gyrocopter_call_down_lua.txt"
+
+//=====================================================================================================APPARITION==================================================================================================================================================
+
+#base "../vscripts/heroes/hero_ancient_apparition/ancient_apparition_talents.txt"
+#base "../vscripts/heroes/hero_ancient_apparition/ancient_apparition_cold_feet_lua/ancient_apparition_cold_feet_lua.txt"
+#base "../vscripts/heroes/hero_ancient_apparition/ancient_apparition_ice_vortex_lua/ancient_apparition_ice_vortex_lua.txt"
+#base "../vscripts/heroes/hero_ancient_apparition/ancient_apparition_chilling_touch_lua/ancient_apparition_chilling_touch_lua.txt"
+#base "../vscripts/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_lua/ancient_apparition_ice_blast_lua.txt"
+
+//=====================================================================================================SILENCER==================================================================================================================================================
+
+#base "../vscripts/heroes/hero_silencer/silencer_talents.txt"
+#base "../vscripts/heroes/hero_silencer/curse_of_the_silent_lua/curse_of_the_silent_lua.txt"
+#base "../vscripts/heroes/hero_silencer/glaives_of_wisdom_lua/glaives_of_wisdom_lua.txt"
+#base "../vscripts/heroes/hero_silencer/global_silence_lua/global_silence_lua.txt"
+#base "../vscripts/heroes/hero_silencer/last_word_lua/last_word_lua.txt"
+
+//=====================================================================================================MUERTA==================================================================================================================================================
+
+// #base "../vscripts/heroes/hero_ancient_apparition/ancient_apparition_talents.txt"
+#base "../vscripts/heroes/hero_muerta/muerta_gunslinger_lua/muerta_gunslinger_lua.txt"
+#base "../vscripts/heroes/hero_muerta/muerta_pierce_the_veil_lua/muerta_pierce_the_veil_lua.txt"
+
+//=====================================================================================================MARCI=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_marci/marci_talents.txt"
+#base "../vscripts/heroes/hero_marci/spells.txt"
+
+//=====================================================================================================CRYSTAL=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_crystal/crystal_talents.txt"
+#base "../vscripts/heroes/hero_crystal/crystal_spells.txt"
+
+//=====================================================================================================HUSKAR=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_huskar/huskar_talents.txt"
+#base "../vscripts/heroes/hero_huskar/huskar_berserkers_blood_lua/huskar_berserkers_blood_lua.txt"
+#base "../vscripts/heroes/hero_huskar/huskar_burning_spear_lua/huskar_burning_spear_lua.txt"
+#base "../vscripts/heroes/hero_huskar/huskar_life_break_lua/huskar_life_break_lua.txt"
+#base "../vscripts/heroes/hero_huskar/huskar_inner_fire_lua/huskar_inner_fire_lua.txt"
+
+//=====================================================================================================VIPER=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_viper/viper_talents.txt"
+#base "../vscripts/heroes/hero_viper/corrosive_skin/corrosive_skin.txt"
+#base "../vscripts/heroes/hero_viper/nethertoxin/nethertoxin.txt"
+#base "../vscripts/heroes/hero_viper/poison_attack/poison_attack.txt"
+#base "../vscripts/heroes/hero_viper/viper_strike/viper_strike.txt"
+
+//=====================================================================================================hero spirit breaker=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_spirit_breaker/spirit_breaker_talents.txt"
+#base "../vscripts/heroes/hero_spirit_breaker/spirit_breaker_bulldoze_lua/spirit_breaker_bulldoze_lua.txt"
+#base "../vscripts/heroes/hero_spirit_breaker/spirit_breaker_charge_of_darkness_lua/spirit_breaker_charge_of_darkness_lua.txt"
+#base "../vscripts/heroes/hero_spirit_breaker/spirit_breaker_greater_bash_lua/spirit_breaker_greater_bash_lua.txt"
+#base "../vscripts/heroes/hero_spirit_breaker/spirit_breaker_nether_strike_lua/spirit_breaker_nether_strike_lua.txt"
+
+//=====================================================================================================WITCH DOCTOR=====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_witch_doctor/witch_doctor_talents.txt"
+#base "../vscripts/heroes/hero_witch_doctor/death_ward/death_ward.txt"
+#base "../vscripts/heroes/hero_witch_doctor/maledict/maledict.txt"
+#base "../vscripts/heroes/hero_witch_doctor/paralyzing_cask/paralyzing_cask.txt"
+#base "../vscripts/heroes/hero_witch_doctor/voodoo_restoration/voodoo_restoration.txt"
+
+//===================================================================================================== dawnbreaker =====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_dawnbreaker/dawnbreaker_talents.txt"
+#base "../vscripts/heroes/hero_dawnbreaker/dawnbreaker_starbreaker_lua/dawnbreaker_starbreaker_lua.txt"
+#base "../vscripts/heroes/hero_dawnbreaker/dawnbreaker_celestial_hammer_lua/dawnbreaker_celestial_hammer_lua.txt"
+#base "../vscripts/heroes/hero_dawnbreaker/dawnbreaker_luminosity_lua/dawnbreaker_luminosity_lua.txt"
+#base "../vscripts/heroes/hero_dawnbreaker/dawnbreaker_solar_guardian_lua/dawnbreaker_solar_guardian_lua.txt"
+
+//===================================================================================================== hero_necrolyte =====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_necrolyte/necrolyte_talents.txt"
+#base "../vscripts/heroes/hero_necrolyte/necrolyte_death_pulse/necrolyte_death_pulse.txt"
+#base "../vscripts/heroes/hero_necrolyte/necrolyte_ghost_shroud/necrolyte_ghost_shroud.txt"
+#base "../vscripts/heroes/hero_necrolyte/necrolyte_heartstopper_aura/necrolyte_heartstopper_aura.txt"
+#base "../vscripts/heroes/hero_necrolyte/necrolyte_reapers_scythe/necrolyte_reapers_scythe.txt"
+#base "../vscripts/heroes/hero_necrolyte/necrolyte_sadist/necrolyte_sadist.txt"
+
+//===================================================================================================== hero_vengeful_spirit =====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_vengeful_spirit/hero_vengeful_spirit_talents.txt"
+#base "../vscripts/heroes/hero_vengeful_spirit/command_aura/command_aura.txt"
+#base "../vscripts/heroes/hero_vengeful_spirit/magic_missile/magic_missile.txt"
+#base "../vscripts/heroes/hero_vengeful_spirit/nether_swap/nether_swap.txt"
+#base "../vscripts/heroes/hero_vengeful_spirit/wave_of_terror/wave_of_terror.txt"
+#base "../vscripts/heroes/hero_vengeful_spirit/vengeful_tempest_double/vengeful_tempest_double.txt"
+
+//===================================================================================================== RAZOR =====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_razor/hero_razor_talents.txt"
+#base "../vscripts/heroes/hero_razor/static_link_lua/static_link_lua.txt"
+#base "../vscripts/heroes/hero_razor/razor_eye_of_the_storm_lua/razor_eye_of_the_storm_lua.txt"
+#base "../vscripts/heroes/hero_razor/razor_plasma_field_lua/razor_plasma_field_lua.txt"
+#base "../vscripts/heroes/hero_razor/razor_storm_surge_lua/razor_storm_surge_lua.txt"
+#base "../vscripts/heroes/hero_razor/razor_storm_surge_lua/razor_unstable_current_bh.txt"
+
+//=====================================================================================================  death prophet =====================================================================================================================================================
+
+#base "../vscripts/heroes/hero_death_prophet/death_prophet_talents.txt"
+#base "../vscripts/heroes/hero_death_prophet/death_prophet_crypt_swarm_bh/death_prophet_crypt_swarm_bh.txt"
+#base "../vscripts/heroes/hero_death_prophet/death_prophet_exorcism_bh/death_prophet_exorcism_bh.txt"
+#base "../vscripts/heroes/hero_death_prophet/death_prophet_ghastly_haunting/death_prophet_ghastly_haunting.txt"
+#base "../vscripts/heroes/hero_death_prophet/death_prophet_occultism/death_prophet_occultism.txt"
+#base "../vscripts/heroes/hero_death_prophet/death_prophet_spirit_siphon_bh/death_prophet_spirit_siphon_bh.txt"
+
+//=====================================================================================================WISP=================================================================================================================================================
+
+#base "../vscripts/heroes/hero_wisp/wisp_talents.txt"
+#base "../vscripts/heroes/hero_wisp/wisp_tether/wisp_tether_lua.txt"
+#base "../vscripts/heroes/hero_wisp/wisp_tether/lifestealer_infest_bh.txt"
+#base "../vscripts/heroes/hero_wisp/wisp_spirits/wisp_spirits_lua.txt"
+#base "../vscripts/heroes/hero_wisp/wisp_spirits/wisp_spirits_bh.txt"
+#base "../vscripts/heroes/hero_wisp/wisp_overcharge/wisp_overcharge.txt"
+#base "../vscripts/heroes/hero_wisp/wisp_relocate/wisp_relocate.txt"
+#base "../vscripts/heroes/hero_wisp/lufigan/abilities.txt"
+
+//=====================================================================================================TEMPLAR ASSASSIN==================================================================================================================================================
+
+#base "../vscripts/heroes/hero_templar_assassin/templar_assassin_refraction_lua/templar_assassin_refraction_lua.txt"
+#base "../vscripts/heroes/hero_templar_assassin/templar_assassin_meld_lua/templar_assassin_meld_lua.txt"
+#base "../vscripts/heroes/hero_templar_assassin/templar_assassin_psi_blades_lua/templar_assassin_psi_blades_lua.txt"
+#base "../vscripts/heroes/hero_templar_assassin/templar_assassin_trap_lua/templar_assassin_trap_lua.txt"
+
+
+//===================================================================================================== RIKI ==================================================================================================================================================
+
+#base "../vscripts/heroes/hero_riki/riki_talents.txt"
+#base "../vscripts/heroes/hero_riki/riki_blink_strike_lua/riki_blink_strike_lua.txt"
+#base "../vscripts/heroes/hero_riki/riki_smoke_screen_lua/riki_smoke_screen_lua.txt"
+#base "../vscripts/heroes/hero_riki/riki_cloak_and_dagger_lua/riki_cloak_and_dagger_lua.txt"
+#base "../vscripts/heroes/hero_riki/riki_tricks_of_the_trade_lua/riki_tricks_of_the_trade_lua.txt"
+
+//===================================================================================================== Leshrac ==================================================================================================================================================
+
+#base "../vscripts/heroes/hero_leshrac/leshrac_talents.txt"
+#base "../vscripts/heroes/hero_leshrac/leshrac_split_earth_lua/leshrac_split_earth_lua.txt"
+#base "../vscripts/heroes/hero_leshrac/leshrac_diabolic_edict_lua/leshrac_diabolic_edict_lua.txt"
+#base "../vscripts/heroes/hero_leshrac/leshrac_lightning_storm_lua/leshrac_lightning_storm_lua.txt"
+#base "../vscripts/heroes/hero_leshrac/leshrac_pulse_nova_lua/leshrac_pulse_nova_lua.txt"
+
+//===================================================================================================== jakiro ==================================================================================================================================================
+
+#base "../vscripts/heroes/hero_jakiro/jakiro_talents.txt"
+#base "../vscripts/heroes/hero_jakiro/jakiro_dual_breath_lua/jakiro_dual_breath_lua.txt"
+#base "../vscripts/heroes/hero_jakiro/jakiro_ice_path_lua/jakiro_ice_path_lua.txt"
+#base "../vscripts/heroes/hero_jakiro/jakiro_liquid_fire_lua/jakiro_liquid_fire_lua.txt"
+#base "../vscripts/heroes/hero_jakiro/jakiro_liquid_ice_lua/jakiro_liquid_ice_lua.txt"
+#base "../vscripts/heroes/hero_jakiro/jakiro_macropyre_lua/jakiro_macropyre_lua.txt"
+
+//==================================================================================================== BROODMATHER===================================================================================================================================================
+
+#base "../vscripts/heroes/hero_broodmother/broodmother_talents.txt"
+#base "../vscripts/heroes/hero_broodmother/broodmother_web/broodmother_web.txt"
+#base "../vscripts/heroes/hero_broodmother/broodmother_steal/broodmother_steal.txt"
+#base "../vscripts/heroes/hero_broodmother/broodmother_poison/broodmother_poison.txt"
+#base "../vscripts/heroes/hero_broodmother/broodmother_ult/broodmother_ult.txt"
+
+//==================================================================================================== URSA ===================================================================================================================================================
+
+#base "../vscripts/heroes/hero_ursa/ursa_talents.txt"
+#base "../vscripts/heroes/hero_ursa/ursa_earthshock_lua/ursa_earthshock_lua.txt"
+#base "../vscripts/heroes/hero_ursa/ursa_enrage_lua/ursa_enrage_lua.txt"
+#base "../vscripts/heroes/hero_ursa/ursa_fury_swipes_lua/ursa_fury_swipes_lua.txt"
+#base "../vscripts/heroes/hero_ursa/ursa_overpower_lua/ursa_overpower_lua.txt"
+
+//==============================================================================================new boss ability===========================
+
+#base "../vscripts/abilities/bosses/2023/first_skill/first_skill.txt"
+#base "../vscripts/abilities/bosses/2023/second_skill/second_skill.txt"
+#base "../vscripts/abilities/bosses/2023/third_skill/third_skill.txt"
+#base "../vscripts/abilities/bosses/2023/fourth_skill/fourth_skill.txt"
+#base "../vscripts/abilities/bosses/2023/fifth_skill/fifth_skill.txt"
+#base "../vscripts/abilities/bosses/2023/ult/ult.txt"
+
+//================================================================================================ boss_earthshaker ======================
+
+#base "../vscripts/bosses/EARTHSHAKER/earthshaker_fissure_lua/earthshaker_fissure_lua.txt"
+#base "../vscripts/bosses/EARTHSHAKER/earthshaker_enchant_totem_lua/earthshaker_enchant_totem_lua.txt"
+#base "../vscripts/bosses/EARTHSHAKER/earthshaker_aftershock_lua/earthshaker_aftershock_lua.txt"
+#base "../vscripts/bosses/EARTHSHAKER/earthshaker_echo_slam_lua/earthshaker_echo_slam_lua.txt"
+#base "../vscripts/bosses/EARTHSHAKER/earthshaker_enrage_lua/earthshaker_enrage_lua.txt"
+#base "../vscripts/bosses/EARTHSHAKER/earthshaker_vacuum_lua/earthshaker_vacuum_lua.txt"

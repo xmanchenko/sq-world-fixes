@@ -1,0 +1,42 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// Death Prophet: Carrion Swarm
+	//=================================================================================================================
+	"death_prophet_occultism"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_death_prophet/death_prophet_occultism/death_prophet_occultism"
+		"AbilityTextureName"			"undying_tombstone"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"1"
+		"InnateAbility"					"1"
+		"AbilityCooldown"				"60"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastRange"				"900"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"duration"						"60"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"900"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"ghost_count"						"5"
+			}
+		}
+	}
+}
