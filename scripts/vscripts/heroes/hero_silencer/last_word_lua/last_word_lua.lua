@@ -5,7 +5,9 @@ LinkLuaModifier( "modifier_special_bonus_unique_npc_dota_hero_silencer_str50", "
 silencer_last_word_lua = {}
 
 function silencer_last_word_lua:GetIntrinsicModifierName()
-    return "modifier_special_bonus_unique_npc_dota_hero_silencer_str50"
+	if self:GetCaster():FindAbilityByName("special_bonus_unique_npc_dota_hero_silencer_str50") then
+    	return "modifier_special_bonus_unique_npc_dota_hero_silencer_str50"
+	end
 end
 
 function silencer_last_word_lua:GetManaCost(iLevel)
@@ -245,11 +247,7 @@ function modifier_special_bonus_unique_npc_dota_hero_silencer_str50:DeclareFunct
 end
 
 function modifier_special_bonus_unique_npc_dota_hero_silencer_str50:GetModifierDamageOutgoing_Percentage(data)
-	if IsClient() then
-		return 0
-	end
-	if self:GetCaster():FindAbilityByName("special_bonus_unique_npc_dota_hero_silencer_str50") and data.target and data.target:IsSilenced() then
-		print("silence")
+	if data.target and data.target:HasModifier("modifier_silencer_global_silence_lua") or data.target:HasModifier("modifier_silencer_last_word_lua_silence") then
 		return 100
 	end
 	return 0

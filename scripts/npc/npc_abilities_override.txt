@@ -127,6 +127,11 @@
 "item_recipe_devastator"					"REMOVED"
 "item_angels_demise"					    "REMOVED"
 "item_recipe_angels_demise"					"REMOVED"
+"item_rapier"					            "REMOVED"
+"item_recipe_rapier"					    "REMOVED"
+"item_disperser"					        "REMOVED"
+"item_recipe_disperser"					    "REMOVED"
+
     "item_tpscroll"
       {
         // General

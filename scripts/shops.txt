@@ -162,6 +162,7 @@
 		"item"		"item_assault_lua"
 		"item"		"item_bloodstone_lua"
 		"item"		"item_helm_of_the_overlord"		
+		"item"		"item_golden_egg_lua"		
 	}
 			
 	"weapons"
@@ -184,11 +185,11 @@
 		"item"		"item_mage_heart_lua"
 		"item"		"item_agility_heart_lua"
 		"item"		"item_silver_edge"
-		"item"		"item_rapier"
+		"item"		"item_rapier_lua"
 		"item"		"item_bloodthorn"
 		"item"		"item_abyssal_blade"	
 		"item"		"item_revenants_brooch"	
-		"item"		"item_disperser"
+		"item"		"item_disperser_lua"
 	}
 					
 	"artifacts"

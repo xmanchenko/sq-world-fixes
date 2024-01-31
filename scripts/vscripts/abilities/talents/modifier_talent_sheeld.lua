@@ -13,18 +13,20 @@ function modifier_talent_sheeld:RemoveOnDeath()
 end
 
 function modifier_talent_sheeld:OnCreated( kv )
+	if IsServer() then
+		self:SetStackCount(1)
+	end
 	self.value = {7.5, 10, 12.5, 15, 17.5, 20}
 	self.is_broken = false
 	self.sheeld_max = self.value[self:GetStackCount()] * 0.01 * self:GetParent():GetMaxHealth()
 	self.sheeld_regen = self.sheeld_max / 25 * 0.03
-	self.current_sheeld_health = self.sheeld_max
+	self.current_sheeld_health = self.value[self:GetStackCount() or 1] * 0.01 * self:GetParent():GetMaxHealth()
 	if IsClient() then
 		self:StartIntervalThink(0.03)
 	end
 	if not IsServer() then
 		return
 	end
-	self:SetStackCount(1)
 	ListenToGameEvent("dota_player_gained_level", Dynamic_Wrap(self, "LevelUP"), self)
 	self.iPlayerID = self:GetParent():GetPlayerID()
 	self:SetHasCustomTransmitterData( true )

@@ -396,7 +396,7 @@
 			"block"					"6 7 8 9 10 11 12 13 14 15"
 			"dmg"					"10 11 12 13 14 15 16 17 18 19"
 			"gold"					"5 6 7 8 9 10 11 12 13 14"
-			// "stats_bonus"			"1 2 3 4 5 6 7 8 9 10"
+			"stats_bonus"			"1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5"
 		}
 	}	
 	"spell_item_pet_rda_roshan_2"
@@ -444,6 +444,22 @@
 			"speed"						"1700 1900 2100 2300 2500 2700 2900 3100 3300 3500"
 			"armor_per_level"			"0.5 0.75 1.0 1.25 1.50 1.75 2.0 2.25 2.50 2.75"
 			"magic_resistance"			"5 10 15 20 25 30 35 40 45 50"
+		}
+	}
+	"spell_item_pet_rda_bp_3"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_HIDDEN"       
+        "BaseClass"						"ability_lua"
+		"AbilityTextureName"			"pets/skeleton"
+		"ScriptFile"					"items/pets/item_pet_rda_bp_3"
+		"AbilityValues"
+		{
+			"speed"						"1700 1900 2100 2300 2500 2700 2900 3100 3300 3500"
+			"attack_targets"			"2"
+			"second_target_damage"		"30 35 40 45 50 55 60 65 70 75"
+			"cleave_damage"				"28 36 44 52 60 68 76 84 92 100"
+			"attack_speed"				"20 25 30 35 40 45 50 55 60 65"
+			"attack_lifesteal"			"3 4 5 6 7 8 9 10 11 12"
 		}
 	}
     //======================================================================================================================================

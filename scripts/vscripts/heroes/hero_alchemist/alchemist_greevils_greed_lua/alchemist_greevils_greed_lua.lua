@@ -111,7 +111,7 @@ end
 
 function modifier_alchemist_greevils_greed_lua:OnDeath( params )
 if self:GetParent():PassivesDisabled() then return end
-	if params.attacke == self:GetParent() then
+	if params.attacker == self:GetParent() then
 		if self:GetParent():FindAbilityByName("special_bonus_unique_npc_dota_hero_alchemist_str50")	then
 			self:IncrementStackCount()
 		end

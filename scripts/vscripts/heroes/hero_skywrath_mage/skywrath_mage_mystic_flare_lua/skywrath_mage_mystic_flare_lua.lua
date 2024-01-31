@@ -12,6 +12,13 @@ function skywrath_mage_mystic_flare_lua:GetAOERadius()
 	return self:GetSpecialValueFor( "radius" )
 end
 
+function skywrath_mage_mystic_flare_lua:GetCooldown(level)
+	if self:GetCaster():HasModifier("modifier_hero_sky_mage_buff_1") then
+		return self.BaseClass.GetCooldown( self, level ) - 20
+	end
+	return self.BaseClass.GetCooldown( self, level )
+end
+
 --------------------------------------------------------------------------------
 -- Ability Start
 function skywrath_mage_mystic_flare_lua:OnSpellStart()

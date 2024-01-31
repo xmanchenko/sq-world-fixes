@@ -202,28 +202,16 @@ function CAddonAdvExGameMode:OnChat( event )
 	if text == "dump" and not _G.DumpSent then
 		_G.DumpSent = true
 		local t = {}
-		t.casters = {}
-		t.abilities = {}
 		local all_ent = Entities:FindAllInSphere(Vector(0,0,0), 99999)
 		for _,ent in pairs(all_ent) do
 			local class = ent:GetClassname()
 			if class == "npc_dota_thinker" then
 				local modifiers = ent:FindAllModifiers()
 				if modifiers[1] then
-					local main_modifier = modifiers[1]
-					local caster = main_modifier:GetCaster()
-					local ability = main_modifier:GetAbility()
-					if caster and ability then
-						if t.casters[caster:GetUnitName()] then
-							t.casters[caster:GetUnitName()] = t.casters[caster:GetUnitName()] + 1
-						else
-							t.casters[caster:GetUnitName()] = 1
-						end
-						if t.abilities[ability:GetAbilityName()] then
-							t.abilities[ability:GetAbilityName()] = t.abilities[ability:GetAbilityName()] + 1
-						else
-							t.abilities[ability:GetAbilityName()] = 1
-						end
+					if t[modifiers:GetName()] then
+						t[modifiers:GetName()] = t[modifiers:GetName()] + 1
+					else
+						t[modifiers:GetName()] = 1
 					end
 				end
 			end
@@ -1716,7 +1704,7 @@ Convars:RegisterCommand( "chek_localize", function( cmd )
 Convars:RegisterCommand( "addmod", function( cmd )
 	local hHero = PlayerResource:GetSelectedHeroEntity(0)
 	if hHero then
-		hHero:AddAbility("spell_pet_rda_armor")
+		hHero:AddAbility("neutral_slot_ability")
 	end
     end, "chek_localize", FCVAR_CHEAT
 )

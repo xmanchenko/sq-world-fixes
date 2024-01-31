@@ -4577,4 +4577,81 @@ heroTalentsData = {
             place = {"int 13"}, url = "/npc_dota_hero_ursa/int/3.png", name = "npc_dota_hero_ursa_int13", 
         },
     },
+    npc_dota_hero_weaver = {
+        -------------------- STR -----------------------------------------------------------
+        npc_dota_hero_weaver_str6 = {
+            place = {"str 6"}, url = "/npc_dota_hero_weaver/str/2.png", name = "npc_dota_hero_weaver_str6", 
+        },
+        npc_dota_hero_weaver_str7 = {
+            place = {"str 7"}, url = "/npc_dota_hero_weaver/str/4.png", name = "npc_dota_hero_weaver_str7", 
+        },
+        npc_dota_hero_weaver_str8 = {
+            place = {"str 8"}, url = "/npc_dota_hero_weaver/str/1.png", name = "npc_dota_hero_weaver_str8", 
+        },  
+        npc_dota_hero_weaver_str9 = {
+            place = {"str 9"}, url = "/npc_dota_hero_weaver/str/2.png", name = "npc_dota_hero_weaver_str9", 
+        },
+        npc_dota_hero_weaver_str10 = {
+            place = {"str 10"}, url = "/npc_dota_hero_weaver/str/5.png", name = "npc_dota_hero_weaver_str10", 
+        },
+        npc_dota_hero_weaver_str11 = {
+            place = {"str 11"}, url = "/npc_dota_hero_weaver/str/1.png", name = "npc_dota_hero_weaver_str11", 
+        },
+        npc_dota_hero_weaver_str12 = {
+            place = {"str 12"}, url = "/npc_dota_hero_weaver/str/2.png", name = "npc_dota_hero_weaver_str12", 
+        },
+        npc_dota_hero_weaver_str13 = {
+            place = {"str 13"}, url = "/npc_dota_hero_weaver/str/2.png", name = "npc_dota_hero_weaver_str13", 
+        },
+        -------------------- AGI -----------------------------------------------------------
+        npc_dota_hero_weaver_agi6 = {
+            place = {"agi 6"}, url = "/npc_dota_hero_weaver/agi/2.png", name = "npc_dota_hero_weaver_agi6", 
+        },
+        npc_dota_hero_weaver_agi7 = {
+            place = {"agi 7"}, url = "/npc_dota_hero_weaver/agi/3.png", name = "npc_dota_hero_weaver_agi7", 
+        },
+        npc_dota_hero_weaver_agi8 = {
+            place = {"agi 8"}, url = "/npc_dota_hero_weaver/agi/3.png", name = "npc_dota_hero_weaver_agi8", 
+        },
+        npc_dota_hero_weaver_agi9 = {
+            place = {"agi 9"}, url = "/npc_dota_hero_weaver/agi/1.png", name = "npc_dota_hero_weaver_agi9", 
+        },
+        npc_dota_hero_weaver_agi10 = {
+            place = {"agi 10"}, url = "/npc_dota_hero_weaver/agi/1.png", name = "npc_dota_hero_weaver_agi10", 
+        },
+        npc_dota_hero_weaver_agi11 = {
+            place = {"agi 11"}, url = "/npc_dota_hero_weaver/agi/5.png", name = "npc_dota_hero_weaver_agi11", 
+        },
+        npc_dota_hero_weaver_agi12 = {
+            place = {"agi 12"}, url = "/npc_dota_hero_weaver/agi/3.png", name = "npc_dota_hero_weaver_agi12", 
+        },
+        npc_dota_hero_weaver_agi13 = {
+            place = {"agi 13"}, url = "/npc_dota_hero_weaver/agi/3.png", name = "npc_dota_hero_weaver_agi13", 
+        },
+        -------------------- INT -----------------------------------------------------------
+        npc_dota_hero_weaver_int6 = {
+            place = {"int 6"}, url = "/npc_dota_hero_weaver/int/2.png", name = "npc_dota_hero_weaver_int6", 
+        },
+        npc_dota_hero_weaver_int7 = {
+            place = {"int 7"}, url = "/npc_dota_hero_weaver/int/1.png", name = "npc_dota_hero_weaver_int7", 
+        },
+        npc_dota_hero_weaver_int8 = {
+            place = {"int 8"}, url = "/npc_dota_hero_weaver/int/3.png", name = "npc_dota_hero_weaver_int8", 
+        },
+        npc_dota_hero_weaver_int9 = {
+            place = {"int 9"}, url = "/npc_dota_hero_weaver/int/2.png", name = "npc_dota_hero_weaver_int9", 
+        },
+        npc_dota_hero_weaver_int10 = {
+            place = {"int 10"}, url = "/npc_dota_hero_weaver/int/1.png", name = "npc_dota_hero_weaver_int10", 
+        },
+        npc_dota_hero_weaver_int11 = {
+            place = {"int 11"}, url = "/npc_dota_hero_weaver/int/1.png", name = "npc_dota_hero_weaver_int11", 
+        },  
+        npc_dota_hero_weaver_int12 = {
+            place = {"int 12"}, url = "/npc_dota_hero_weaver/int/2.png", name = "npc_dota_hero_weaver_int12", 
+        },	
+        npc_dota_hero_weaver_int13 = {
+            place = {"int 13"}, url = "/npc_dota_hero_weaver/int/2.png", name = "npc_dota_hero_weaver_int13", 
+        },
+    },
 }

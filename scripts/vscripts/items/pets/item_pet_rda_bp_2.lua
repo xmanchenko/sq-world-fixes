@@ -40,7 +40,6 @@ function modifier_item_pet_rda_bp_2:OnCreated( kv )
 			self.pet:SetControllableByPlayer(self:GetCaster():GetPlayerID(), true)
 			self.pet:SetOwner(self:GetCaster())
 		end
-		self:StartIntervalThink(60)
 	end
 end
 function modifier_item_pet_rda_bp_2:OnDestroy()
@@ -78,13 +77,6 @@ end
 
 function modifier_item_pet_rda_bp_2:GetModifierMagicalResistanceBonus()
 	return self:GetAbility():GetSpecialValueFor("magic_resistance")
-end
-
-function modifier_item_pet_rda_bp_2:OnIntervalThink()
-	if IsServer() then
-		local totalgold = self:GetParent():GetTotalGold()
-		self:GetParent():ModifyGoldFiltered(totalgold/100*self:GetAbility():GetSpecialValueFor("gold"), true, 0)
-	end
 end
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------

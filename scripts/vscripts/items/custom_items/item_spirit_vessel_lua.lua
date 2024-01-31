@@ -76,6 +76,10 @@ function modifier_item_spirit_vessel_lua:OnCreated()
     self.bonus_all_stats = self:GetAbility():GetSpecialValueFor("bonus_all_stats")
 end
 
+function modifier_item_spirit_vessel_lua:OnRefresh()
+    self:OnCreated()
+end
+
 function modifier_item_spirit_vessel_lua:DeclareFunctions()
     return {
         MODIFIER_PROPERTY_MANA_REGEN_CONSTANT,
