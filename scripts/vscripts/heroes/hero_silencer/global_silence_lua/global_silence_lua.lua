@@ -159,7 +159,7 @@ end
 
 function modifier_silencer_global_silence_lua:DeclareFunctions()
 	return { 
-		MODIFIER_EVENT_ON_DEATH,
+		MODIFIER_EVENT_ON_DEATH
 	}
 end
 

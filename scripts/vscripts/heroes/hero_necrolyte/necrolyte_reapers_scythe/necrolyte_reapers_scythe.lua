@@ -213,9 +213,9 @@ function modifier_reapers_scythe_stack_lua:DeclareFunctions()
 end
 
 function modifier_reapers_scythe_stack_lua:GetModifierConstantManaRegen()
-	return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("hp_regen")
+	return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("mp_regen")
 end
 
 function modifier_reapers_scythe_stack_lua:GetModifierConstantHealthRegen()
-	return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("mp_regen")
+	return self:GetStackCount() * self:GetAbility():GetSpecialValueFor("hp_regen")
 end

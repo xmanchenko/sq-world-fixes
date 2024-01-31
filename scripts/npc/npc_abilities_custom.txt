@@ -1538,6 +1538,21 @@
         }
         "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
     }
+
+	"neutral_slot_ability"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/neutral_slot_ability"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"rat_pack" "1"
+		}
+	}
 }
 
 //=========================================================================================================================================================================================================================
@@ -2085,6 +2100,14 @@
 #base "../vscripts/heroes/hero_ursa/ursa_enrage_lua/ursa_enrage_lua.txt"
 #base "../vscripts/heroes/hero_ursa/ursa_fury_swipes_lua/ursa_fury_swipes_lua.txt"
 #base "../vscripts/heroes/hero_ursa/ursa_overpower_lua/ursa_overpower_lua.txt"
+
+//==================================================================================================== WEAVER ===================================================================================================================================================
+
+#base "../vscripts/heroes/hero_weaver/weaver_talents.txt"
+#base "../vscripts/heroes/hero_weaver/geminate_attack/geminate_attack.txt"
+#base "../vscripts/heroes/hero_weaver/shukuchi/shukuchi.txt"
+#base "../vscripts/heroes/hero_weaver/swarm/the_swarm.txt"
+#base "../vscripts/heroes/hero_weaver/time_lapse/time_lapse.txt"
 
 //==============================================================================================new boss ability===========================
 

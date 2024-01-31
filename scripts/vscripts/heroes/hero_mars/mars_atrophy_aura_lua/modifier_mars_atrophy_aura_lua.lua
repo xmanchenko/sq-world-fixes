@@ -106,6 +106,11 @@ function modifier_mars_atrophy_aura_lua:OnDeath( params )
 
 	-- not illusion
 	if params.unit:IsIllusion() then return end
+	
+	local abil = self:GetCaster():FindAbilityByName("special_bonus_unique_npc_dota_hero_mars_agi50")
+	if abil ~= nil then 
+		self.duration = -1
+	end
 
 	-- check if has modifier
 	if not params.unit:FindModifierByNameAndCaster( "modifier_mars_atrophy_aura_lua_debuff", parent ) then return end

@@ -25,6 +25,8 @@
 			"item"		"item_mjollnir_lua"
 			"item"		"item_midas_lua"
 			"item"		"item_demon_slayer_lua"
+			"item"		"item_rapier_lua"
+			"item"		"item_disperser_lua"
 		}
 		
 		"MAGICAL CARRY ITEMS"
@@ -43,6 +45,7 @@
 			"item"		"item_meteor_hammer_lua"
 			"item"		"item_crimson_guard_lua"
 			"item"		"item_ethereal_blade_lua"
+			"item"		"item_golden_egg_lua"
 			
 		}
 		"TANK OR MID ITEMS"

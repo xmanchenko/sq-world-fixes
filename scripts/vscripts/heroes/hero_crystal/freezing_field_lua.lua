@@ -8,7 +8,11 @@ function freezing_field_lua:OnSpellStart()
 end
 
 function freezing_field_lua:GetManaCost(iLevel)
-    return 150 + math.min(65000, self:GetCaster():GetIntellect() / 200)
+	local manacost = 150 + math.min(65000, self:GetCaster():GetIntellect() / 200)
+	if self:GetCaster():HasModifier("modifier_hero_crystal_maiden_buff_1") then
+		manacost = manacost * 0.2
+	end
+    return manacost
 end
 
 function freezing_field_lua:GetIntrinsicModifierName()

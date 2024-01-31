@@ -22,9 +22,9 @@ function modifier_riki_cloak_and_dagger_lua:OnIntervalThink()
 		self:GetParent():RemoveModifierByName("modifier_riki_cloak_and_dagger_invisibility")
 	end
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_riki_int12") or self:GetCaster():FindAbilityByName("npc_dota_hero_riki_int13") then
-		if self:GetAbility():IsFullyCastable() and not self:GetParent():HasModifier("modifier_riki_cloak_and_dagger_invisibility_spell_amplify") then
+		if self:GetAbility():IsFullyCastable() then
 			self:GetParent():AddNewModifier(self:GetCaster(), self:GetAbility(), "modifier_riki_cloak_and_dagger_invisibility_spell_amplify", {})
-		elseif not self:GetAbility():IsFullyCastable() and self:GetParent():HasModifier("modifier_riki_cloak_and_dagger_invisibility_spell_amplify") then
+		elseif not self:GetAbility():IsFullyCastable() then
 			self:GetParent():RemoveModifierByName("modifier_riki_cloak_and_dagger_invisibility_spell_amplify")
 		end
 	end
@@ -128,11 +128,21 @@ modifier_riki_cloak_and_dagger_invisibility_spell_amplify = class({})
 function modifier_riki_cloak_and_dagger_invisibility_spell_amplify:OnCreated()
 	if IsServer() then
 		if self:GetCaster():FindAbilityByName("npc_dota_hero_riki_int13") then
-			self:SetStackCount(self:GetCaster():GetSpellAmplification(false) * 100 * 2.5)
+			self.lock = true
+			local amp = self:GetCaster():GetSpellAmplification(false)
+			self.lock = false
+			self:SetStackCount(math.ceil( amp * 100) * 6 )
 		elseif self:GetCaster():FindAbilityByName("npc_dota_hero_riki_int12") then
-			self:SetStackCount(self:GetCaster():GetSpellAmplification(false) * 100 * 6.0)
+			self.lock = true
+			local amp = self:GetCaster():GetSpellAmplification(false)
+			self.lock = false
+			self:SetStackCount(math.ceil( amp * 100) * 2.5 )
 		end
 	end	
+end
+
+function modifier_riki_cloak_and_dagger_invisibility_spell_amplify:OnRefresh()
+	self:OnCreated()
 end
 
 function modifier_riki_cloak_and_dagger_invisibility_spell_amplify:DeclareFunctions()
@@ -146,5 +156,8 @@ function modifier_riki_cloak_and_dagger_invisibility_spell_amplify:GetModifierIn
 	return 1
 end
 function modifier_riki_cloak_and_dagger_invisibility_spell_amplify:GetModifierSpellAmplify_PercentageUnique()
+	if self.lock then
+		return 0
+	end
 	return self:GetStackCount()
 end

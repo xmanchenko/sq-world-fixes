@@ -28,7 +28,7 @@ function ability_npc_boss_plague_squirrel_spell1:OnSpellStart()
 		for _,unit in pairs(enemies) do
 			if tree_count < 4 then
 				tree_count = tree_count + 1
-				local npc = CreateModifierThinker(self:GetCaster(), self, "modifier_ability_npc_boss_plague_squirrel_spell1", {}, unit:GetAbsOrigin(), self:GetCaster():GetTeamNumber(), false)
+				local npc = CreateModifierThinker(self:GetCaster(), self, "modifier_ability_npc_boss_plague_squirrel_spell1", {duration = 60}, unit:GetAbsOrigin(), self:GetCaster():GetTeamNumber(), false)
 				info.Target = npc
 				ProjectileManager:CreateTrackingProjectile(info)
 			end
@@ -42,7 +42,7 @@ function ability_npc_boss_plague_squirrel_spell1:OnSpellStart()
 			local dx = math.cos(angle) * variance
 			local target_point = Vector(pos.x + dx, pos.y + dy, pos.z)
 		
-			local npc = CreateModifierThinker(self:GetCaster(), self, "modifier_ability_npc_boss_plague_squirrel_spell1", {}, target_point, self:GetCaster():GetTeamNumber(), false)
+			local npc = CreateModifierThinker(self:GetCaster(), self, "modifier_ability_npc_boss_plague_squirrel_spell1", {duration = 60}, target_point, self:GetCaster():GetTeamNumber(), false)
 			info.Target = npc
 			ProjectileManager:CreateTrackingProjectile(info)
 		end
@@ -67,7 +67,7 @@ function ability_npc_boss_plague_squirrel_spell1:CreateTree_OtherAbilities(posit
         iVisionTeamNumber = self:GetCaster():GetTeamNumber(),        -- Optional
         ExtraData = {type = "main_shot"}
     }
-    local npc = CreateModifierThinker(self:GetCaster(), self, "modifier_ability_npc_boss_plague_squirrel_spell1", {}, position, self:GetCaster():GetTeamNumber(), false)
+    local npc = CreateModifierThinker(self:GetCaster(), self, "modifier_ability_npc_boss_plague_squirrel_spell1", {duration = 60}, position, self:GetCaster():GetTeamNumber(), false)
     info.Target = npc
     ProjectileManager:CreateTrackingProjectile(info)
 end

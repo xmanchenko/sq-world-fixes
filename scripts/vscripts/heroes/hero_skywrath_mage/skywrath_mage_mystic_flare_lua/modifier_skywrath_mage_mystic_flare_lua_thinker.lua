@@ -27,6 +27,9 @@ function modifier_skywrath_mage_mystic_flare_lua_thinker:OnCreated( kv )
 	if IsServer() then
 		-- precache damage
 		self.damage = self.damage*interval/kv.duration
+		if self:GetCaster():HasModifier("modifier_hero_sky_mage_buff_1") then
+			self.damage = self.damage + self:GetCaster():GetIntellect() * 0.1
+		end
 		self.damageTable = {
 			-- victim = target,
 			attacker = self:GetCaster(),

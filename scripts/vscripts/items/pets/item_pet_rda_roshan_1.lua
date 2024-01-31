@@ -66,6 +66,9 @@ function modifier_item_pet_rda_roshan_1:DeclareFunctions()
 		MODIFIER_PROPERTY_EXP_RATE_BOOST,
 		MODIFIER_PROPERTY_GOLD_RATE_BOOST,
 		MODIFIER_PROPERTY_VISUAL_Z_DELTA,
+		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
+		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
+		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
 	}
 end
 
@@ -86,6 +89,18 @@ end
 
 function modifier_item_pet_rda_roshan_1:GetModifierIncomingDamage_Percentage()
 	return - self:GetAbility():GetSpecialValueFor( "block" )
+end
+
+function modifier_item_pet_rda_roshan_1:GetModifierBonusStats_Strength()
+	return self:GetAbility():GetSpecialValueFor("stats_bonus") * self:GetParent():GetLevel()
+end
+
+function modifier_item_pet_rda_roshan_1:GetModifierBonusStats_Agility()
+	return self:GetAbility():GetSpecialValueFor("stats_bonus") * self:GetParent():GetLevel()
+end
+
+function modifier_item_pet_rda_roshan_1:GetModifierBonusStats_Intellect()
+	return self:GetAbility():GetSpecialValueFor("stats_bonus") * self:GetParent():GetLevel()
 end
 
 function modifier_item_pet_rda_roshan_1:OnAttackLanded(keys)

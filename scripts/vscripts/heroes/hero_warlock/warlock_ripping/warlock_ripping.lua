@@ -35,14 +35,10 @@ function warlock_ripping:CastFilterResultTarget( hTarget )
 	self.max_golems = 5
 
 	if self:GetCaster():GetModifierStackCount( "modifier_golems", self) == self.max_golems then 
-		local nResult = UnitFilter(
-		hTarget,
-		DOTA_UNIT_TARGET_TEAM_ENEMY,
-		DOTA_UNIT_TARGET_COURIER,
-		DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS + DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO,
-		self:GetCaster():GetTeamNumber()
-	)
-		return nResult
+		local player = PlayerResource:GetPlayer(self:GetCaster():GetPlayerOwnerID())
+		CustomGameEventManager:Send_ServerToPlayer(player, "CreateIngameErrorMessage", {message="dota_hud_error_max_golems"})
+		self:EndCooldown()
+		return nil
 	end
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_warlock_int10") == nil and	(
 	hTarget:GetUnitName() == "comandir_creep_1"

@@ -1436,4 +1436,24 @@
 		"Ability16"				""
 		"Ability17"				""
 	}
+	"npc_dota_hero_weaver" 
+	{
+		"override_hero"			"npc_dota_hero_weaver" 
+		"StatusMana"			"500"
+		"StatusManaRegen"	    "4"
+		"Ability1"				"the_swarm_lua"
+		"Ability2"				"shukuchi_lua"
+		"Ability3"				"geminate_attack_lua"
+		"Ability4"				"generic_hidden"
+		"Ability5"				"generic_hidden"		
+		"Ability6"				"time_lapse_lua"
+		"Ability10"				""
+		"Ability11"				""
+		"Ability12"				""
+		"Ability13"				""
+		"Ability14"				""
+		"Ability15"				""
+		"Ability16"				""
+		"Ability17"				""
+	}
 }

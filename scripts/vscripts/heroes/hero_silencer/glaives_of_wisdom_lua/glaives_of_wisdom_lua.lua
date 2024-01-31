@@ -122,6 +122,13 @@ function silencer_glaives_of_wisdom_lua:ApplyDamage( target, damage )
 			)
 		end
 	end
+	for i=0,32 do 
+		local abi = self:GetCaster():GetAbilityByIndex(i)
+		if abi then
+			print(abi:GetAbilityName())
+		end
+	end
+	print(self:GetCaster():FindAbilityByName("special_bonus_unique_npc_dota_hero_silencer_agi50"))
 	if self:GetCaster():FindAbilityByName("special_bonus_unique_npc_dota_hero_silencer_agi50") then
 		target:AddNewModifier(self:GetCaster(), self, "modifier_silencer_glaives_of_wisdom_m_resistance", {duration = 30})
 	end
