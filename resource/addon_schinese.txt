@@ -6213,6 +6213,109 @@
 "DOTA_Tooltip_modifier_item_demon_slayer_lua_effect_Description" "你的攻击速度限制为每秒 %fMODIFIER_PROPERTY_FIXED_ATTACK_RATE% 次攻击，每秒损失 %dMODIFIER_PROPERTY_TOOLTIP%%% 生命值。"
 "DOTA_Tooltip_modifier_insane_lives" "生命值"
 "DOTA_Tooltip_modifier_insane_lives_Description" "您可以重生 %dMODIFIER_PROPERTY_TOOLTIP% 次"
+"DOTA_Tooltip_ability_item_golden_egg_lua" "金蛋"
+     "DOTA_Tooltip_ability_item_golden_egg_lua_Description" "有一天，一个被食人魔骑着套索的奇怪生物生下了一个蛋，结果证明这是一个好物品。"
+     "DOTA_Tooltip_ability_item_golden_egg_lua_Lore" "<font color='orange'>该物品的副本不提供奖励</font>"
+     "DOTA_Tooltip_ability_item_golden_egg_lua_armor" "+$armor"
+     "DOTA_Tooltip_ability_item_golden_egg_lua_mana_regen" "+$mana_regen"
+     "DOTA_Tooltip_ability_item_golden_egg_lua_int" "+$int"
+     "DOTA_Tooltip_ability_item_golden_egg_lua_no_primary" "+至非主要属性"
+     "DOTA_Tooltip_ability_item_golden_egg_lua_gold_per_second" "+每秒黄金数"
+     "DOTA_Tooltip_ability_item_分散器_lua" "分散器"
+     "DOTA_Tooltip_ability_item_分散器_lua_Description" "<h1>主动：压制</h1>影响目标周围 %radius% 范围内的所有生物。减缓敌人的移动速度 %duration% 秒。<br><br>对盟友造成驱散，并对盟友造成驱散效果使它们加速 %duration% 秒并防止它们减速。<br><br>施法时减速和加速均为 100%%，并逐渐减小到零。<br><br>施法范围： %abilitycastrange%<br>驱散类型：<span class=\"GameplayValues ​​GameplayVariable\">普通</span>\n\n<h1>被动：法力破坏</h1> 每次攻击都有 %chance%%%造成额外纯伤害的几率，取决于拥有者的敏捷度。”
+     "DOTA_Tooltip_ability_item_分散器_lua_Lore" "<font color='orange'>该物品的副本不提供奖励</font>"
+     "DOTA_Tooltip_ability_item_分散器_lua_damage" "%+敏捷伤害"
+     "DOTA_Tooltip_ability_item_分散器_lua_bonus_agility" "+$agi"
+     "DOTA_Tooltip_ability_item_分散器_lua_bonus_intellect" "+$int"
+     "DOTA_Tooltip_modifier_item_分散器_lua_active" "分散器"
+     " DOTA_Tooltip_modifier_item_分散器_lua_active_Description" "生物不能减速，其移动速度增加%MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%%%。"
+     "DOTA_Tooltip_ability_item_rapier_lua" "神剑"
+     "DOTA_Tooltip_ability_item_rapier_lua_Lore" "<font color='orange'>该物品的副本不提供奖励</font>"
+     "DOTA_Tooltip_ability_item_rapier_lua_bonus_damage" "+$伤害"
+     "DOTA_Tooltip_ability_item_rapier_lua_description" "该物品的佩戴者会受到 %incoming_damage%%% 的额外伤害。"
+     
+     "Dota_Tooltip_ability_the_swarm_lua"                       "虫群"
+"Dota_Tooltip_ability_the_swarm_lua_Description"           "英雄释放 %count% 只甲虫组成的虫群，它们会抓住路径上的敌人。甲虫造成伤害并降低目标的护甲，直到它们死亡。"
+"Dota_Tooltip_ability_the_swarm_lua_damage"                "伤害:"
+"Dota_Tooltip_ability_the_swarm_lua_attack_rate"           "攻击速率:"
+"Dota_Tooltip_ability_the_swarm_lua_duration"              "持续时间:"
+"Dota_Tooltip_ability_the_swarm_lua_count"                 "甲虫数量:"
+"Dota_Tooltip_ability_the_swarm_lua_armor_reduction"      "每次攻击的护甲减少:"
+"Dota_Tooltip_ability_the_swarm_lua_destroy_attacks"      "摧毁甲虫所需攻击次数:"
+"Dota_Tooltip_ability_shukuchi_lua"                       "疾行术"
+"Dota_Tooltip_ability_shukuchi_lua_Description"           "英雄消失在视线之外，允许其以最大速度移动并对穿过的敌人造成伤害。"
+"Dota_Tooltip_ability_shukuchi_lua_damage"                "伤害:"
+"Dota_Tooltip_ability_shukuchi_lua_radius"                "范围:"
+"Dota_Tooltip_ability_shukuchi_lua_fade_time"             "隐身褪色时间:"
+"Dota_Tooltip_ability_shukuchi_lua_duration"              "持续时间:"
+"Dota_Tooltip_ability_shukuchi_lua_speed"                 "速度:"
+"Dota_Tooltip_ability_geminate_attack_lua"                "二连攻击"
+"Dota_Tooltip_ability_geminate_attack_lua_Description"    "允许英雄同时进行多次攻击。"
+"Dota_Tooltip_ability_geminate_attack_lua_tooltip_attack" "额外攻击次数:"
+"Dota_Tooltip_ability_geminate_attack_lua_bonus_damage"   "额外伤害:"
+"Dota_Tooltip_ability_time_lapse_lua"                     "时光倒流"
+"Dota_Tooltip_ability_time_lapse_lua_Description"         "英雄回到五秒前的位置，恢复生命值和法力值至先前的水平。不影响技能和物品的冷却时间，以及黄金和经验。 \n\n驱散类型: 强驱散"
+"Dota_Tooltip_modifier_modifier_time_lapse_cd"            "冷却时间"
+"Dota_Tooltip_modifier_weaver_swarm_debuff"               "虫群"
+"Dota_Tooltip_modifier_weaver_swarm_debuff_Description"   "造成伤害并减少护甲。"
+"Dota_Tooltip_modifier_weaver_shukuchi"                   "疾行术"
+"Dota_Tooltip_modifier_weaver_shukuchi_Description"       "隐形并对穿过的单位造成伤害。"
+"Dota_Tooltip_modifier_shukuchi_geminate_attack_mark"     "疾行术印记"
+"Dota_Tooltip_modifier_shukuchi_geminate_attack_mark_Description" "当疾行术结束时，将额外的攻击指向该单位。"
+
+//
+"npc_dota_hero_weaver_str6"                                "暗影之健康"
+"npc_dota_hero_weaver_str6_description"                    "激活疾行术时，恢复35%的生命值。"  //  +
+"npc_dota_hero_weaver_str7"                                "时光之救赎"
+"npc_dota_hero_weaver_str7_description"                    "如果英雄的生命值低于20%，则触发时光倒流，冷却时间为60秒。" // +
+"npc_dota_hero_weaver_str7_tooltip"                        "技能和天赋的冷却时间彼此独立，不相互影响。"
+"npc_dota_hero_weaver_str8"                                "打击虫群"
+"npc_dota_hero_weaver_str8_description"                    "虫群攻击间隔减少0.3秒。"
+"npc_dota_hero_weaver_str9"                                "疾行术的秘密力量"
+"npc_dota_hero_weaver_str9_description"                    "+75% 力量转化为疾行术伤害。"   //  +
+"npc_dota_hero_weaver_str10"                               "吸血润滑剂"
+"npc_dota_hero_weaver_str10_description"                   "+15% 生命偷取。"
+"npc_dota_hero_weaver_str11"                               "潜伏虫群"
+"npc_dota_hero_weaver_str11_description"                   "虫群变为被动技能，并应用于英雄攻击的目标。"
+"npc_dota_hero_weaver_str12"                               "来自阴影的闪电打击"
+"npc_dota_hero_weaver_str12_description"                   "英雄在疾行术隐形时可以攻击1.5秒。"
+"npc_dota_hero_weaver_str13"                               "黑暗隐身打击"
+"npc_dota_hero_weaver_str13_description"                   "英雄在疾行术隐形时可以攻击3.0秒。"
+//
+"npc_dota_hero_weaver_agi6"                                "x5 疾行术速度"
+"npc_dota_hero_weaver_agi6_description"                    "疾行术期间移动速度提高5倍。"    // +
+"npc_dota_hero_weaver_agi7"                                "英勇的二连打击"
+"npc_dota_hero_weaver_agi7_description"                    "二连攻击的额外伤害为英雄伤害的+40%。" //  +
+"npc_dota_hero_weaver_agi8"                                "三连闪烁二连攻击"
+"npc_dota_hero_weaver_agi8_description"                    "二连攻击可以攻击3个目标。"    // +
+"npc_dota_hero_weaver_agi9"                                "虫群护甲减少 x2"
+"npc_dota_hero_weaver_agi9_description"                    "虫群的护甲减少加倍。"
+"npc_dota_hero_weaver_agi10"                               "攻击性甲虫"
+"npc_dota_hero_weaver_agi10_description"                   "虫群造成英雄的攻击伤害。"
+"npc_dota_hero_weaver_agi11"                               "最终暴击攻击"
+"npc_dota_hero_weaver_agi11_description"                   "如果伤害足以击败小兵，则暴击750%（对小兵的最后一击为暴击）。"
+"npc_dota_hero_weaver_agi12"                               "二连攻击增强"
+"npc_dota_hero_weaver_agi12_description"                   "来自二连攻击的+1攻击。"    // +
+"npc_dota_hero_weaver_agi13"                               "重复的二连打击"
+"npc_dota_hero_weaver_agi13_description"                   "二连攻击在每3次英雄攻击后触发一次。"     // +
+//
+"npc_dota_hero_weaver_int6"                                "智者疾行术天赋"
+"npc_dota_hero_weaver_int6_description"                    "+100% 智力转化为疾行术伤害。"   // +
+"npc_dota_hero_weaver_int7"                                "触摸不到的甲虫"
+"npc_dota_hero_weaver_int7_description"                    "甲虫是无敌的。"
+"npc_dota_hero_weaver_int8"                                "魔法二连打击"
+"npc_dota_hero_weaver_int8_description"                    "二连攻击的额外伤害变为魔法伤害。"
+"npc_dota_hero_weaver_int9"                                "扩展疾行术天赋"
+"npc_dota_hero_weaver_int9_description"                    "疾行术的伤害半径为600。"
+"npc_dota_hero_weaver_int10"                               "魔法虫群攻击"
+"npc_dota_hero_weaver_int10_description"                   "+50% 智力转化为虫群伤害，伤害类型变为魔法伤害。"
+"npc_dota_hero_weaver_int11"                               "甲虫的智力打击"
+"npc_dota_hero_weaver_int11_description"                   "在施加甲虫时，造成150%智力伤害。"
+"npc_dota_hero_weaver_int12"                               "可重复的疾行术伤害天赋"
+"npc_dota_hero_weaver_int12_description"                   "疾行术在一次使用中可以对目标造成多次伤害，伤害间隔为1秒。" // + 
+"npc_dota_hero_weaver_int13"                               "持续疾行术伤害"
+"npc_dota_hero_weaver_int13_description"                   "疾行术始终处于活动状态（伤害，速度）；如果使用该技能，则英雄将仅获得隐身效果。"  // +
+
 // ---- END OF FILE ----
     }
 }

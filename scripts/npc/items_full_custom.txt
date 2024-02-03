@@ -785,73 +785,73 @@
 	// 		"stats_bonus"				"5 7 9 11 13 15 17 19 21 23 25"
 	// 	}
 	// }
-	// "item_golden_egg_lua"
-	// {
-	// 	"BaseClass"						"item_lua"
-	// 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	// 	"AbilityTextureName"	        "all/item_golden_egg_lua1"
-	// 	"ScriptFile"					"items/custom_items/item_golden_egg_lua"
-	// 	"ItemBaseLevel"                 "1"
-	// 	"ItemCost"						"12000"
+	"item_golden_egg_lua"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	        "all/item_golden_egg_lua1"
+		"ScriptFile"					"items/custom_items/item_golden_egg_lua"
+		"ItemBaseLevel"                 "1"
+		"ItemCost"						"6300"
 
-	// 	"AbilityValues"
-	// 	{
-	// 		"armor"						"40 80 120 160 200 240 280 320 360 400 440"
-	// 		"mana_regen"				"20 40 60 80 100 120 140 160 180 200 220"
-	// 		"int"						"10 20 40 80 160 320 640 1280 2560 5120 10240"
-	// 		"no_primary"				"5 10 20 40 80 160 320 640 1280 2560 5120"
-	// 		"gold_per_second"			"25 50 75 100 125 150 175 200 225 250 275"
-	// 	}
-	// }
-	// "item_disperser_lua"
-	// {
-	// 	// General
-	// 	//-------------------------------------------------------------------------------------------------------------
-	// 	"BaseClass"						"item_lua"
-	// 	"AbilityTextureName"	        "all/item_disperser_lua1"
-	// 	"ScriptFile"					"items/custom_items/item_disperser_lua"
-	// 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
-	// 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
-	// 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-	// 	"FightRecapLevel"				"1"
-	// 	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-	// 	"ItemCost"						"11400"
+		"AbilityValues"
+		{
+			"armor"						"10 19 38 72 105 140 190 230 270 310 350"
+			"mana_regen"				"20 40 60 80 100 120 140 160 180 200 220"
+			"int"						"10 20 36 68 130 250 470 890 1700 3220 6130"
+			"no_primary"				"5 10 18 34 65 123 235 446 850 1600 3000"
+			"gold_per_second"			"10 25 40 55 70 85 100 115 130 145 160"
+		}
+	}
+	"item_disperser_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"	        "all/item_disperser_lua1"
+		"ScriptFile"					"items/custom_items/item_disperser_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"ItemCost"						"5200"
 
-	// 	"AbilityCastRange"				"600"
-	// 	"AbilityCastPoint"				"0.0"
-	// 	"AbilityCooldown"				"15.0"
-	// 	"AbilityManaCost"				"75"
-	// 	"AbilitySharedCooldown"			"diffusal"
-	// 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilityManaCost"				"75"
+		"AbilitySharedCooldown"			"diffusal"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
-	// 	"AbilityValues"
-	// 	{
-	// 		"bonus_agility"			"40 60 100 190 360 720 1400 2700 5300 10000 20000"
-	// 		"bonus_intellect"		"10 30 50 95 180 360 640 1280 2560 5120 10240"
-	// 		"duration"	"5.0"
-	// 		"radius"				
-	// 		{
-	// 			"value"						"350"
-	// 			"affected_by_aoe_increase"	"1"
-	// 		}
-	// 		"chance" "100"
-	// 		"damage" "4 4.2 4.4 4.6 4.8 5 5.2 5.4 5.6 5.8 6"
-	// 	}
-	// }
-	// "item_rapier_lua"
-	// {
-	// 	"BaseClass"						"item_lua"
-	// 	"AbilityTextureName"	        "all/item_rapier_lua1"
-	// 	"ScriptFile"					"items/custom_items/item_rapier_lua"
-	// 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	// 	"Model"							"models/props_gameplay/divine_rapier.vmdl"
-	// 	"ItemCost"						"11200"
+		"AbilityValues"
+		{
+			"bonus_agility"			"20 40 75 140 260 500 940 1780 3400 6450 12200"
+			"bonus_intellect"		"10 20 40 70 130 250 470 900 1700 3225 6130"
+			"duration"	"5.0"
+			"radius"				
+			{
+				"value"						"350"
+				"affected_by_aoe_increase"	"1"
+			}
+			"chance" "100"
+			"damage" "1 1.2 1.4 1.6 1.8 2 2.2 2.4 2.6 2.8 3"
+		}
+	}
+	"item_rapier_lua"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"	        "all/item_rapier_lua1"
+		"ScriptFile"					"items/custom_items/item_rapier_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/divine_rapier.vmdl"
+		"ItemCost"						"10000"
 
-	// 	"AbilityValues"
-	// 	{
-	// 		// "bonus_spell_amp"		"25"
-	// 		"bonus_damage"			"84 160 480 1440 3000 6000 12000 24000 48000 96000 192000"
-	// 	}
-	// }
+		"AbilityValues"
+		{
+			"incoming_damage"		"20"
+			"bonus_damage"			"84 160 480 1440 3000 6000 12000 24000 48000 96000 192000"
+		}
+	}
 }
 

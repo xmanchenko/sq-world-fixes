@@ -117,4 +117,5 @@ talents_second_branch = {
     npc_dota_hero_viper                         = { hero_name = "npc_dota_hero_viper", price = {don = 200, rp = 1000} },
     npc_dota_hero_vengefulspirit                = { hero_name = "npc_dota_hero_vengefulspirit", price = {don = 200, rp = 1000} },
     npc_dota_hero_ursa                          = { hero_name = "npc_dota_hero_ursa", price = {don = 200, rp = 1000} },
+    npc_dota_hero_weaver                        = { hero_name = "npc_dota_hero_weaver", price = {don = 200, rp = 1000} },
 }

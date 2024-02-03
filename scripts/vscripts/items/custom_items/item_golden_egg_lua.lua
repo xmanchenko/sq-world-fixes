@@ -62,7 +62,8 @@ function modifier_item_golden_egg_lua:OnCreated()
     self.mana_regen = self:GetAbility():GetSpecialValueFor("mana_regen")
     self.int = self:GetAbility():GetSpecialValueFor("int")
     self.no_primary = self:GetAbility():GetSpecialValueFor("no_primary")
-    self.interval = 60 / self:GetAbility():GetSpecialValueFor("gold_per_second")
+    self.gold_per_second = self:GetAbility():GetSpecialValueFor("gold_per_second")
+    -- self.interval = 60 / self:GetAbility():GetSpecialValueFor("gold_per_second")
     if not IsServer() then
         return
     end
@@ -77,7 +78,7 @@ function modifier_item_golden_egg_lua:OnCreated()
         self.no_primary = self.no_primary / 2
     end
     self:SetHasCustomTransmitterData( true )
-    self:StartIntervalThink(self.interval)
+    self:StartIntervalThink(1)
 end
 
 function modifier_item_golden_egg_lua:AddCustomTransmitterData()
@@ -95,7 +96,8 @@ function modifier_item_golden_egg_lua:OnRefresh()
     self.mana_regen = self:GetAbility():GetSpecialValueFor("mana_regen")
     self.int = self:GetAbility():GetSpecialValueFor("int")
     self.no_primary = self:GetAbility():GetSpecialValueFor("no_primary")
-    self.interval = 60 / self:GetAbility():GetSpecialValueFor("gold_per_second")
+    self.gold_per_second = self:GetAbility():GetSpecialValueFor("gold_per_second")
+    -- self.interval = 60 / self:GetAbility():GetSpecialValueFor("gold_per_second")
     if not IsServer() then
         return
     end
@@ -110,11 +112,11 @@ function modifier_item_golden_egg_lua:OnRefresh()
         self.no_primary = self.no_primary / 2
     end
     self:SendBuffRefreshToClients()
-    self:StartIntervalThink(self.interval)
+    self:StartIntervalThink(1)
 end
 
 function modifier_item_golden_egg_lua:OnIntervalThink()
-    self:GetCaster():ModifyGoldFiltered(1, true, DOTA_ModifyGold_SharedGold)
+    self:GetCaster():ModifyGoldFiltered(self.gold_per_second, true, DOTA_ModifyGold_SharedGold)
 end
 
 function modifier_item_golden_egg_lua:DeclareFunctions()

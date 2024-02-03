@@ -59,18 +59,25 @@ end
 
 function modifier_item_rapier_lua:OnCreated()
     self.damage = self:GetAbility():GetSpecialValueFor("bonus_damage")
+    self.incoming_damage = self:GetAbility():GetSpecialValueFor("incoming_damage")
 end
 
 function modifier_item_rapier_lua:OnRefresh()
     self.damage = self:GetAbility():GetSpecialValueFor("bonus_damage")
+    self.incoming_damage = self:GetAbility():GetSpecialValueFor("incoming_damage")
 end
 
 function modifier_item_rapier_lua:DeclareFunctions()
     return {
-        MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE
+        MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
+        MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE,
     }
 end
 
 function modifier_item_rapier_lua:GetModifierPreAttack_BonusDamage()
     return self.damage
+end
+
+function modifier_item_rapier_lua:GetModifierIncomingDamage_Percentage()
+    return self.incoming_damage
 end

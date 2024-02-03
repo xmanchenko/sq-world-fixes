@@ -1,7 +1,30 @@
 LinkLuaModifier("modifier_the_swarm_beetle", "heroes/hero_weaver/swarm/the_swarm", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_the_swarm_debuff", "heroes/hero_weaver/swarm/the_swarm", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_the_swarm_intrinsic", "heroes/hero_weaver/swarm/modifier_the_swarm_intrinsic", LUA_MODIFIER_MOTION_NONE)
 
 the_swarm_lua = class({})
+
+function the_swarm_lua:GetIntrinsicModifierName()
+	return "modifier_the_swarm_intrinsic"
+end
+
+function the_swarm_lua:GetBehavior()
+    if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_str11") then
+        return DOTA_ABILITY_BEHAVIOR_PASSIVE
+    end
+end
+
+function the_swarm_lua:GetManaCost()
+    if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_str11") then
+        return 0
+    end
+end
+
+function the_swarm_lua:GetCooldown()
+    if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_str11") then
+        return 0
+    end
+end
 
 function the_swarm_lua:OnSpellStart()
     if(not IsServer()) then
@@ -96,6 +119,7 @@ function the_swarm_lua:OnProjectileHit_ExtraData(target, location, data)
                         target_entindex = target:entindex()
                     }
             )
+            beetle:AddNewModifier(self:GetCaster(), self, "modifier_pips", {pips_count = 8})
             target:AddNewModifier(
                     self.caster,
                     self,
@@ -105,7 +129,19 @@ function the_swarm_lua:OnProjectileHit_ExtraData(target, location, data)
                         duration = self:GetSpecialValueFor("duration")
                     }
             )
+            if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_int11") then
+                local damage_table = {
+                    victim = target,
+                    damage = self:GetCaster():GetIntellect() * 1.5,
+                    damage_type = DAMAGE_TYPE_MAGICAL,
+                    damage_flags = DOTA_DAMAGE_FLAG_NONE,
+                    attacker = self:GetCaster(),
+                    ability = self
+                }
+                ApplyDamage(damage_table)
+            end
             beetle:SetForwardVector((target_position - beetle:GetAbsOrigin()):Normalized())
+            beetle:SetMaxHealth(8)
             ProjectileManager:DestroyLinearProjectile(thinker.projectile_id)
             thinker:StopSound("Hero_Weaver.Swarm.Projectile")
             UTIL_Remove(thinker)
@@ -133,11 +169,18 @@ modifier_the_swarm_beetle = class({
             MODIFIER_EVENT_ON_ATTACKED
         }
     end,
-    CheckState = function()
-        return {
+    CheckState = function(self)
+        local data = {
             [MODIFIER_STATE_NO_UNIT_COLLISION] = true,
             [MODIFIER_STATE_MAGIC_IMMUNE] = true,
         }
+        if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_int7") then
+            data[MODIFIER_STATE_UNSELECTABLE] = true
+            data[MODIFIER_STATE_UNTARGETABLE] = true
+            data[MODIFIER_STATE_INVULNERABLE] = true
+            -- data[MODIFIER_STATE_NO_HEALTH_BAR] = true
+        end
+        return data
     end,
     GetAbsoluteNoDamagePhysical = function()
         return 1
@@ -179,6 +222,10 @@ function modifier_the_swarm_beetle:OnIntervalThink()
             self.beetle:SetForwardVector((target_position - self.beetle:GetAbsOrigin()):Normalized())
         end
     end
+    -- if self:GetParent():GetHealth() == 0 or not (self.target and not self.target:IsNull()) then
+    --     self.beetle:ForceKill(false)
+    --     self:Destroy()
+    -- end
 end
 
 function modifier_the_swarm_beetle:OnDestroy()
@@ -190,12 +237,12 @@ end
 function modifier_the_swarm_beetle:OnAttacked(keys)
     if (keys.target == self.beetle) then
         local newBeetleHp = self.beetle:GetHealth()
-        if (keys.attacker:IsHero()) then
-            newBeetleHp = newBeetleHp - (self.health_increments * self.hero_attack_multiplier)
-        else
-            newBeetleHp = newBeetleHp - self.health_increments
-        end
-        self.beetle:SetHealth(newBeetleHp)
+        -- if (keys.attacker:IsHero()) then
+        --     newBeetleHp = newBeetleHp - (self.health_increments * self.hero_attack_multiplier)
+        -- else
+        --     newBeetleHp = newBeetleHp - self.health_increments
+        -- end
+        -- self.beetle:SetHealth(newBeetleHp)
         if (newBeetleHp <= 0) then
             self.beetle:Kill(nil, keys.attacker)
             self:Destroy()
@@ -238,6 +285,9 @@ function modifier_the_swarm_debuff:OnCreated(params)
         attacker = self.ability.caster,
         ability = self.ability
     }
+    if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_int10") then
+        self.damage_table.damage_type = DAMAGE_TYPE_MAGICAL
+    end
     self:OnIntervalThink()
     self:StartIntervalThink(self.ability:GetSpecialValueFor("attack_rate"))
 end
@@ -245,6 +295,9 @@ end
 function modifier_the_swarm_debuff:OnIntervalThink()
     self:IncrementStackCount()
     ApplyDamage(self.damage_table)
+    if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_agi10") then
+        self:GetCaster():PerformAttack(self:GetParent(), true, true, true, false, false, false, false)
+    end
 end
 
 function modifier_the_swarm_debuff:OnDestroy()

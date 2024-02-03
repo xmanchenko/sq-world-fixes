@@ -66,9 +66,10 @@ function diff_wave:OnGameStateChanged(t)
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_HERO_SELECTION then
 		local diff = {0,0,0,0,0,0}
 		local count = 0
+		DeepPrintTable(self.difficultyVote)
 		for i = 0, PlayerResource:GetPlayerCount()-1 do
 			if self.difficultyVote[i] ~= nil then
-				local idx = self.difficultyVote[i]+1
+				local idx = tonumber(self.difficultyVote[i])+1
 				diff[idx] = diff[idx] + 1
 				count = count + 1
 			end
@@ -84,9 +85,9 @@ function diff_wave:OnGameStateChanged(t)
 				vote_count = diff[i]
 			end
 		end
-		if IsInToolsMode() then
-			diff_index = 5
-		end
+		-- if IsInToolsMode() then
+		-- 	diff_index = 5
+		-- end
 		for i, mode in pairs({"Easy", "Normal", "Hard", "Ultra", "Insane", "Impossible"}) do
 			if i == diff_index then
 				self.wavedef = mode

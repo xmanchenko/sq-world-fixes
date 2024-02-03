@@ -1,6 +1,15 @@
 LinkLuaModifier("modifier_shukuchi", "heroes/hero_weaver/shukuchi/shukuchi", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_shukuchi_intrinsic", "heroes/hero_weaver/shukuchi/modifier_shukuchi_intrinsic", LUA_MODIFIER_MOTION_NONE)
 
 shukuchi_lua = class({})
+
+function shukuchi_lua:GetCastRange(vLocation, hTarget)
+    return self:GetSpecialValueFor("radius")
+end
+
+function shukuchi_lua:GetIntrinsicModifierName()
+	return "modifier_shukuchi_intrinsic"
+end
 
 function shukuchi_lua:OnSpellStart()
     if (not IsServer()) then
@@ -35,11 +44,15 @@ modifier_shukuchi = class({
             MODIFIER_EVENT_ON_ABILITY_FULLY_CAST,
         }
     end,
-    GetModifierIgnoreMovespeedLimit = function()
-        return 1
+    GetModifierIgnoreMovespeedLimit = function(self)
+        if not self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_int13") then
+            return 1
+        end
     end,
     GetModifierMoveSpeedBonus_Constant = function(self)
-        return self.speed
+        if not self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_int13") then
+            return self.speed
+        end
     end
 })
 
@@ -62,10 +75,11 @@ function modifier_shukuchi:GetModifierInvisibilityLevel()
     return math.min(self:GetElapsedTime() / self.fade_time, 1)
 end
 
-function modifier_shukuchi:OnCreated()
+function modifier_shukuchi:OnCreated(kv)
     self.ability = self:GetAbility()
     self.fade_time = self.ability:GetSpecialValueFor("fade_time")
     self.speed = self.ability:GetSpecialValueFor("speed")
+    self.duration = kv.duration
     if not IsServer() then
         return
     end
@@ -73,6 +87,7 @@ function modifier_shukuchi:OnCreated()
     self.damage = self.ability:GetSpecialValueFor("damage")
     self.radius = self.ability:GetSpecialValueFor("radius")
     self.damaged_enemies = {}
+    self.damaged_enemies_time = {}
     self.damage_table = {
         victim = nil,
         damage = self.damage,
@@ -88,10 +103,14 @@ function modifier_shukuchi:OnCreated()
     )
     ParticleManager:SetParticleControlForward(pidx, 0, self.ability.caster:GetForwardVector())
     ParticleManager:ReleaseParticleIndex(pidx)
+    if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_str6") then
+        self:GetCaster():Heal(self:GetCaster():GetMaxHealth() * 0.35, self:GetCaster())
+    end
     self:StartIntervalThink(FrameTime())
 end
 
 function modifier_shukuchi:OnIntervalThink()
+    if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_int13") then return end
     local casterPosition = self.ability.caster:GetAbsOrigin()
     local enemies = FindUnitsInRadius(
             self.casterTeam,
@@ -104,6 +123,9 @@ function modifier_shukuchi:OnIntervalThink()
             FIND_ANY_ORDER,
             false)
     for _, enemy in pairs(enemies) do
+        if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_int12") and self.damaged_enemies_time[enemy] and self.damaged_enemies_time[enemy] <= GameRules:GetGameTime()-1 then
+            self.damaged_enemies[enemy] = false
+        end
         if (not self.damaged_enemies[enemy]) then
             local pidx = ParticleManager:CreateParticle(
                     "particles/units/heroes/hero_weaver/weaver_shukuchi_damage.vpcf",
@@ -115,12 +137,22 @@ function modifier_shukuchi:OnIntervalThink()
             self.damage_table.victim = enemy
             ApplyDamage(self.damage_table)
             self.damaged_enemies[enemy] = true
+            self.damaged_enemies_time[enemy] = GameRules:GetGameTime()
         end
     end
 end
 
 function modifier_shukuchi:OnAttack(keys)
     if keys.attacker == self.ability.caster and not keys.no_attack_cooldown and self:GetElapsedTime() >= self.fade_time then
+        if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_str13") then
+            if self.duration - 3 <= self:GetRemainingTime() then 
+                return
+            end
+        elseif self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_str12") then
+            if self.duration - 1.5 <= self:GetRemainingTime() then 
+                return
+            end
+        end
         self:Destroy()
     end
 end

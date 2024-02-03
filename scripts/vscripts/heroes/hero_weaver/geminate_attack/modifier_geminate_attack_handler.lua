@@ -31,9 +31,10 @@ end
 
 function modifier_geminate_attack_handler:OnIntervalThink()
     if (self.caster:IsAlive()) then
-        self.caster:AddNewModifier(self.caster, self.ability, "modifier_geminate_attack_bonus_damage", {bonus_damage = self.bonus_damage})
-        self.caster:PerformAttack(self.target, true, true, true, false, true, false, false)
-        self.caster:RemoveModifierByName("modifier_geminate_attack_bonus_damage")
+        -- self.caster:AddNewModifier(self.caster, self.ability, "modifier_geminate_attack_bonus_damage", {bonus_damage = self.bonus_damage})
+        -- self.caster:PerformAttack(self.target, true, true, true, false, true, false, false)
+        -- self.caster:RemoveModifierByName("modifier_geminate_attack_bonus_damage")
+        self:ProjectileShot()
     end
     local stacks = self:GetStackCount() - 1
     if (stacks < 1) then
@@ -43,10 +44,33 @@ function modifier_geminate_attack_handler:OnIntervalThink()
     end
 end
 
+function modifier_geminate_attack_handler:ProjectileShot()
+	if not IsServer() then return end
+	
+		local projectile =
+		{
+			Target = self.target,
+			Source = self:GetCaster(),
+			Ability = self:GetAbility(),
+			EffectName = self:GetCaster():GetRangedProjectileName(),
+			bDodgeable = true,
+			bProvidesVision = false,
+			iMoveSpeed = self:GetCaster():GetProjectileSpeed(),
+			flExpireTime = GameRules:GetGameTime() + 60,
+			iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_HITLOCATION,
+		}
+				
+
+	ProjectileManager:CreateTrackingProjectile(projectile)
+end
+
 modifier_geminate_attack_bonus_damage = class({})
 
 function modifier_geminate_attack_bonus_damage:OnCreated(kv)
     self.bonus_damage = kv.bonus_damage
+    if self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_int8") then
+        self:OnDestroy()
+    end
 end
 
 function modifier_geminate_attack_bonus_damage:DeclareFunctions()

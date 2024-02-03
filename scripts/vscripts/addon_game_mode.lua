@@ -504,7 +504,7 @@ function CAddonAdvExGameMode:OnGameStateChanged( keys )
 				
 				CustomNetTables:SetTableValue("player_pets", tostring(playerID), {pet = "spell_item_pet"})	
 				CheckCheatMode()
-				
+				print('ban', Shop.pShop[playerID].ban)
 				if Shop.pShop[playerID].ban and Shop.pShop[playerID].ban == 1 then 
 					npc:AddNewModifier( npc, nil, "modifier_ban", {} )
 					CustomGameEventManager:Send_ServerToPlayer( PlayerResource:GetPlayer(playerID), "ban", ban )
