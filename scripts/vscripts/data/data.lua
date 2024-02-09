@@ -30,7 +30,7 @@ scroll_item_lvl_2 = {"item_up_ability_tower2"}
 scroll_item_lvl_3 = {"item_up_ability_tower3"}
 scroll_item_lvl_4 = {"item_up_ability_tower4"}
 
-bosses_names = {"npc_forest_boss","npc_village_boss","npc_mines_boss","npc_dust_boss","npc_swamp_boss","npc_snow_boss","npc_forest_boss_fake","npc_village_boss_fake","npc_mines_boss_fake","npc_dust_boss_fake","npc_swamp_boss_fake","npc_snow_boss_fake","boss_1","boss_2","boss_3","boss_4","boss_5","boss_6","boss_7","boss_8","boss_9","boss_10","boss_11","boss_12","boss_13","boss_14","boss_15","boss_16","boss_17","boss_18","boss_19","boss_20", "npc_boss_location8", "npc_boss_location8_fake", "npc_invoker_boss", "npc_bara_boss_main","npc_sand_king_boss","npc_dota_monkey_king_boss","npc_titan_boss","npc_appariion_boss","npc_crystal_boss","npc_mega_boss","npc_boss_plague_squirrel","npc_cemetery_boss_fake","npc_cemetery_boss","npc_boss_magma_fake","npc_boss_magma","raid_boss","raid_boss2","raid_boss3","raid_boss4"}
+bosses_names = {"npc_forest_boss","npc_village_boss","npc_mines_boss","npc_dust_boss","npc_swamp_boss","npc_snow_boss","npc_forest_boss_fake","npc_village_boss_fake","npc_mines_boss_fake","npc_dust_boss_fake","npc_swamp_boss_fake","npc_snow_boss_fake","boss_1","boss_2","boss_3","boss_4","boss_5","boss_6","boss_7","boss_8","boss_9","boss_10","boss_11","boss_12","boss_13","boss_14","boss_15","boss_16","boss_17","boss_18","boss_19","boss_20", "npc_boss_location8", "npc_boss_location8_fake", "npc_invoker_boss", "npc_bara_boss_main","npc_sand_king_boss","npc_dota_monkey_king_boss","npc_titan_boss","npc_appariion_boss","npc_crystal_boss","npc_mega_boss","npc_boss_plague_squirrel","npc_cemetery_boss_fake","npc_cemetery_boss","npc_boss_magma_fake","npc_boss_magma","raid_boss","raid_boss2","raid_boss3","raid_boss4","npc_mega_boss_fake"}
 bosses_ability = {"boss_ursa_earthshock_lua","boss_ursa_overpower_lua","ursa_enrage_lua","boss_2_spray","boss_2_heart","boss_2_spawn","boss_2_poison","boss_3_frost_blast","boss_3_chain_frost","boss_3_shards","boss_3_slow","boss_4_hole",
 "boss_4_eva","boss_4_midnignt","boss_4_eidolon","boss_5_lighting","boss_5_passive","boss_5_bolt","boss_5_passive2","boss_6_torrent","boss_6_armor","boss_6_ravage","boss_6_gush","boss_7_flux","boss_7_magnetic_field","boss_7_spark_wraith","boss_7_hide",
 "boss_8_chrono","boss_8_time_delay","boss_8_illusion","boss_8_lock","boss_9_pssive","boss_9_orbs","boss_9_drain","boss_9_aura","boss_10_passive","boss_10_flame","boss_10_macropyre","boss_10_chain", "ability_npc_boss_barrack1_spell1", "ability_npc_boss_barrack1_spell2", "ability_npc_boss_barrack1_spell3", "ability_npc_boss_barrack1_spell4", "ability_npc_boss_barrack2_spell1", "ability_npc_boss_barrack2_spell2", "ability_npc_boss_barrack2_spell3", "ability_npc_boss_barrack2_spell4","npc_byorrocktar_spell1","npc_byorrocktar_spell2","npc_byorrocktar_spell3","npc_byorrocktar_spell4","npc_byorrocktar_spell5","zuus_boss_circle_lua","zuus_boss_nimbus", "hero_destroyer_first_skill_totem", "hero_destroyer_second_skill", "hero_destroyer_third_skill", "hero_destroyer_ult", "hero_destroyer_fourth_skill", "hero_destroyer_fifth_skill",
@@ -61,7 +61,6 @@ Ability_tower_passive_lvl_4 = {"phantom_assassin_coup_de_grace","elder_titan_nat
 AutoCastItem = {"item_black_king_bar","item_lotus_orb","item_ethereal_blade_lua"}
 
 abiility_passive = {"huskar_berserkers_blood","shredder_reactive_armor"}
-
 
 Ability_active_final = {"mars_arena_of_blood","custom_forest","tusk_snowball_meteor","custom_earth_splitter","earth_spirit_magnetize_datadriven","wisp_spirits_datadriven","custom_nyx_skill","sand_king_burrowstrike_lua","lich_sinister_gaze","custom_solar_flare","night_stalker_crippling_fear","creature_fire_breath"}
 
@@ -237,4 +236,154 @@ _G.Miniboses = {
 	"npc_miniboss_timber",
 	"npc_miniboss_nyx",
 	"npc_miniboss_lycan",
+}
+
+Ability_Impossible = {
+	["alchemist_acid_spray_lua"] = {"npc_dota_hero_alchemist_str8", "npc_dota_hero_alchemist_str11", "npc_dota_hero_alchemist_str_last"},
+	["alchemist_chemical_rage_lua"] = {"npc_dota_hero_alchemist_str6", "npc_dota_hero_alchemist_str9", "npc_dota_hero_alchemist_str10","npc_dota_hero_alchemist_agi11"},
+	["axe_berserkers_call_lua"] = {"special_bonus_unique_npc_dota_hero_axe_agi50"},
+	["axe_blood_lua"] = {"npc_dota_hero_axe_str7"},
+	["bristleback_bristleback_lua"] = {"npc_dota_hero_bristleback_str10"},
+	["dragon_fire_ball_lua"] = {"npc_dota_hero_dragon_knight_str7","npc_dota_hero_dragon_knight_int_last"},
+	["dragon_form_lua"] = {"special_bonus_unique_npc_dota_hero_dragon_knight_agi50"},
+	["mars_bulwark_lua"] = {"npc_dota_hero_mars_str9","npc_dota_hero_mars_str10","npc_dota_hero_mars_str_last","special_bonus_unique_npc_dota_hero_mars_str50"},
+	["mars_lil"] = {"npc_dota_hero_mars_agi11","npc_dota_hero_mars_agi7","npc_dota_hero_mars_agi_last"},
+	["legion_courage"] = {"special_bonus_unique_npc_dota_hero_legion_commander_agi50","npc_dota_hero_legion_commander_agi_last","npc_dota_hero_legion_commander_agi10"},
+	["pudge_meat_hook_lua"] = {"npc_dota_hero_pudge_agi10"},
+	["sven_bringer"] = {"special_bonus_unique_npc_dota_hero_sven_agi50"},
+	["sven_gods_strength_lua"] = {"npc_dota_hero_sven_int6","npc_dota_hero_sven_int9","npc_dota_hero_sven_int_last","special_bonus_unique_npc_dota_hero_sven_int50","npc_dota_hero_sven_str10"},
+	["arc_warden_magnetic_field_lua"] = {"npc_dota_hero_arc_warden_agi8","npc_dota_hero_arc_warden_str8","special_bonus_unique_npc_dota_hero_arc_warden_str50"},
+	["arc_geminate_attack"] = {"npc_dota_hero_arc_warden_agi_last","npc_dota_hero_arc_warden_agi9","npc_dota_hero_arc_warden_str9"},
+	["bloodseeker_bloodrage_lua"] = {"npc_dota_hero_bloodseeker_str11","npc_dota_hero_bloodseeker_str8"},
+	["juggernaut_blade_dance_lua"] = {"npc_dota_hero_juggernaut_agi11","npc_dota_hero_juggernaut_str9"},
+	["juggernaut_fervor_lua"] = {"npc_dota_hero_juggernaut_agi_last","npc_dota_hero_juggernaut_agi9","npc_dota_hero_juggernaut_str8","npc_dota_hero_juggernaut_str11"},
+	["juggernaut_omni_slash_lua"] = {"npc_dota_hero_juggernaut_str10","npc_dota_hero_juggernaut_str_last","special_bonus_unique_npc_dota_hero_juggernaut_str50","npc_dota_hero_juggernaut_int8"},
+	["luna_starfall_lua"] = {"npc_dota_hero_luna_int7","npc_dota_hero_luna_int_last"},
+	["luna_moon"] = {"npc_dota_hero_luna_int9","npc_dota_hero_luna_int10","npc_dota_hero_luna_int11","special_bonus_unique_npc_dota_hero_luna_str50"},
+	["phantom_assassin_blur_lua"] = {"npc_dota_hero_phantom_assassin_str11","npc_dota_hero_phantom_assassin_str_last"},
+	["phantom_assassin_phantom_strike_lua"] = {"npc_dota_hero_phantom_assassin_str6"},
+	["phantom_assassin_coup_de_grace_lua"] = {"npc_dota_hero_phantom_assassin_agi9","npc_dota_hero_phantom_assassin_agi10","npc_dota_hero_phantom_assassin_agi_last"},
+	["razor_eye_of_the_storm_lua"] = {"npc_dota_hero_razor_str7","npc_dota_hero_razor_str_last","special_bonus_unique_npc_dota_hero_razor_str50"},
+	["riki_smoke_screen_lua"] = {"npc_dota_hero_riki_agi10","npc_dota_hero_riki_str11"},
+	["nevermore_aura"] = {"npc_dota_hero_nevermore_agi6"},
+	-- ["slark_dark_pact_lua"] = {"npc_dota_hero_slark_str10"},
+	["slark_shadow_dance_lua"] = {"special_bonus_unique_npc_dota_hero_slark_str50"},
+	["sniper_headshot_lua"] = {"npc_dota_hero_sniper_agi9","npc_dota_hero_sniper_agi8"},
+	["sniper_ult"] = {"npc_dota_hero_sniper_agi_last","npc_dota_hero_sniper_agi11"},
+	["spectre_desolate_lua"] = {"npc_dota_hero_spectre_agi8","npc_dota_hero_spectre_agi10","npc_dota_hero_spectre_agi11","npc_dota_hero_spectre_agi_last","special_bonus_unique_npc_dota_hero_spectre_agi50"},
+	-- ["spectre_dispersion_lua"] = {"npc_dota_hero_spectre_str7","npc_dota_hero_spectre_str_last"},
+	["terrorblade_metamorphosis_lua"] = {"npc_dota_hero_terrorblade_str7","npc_dota_hero_terrorblade_agi7","npc_dota_hero_terrorblade_agi10","npc_dota_hero_terrorblade_int_last"},
+	["ursa_overpower_lua"] = {"npc_dota_hero_ursa_agi8","npc_dota_hero_ursa_agi11","npc_dota_hero_ursa_int7","npc_dota_hero_ursa_int10"},
+	["ursa_fury_swipes_lua"] = {"npc_dota_hero_ursa_str9","npc_dota_hero_ursa_str13","npc_dota_hero_ursa_agi6","npc_dota_hero_ursa_agi7","npc_dota_hero_ursa_agi10"},
+	["ursa_enrage_lua"] = {"npc_dota_hero_ursa_str11","npc_dota_hero_ursa_agi9"},
+	["viper_poison_attack_lua"] = {"npc_dota_hero_viper_str10","npc_dota_hero_viper_agi6","npc_dota_hero_viper_int13"},
+	["viper_nethertoxin_lua"] = {"npc_dota_hero_viper_str9","npc_dota_hero_viper_agi7","npc_dota_hero_viper_agi10","npc_dota_hero_viper_agi13"},
+	["viper_corrosive_skin_lua"] = {"npc_dota_hero_viper_str7","npc_dota_hero_viper_str8","npc_dota_hero_viper_str12","npc_dota_hero_viper_str13","npc_dota_hero_viper_agi8","npc_dota_hero_viper_agi11"},
+	["viper_viper_strike_lua"] = {"npc_dota_hero_viper_str6","npc_dota_hero_viper_int11"},
+	["geminate_attack_lua"] = {"npc_dota_hero_weaver_agi7","npc_dota_hero_weaver_agi8","npc_dota_hero_weaver_agi12","npc_dota_hero_weaver_agi13"},
+	["ancient_apparition_cold_feet_lua"] = {"npc_dota_hero_ancient_apparition_str10","npc_dota_hero_ancient_apparition_str11","npc_dota_hero_ancient_apparition_agi8","npc_dota_hero_ancient_apparition_agi9"},
+	["ancient_apparition_ice_vortex_lua"] = {"npc_dota_hero_ancient_apparition_str6","npc_dota_hero_ancient_apparition_agi7","npc_dota_hero_ancient_apparition_int8"},
+	["ancient_apparition_ice_blast_lua"] = {"npc_dota_hero_ancient_apparition_int_last"},
+	["death_prophet_crypt_swarm_bh"] = {"npc_dota_hero_death_prophet_str6", "npc_dota_hero_death_prophet_str13", "npc_dota_hero_death_prophet_agi10", "npc_dota_hero_death_prophet_int11"},
+	["death_prophet_ghastly_haunting"] = {},
+	-- ["death_prophet_exorcism_bh"] = {"npc_dota_hero_death_prophet_str12","npc_dota_hero_death_prophet_agi9","npc_dota_hero_death_prophet_agi12","npc_dota_hero_death_prophet_agi13"},
+	["enchantress_natures_attendants_lua"] = {"npc_dota_hero_enchantress_str11"},
+	["enchantress_natures"] = {"npc_dota_hero_enchantress_str10", "npc_dota_hero_enchantress_int11"},
+	["enchantress_impetus_lua"] = {"special_bonus_unique_npc_dota_hero_enchantress_int50","npc_dota_hero_enchantress_agi11"},
+	["jakiro_dual_breath_lua"] = {"npc_dota_hero_jakiro_str6","npc_dota_hero_jakiro_str9","npc_dota_hero_jakiro_agi10","npc_dota_hero_jakiro_int10","npc_dota_hero_jakiro_int12"},
+	["jakiro_ice_path_lua"] = {"npc_dota_hero_jakiro_str11"},
+	["jakiro_liquid_fire_lua"] = {"npc_dota_hero_jakiro_agi6","npc_dota_hero_jakiro_agi12","npc_dota_hero_jakiro_int9"},
+	["leshrac_diabolic_edict_lua"] = {"npc_dota_hero_leshrac_agi8","npc_dota_hero_leshrac_agi11","npc_dota_hero_leshrac_agi12","npc_dota_hero_leshrac_agi13"},
+	["leshrac_pulse_nova_lua"] = {"npc_dota_hero_leshrac_str7","npc_dota_hero_leshrac_str10","npc_dota_hero_leshrac_agi6","npc_dota_hero_leshrac_int12","npc_dota_hero_leshrac_int13"},
+	["leshrac_split_earth_lua"] = {"npc_dota_hero_leshrac_str6","npc_dota_hero_leshrac_str9","npc_dota_hero_leshrac_agi7","npc_dota_hero_leshrac_agi10"},
+	["lina_stun"] = {"npc_dota_hero_lina_str8","npc_dota_hero_lina_int6"},
+	["lina_laguna_blade_lua"] = {"npc_dota_hero_lina_str11"},
+	["lion_earth_spike_lua"] = {"npc_dota_hero_lion_agi_last","npc_dota_hero_lion_int6"},
+	["lion_finger_of_death_lua"] = {"npc_dota_hero_lion_str6","npc_dota_hero_lion_str_last", "special_bonus_unique_npc_dota_hero_lion_int50"},
+	["necrolyte_ghost_shroud_lua"] = {"npc_dota_hero_necrolyte_str8","npc_dota_hero_necrolyte_str12", "npc_dota_hero_necrolyte_agi8","npc_dota_hero_necrolyte_agi11","npc_dota_hero_necrolyte_int11"},
+	["necrolyte_reapers_scythe_lua"] = {"npc_dota_hero_necrolyte_agi12","npc_dota_hero_necrolyte_agi13", "npc_dota_hero_necrolyte_int12","npc_dota_hero_necrolyte_int13"},
+	-- ["shaman_hex"] = {"npc_dota_hero_shadow_shaman_int9","special_bonus_unique_npc_dota_hero_shadow_shaman_int50", "special_bonus_unique_npc_dota_hero_shadow_shaman_str50","npc_dota_hero_shadow_shaman_str7"},
+	["silencer_global_silence_lua"] = {},
+	["skywrath_mage_ancient_seal_lua"] = {"npc_dota_hero_skywrath_mage_str10","npc_dota_hero_skywrath_mage_agi6","npc_dota_hero_skywrath_mage_int7"},
+	["dazzle_poison_touch_lua"] = {"npc_dota_hero_dazzle_str11","npc_dota_hero_dazzle_str_last","special_bonus_unique_npc_dota_hero_dazzle_str50","npc_dota_hero_dazzle_agi9","special_bonus_unique_npc_dota_hero_dazzle_int50"},
+	["dazzle_custom_badjuju"] = {"npc_dota_hero_dazzle_int_last"},
+	["dazzle_shallow_grave_lua"] = {"npc_dota_hero_dazzle_str7"},
+	["magnataur_empower_lua"] = {"npc_dota_hero_magnataur_str7","npc_dota_hero_magnataur_str8","npc_dota_hero_magnataur_str9","npc_dota_hero_magnataur_agi10","npc_dota_hero_magnataur_agi_last","special_bonus_unique_npc_dota_hero_magnataur_agi50"},
+	["magnataur_reverse_polarity_lua"] = {"npc_dota_hero_magnataur_str_last","npc_dota_hero_magnataur_agi7","npc_dota_hero_magnataur_agi6","npc_dota_hero_magnataur_int8"},
+	["sand_stun"] = {"npc_dota_hero_sand_king_int7","npc_dota_hero_sand_king_int10","special_bonus_unique_npc_dota_hero_sand_king_str50"},
+	["techies_land_mines_lua"] = {"npc_dota_hero_techies_str8","npc_dota_hero_techies_str11","npc_dota_hero_techies_str_last","special_bonus_unique_npc_dota_hero_techies_str50","npc_dota_hero_techies_agi7","npc_dota_hero_techies_agi11","special_bonus_unique_npc_dota_hero_techies_agi50"},
+	["techies_stasis_trap_lua"] = {"npc_dota_hero_techies_str7","npc_dota_hero_techies_str10"},
+	["vengeful_spirit_magic_missile"] = {"npc_dota_hero_vengefulspirit_agi10","npc_dota_hero_vengefulspirit_int11","npc_dota_hero_vengefulspirit_int12","npc_dota_hero_vengefulspirit_int13"},
+	["vengeful_spirit_command_aura"] = {"npc_dota_hero_vengefulspirit_str10","npc_dota_hero_vengefulspirit_agi13"},
+} 
+for key,_ in pairs(Ability_Impossible) do
+	table.insert(bosses_ability, key)
+	table.insert(creep_ability, key)
+end
+function GetRandomAbilities()
+	local abilities = {}
+	while table.count(abilities) < 6 do
+		local talents, ability = table.random(Ability_Impossible)
+		if abilities[ability] == nil then
+			abilities[ability] = talents
+		end
+	end
+	return abilities
+end
+
+Ability_Impossible_Settings = {
+	------ forest -------------------------------------------------------------------------
+	{ ["creeps"] = forest_mini, 	["abilityes"] = 0, 	["level"] = 3, 	["talents"] = 0, ["items"] = 0, ["items_level"] = 1 },
+	{ ["creeps"] = forest_big, 		["abilityes"] = 0, 	["level"] = 4, 	["talents"] = 0, ["items"] = 0, ["items_level"] = 1 },
+	{ ["creeps"] = {
+		"npc_forest_boss", "npc_forest_boss_fake"
+	}, 								["abilityes"] = 0, 	["level"] = 5, 	["talents"] = 0, ["items"] = 0, ["items_level"] = 0 },
+	------ village ------------------------------------------------------------------------
+	{ ["creeps"] = village_mini, 	["abilityes"] = 0, 	["level"] = 6, 	["talents"] = 0, ["items"] = 0, ["items_level"] = 2 },
+	{ ["creeps"] = forest_big, 		["abilityes"] = 0, 	["level"] = 9, 	["talents"] = 0, ["items"] = 0, ["items_level"] = 2 },
+	{ ["creeps"] = {
+		"npc_village_boss", "npc_village_boss_fake"
+	}, 								["abilityes"] = 0, 	["level"] = 8, 	["talents"] = 0, ["items"] = 0, ["items_level"] = 0 },
+	-------- mines ----------------------------------------------------------------------
+	{ ["creeps"] = mines_mini, 		["abilityes"] = 0, 	["level"] = 7, 	["talents"] = 0, ["items"] = 0, ["items_level"] = 3 },
+	{ ["creeps"] = mines_big, 		["abilityes"] = 0, 	["level"] = 10, ["talents"] = 0, ["items"] = 0, ["items_level"] = 3 },
+	{ ["creeps"] = {
+		"npc_mines_boss", "npc_mines_boss_fake"
+	}, 								["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 0 },
+	-------- dust ----------------------------------------------------------------------
+	{ ["creeps"] = dust_mini, 		["abilityes"] = 0, 	["level"] = 10, ["talents"] = 0, ["items"] = 0, ["items_level"] = 4 },
+	{ ["creeps"] = dust_big, 		["abilityes"] = 0, 	["level"] = 13, ["talents"] = 0, ["items"] = 0, ["items_level"] = 4 },
+	{ ["creeps"] = {
+		"npc_dust_boss", "npc_dust_boss_fake"
+	}, 								["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 0 },
+	-------- cemetery ----------------------------------------------------------------------
+	{ ["creeps"] = cemetery_mini, 	["abilityes"] = 0, 	["level"] = 13, ["talents"] = 0, ["items"] = 0, ["items_level"] = 5 },
+	{ ["creeps"] = cemetery_big, 	["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 5 },
+	{ ["creeps"] = {
+		"npc_cemetery_boss", "npc_cemetery_boss_fake"
+	}, 								["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 0 },
+	-------- swamp ----------------------------------------------------------------------
+	{ ["creeps"] = swamp_mini, 		["abilityes"] = 0, 	["level"] = 13, ["talents"] = 0, ["items"] = 0, ["items_level"] = 6 },
+	{ ["creeps"] = swamp_big, 		["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 6 },
+	{ ["creeps"] = {
+		"npc_swamp_boss", "npc_swamp_boss_fake"
+	}, 								["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 0 },
+	-------- snow ----------------------------------------------------------------------
+	{ ["creeps"] = snow_mini, 		["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 7 },
+	{ ["creeps"] = snow_big, 		["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 7 },
+	{ ["creeps"] = {
+		"npc_snow_boss", "npc_snow_boss_fake"
+	}, 								["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 0 },
+	-------- last ----------------------------------------------------------------------
+	{ ["creeps"] = last_mini, 		["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 8 },
+	{ ["creeps"] = last_big, 		["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 8 },
+	{ ["creeps"] = {
+		"npc_boss_location8", "npc_boss_location8_fake"
+	}, 								["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 0 },
+	-------- magma ----------------------------------------------------------------------
+	{ ["creeps"] = magma_mini, 		["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 9 },
+	{ ["creeps"] = magma_big, 		["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 9 },
+	{ ["creeps"] = {
+		"npc_mega_boss", "npc_mega_boss_fake"
+	}, 								["abilityes"] = 0, 	["level"] = 15, ["talents"] = 0, ["items"] = 0, ["items_level"] = 0 },
 }

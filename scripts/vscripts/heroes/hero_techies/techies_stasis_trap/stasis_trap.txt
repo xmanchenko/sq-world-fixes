@@ -1,6 +1,6 @@
 "DOTAAbilities"
 {
-"techies_stasis_trap_lua"
+	"techies_stasis_trap_lua"
 	{
 		"BaseClass"							"ability_lua"
 		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"

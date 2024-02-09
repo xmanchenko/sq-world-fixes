@@ -213,7 +213,7 @@ end
 
 function modifier_the_swarm_beetle:OnIntervalThink()
     if (self.target and not self.target:IsNull()) then
-        if (self.target:IsInvisible() and not self.beetle:CanEntityBeSeenByMyTeam(self.target)) or self.beetle:HasModifier("modifier_faceless_void_chronosphere_freeze") then
+        if (self.target:IsInvisible() and not self.beetle:CanEntityBeSeenByMyTeam(self.target)) or self.beetle:HasModifier("modifier_faceless_void_chronosphere_freeze") or not self.target:IsAlive() then
             self.beetle:ForceKill(false)
             self:Destroy()
         elseif self.target:IsAlive() then

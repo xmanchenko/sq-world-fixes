@@ -7,7 +7,7 @@ function Spawn(entityKeyValues)
         return
     end
 	
-	thisEntity:AddNewModifier(thisEntity, nil, "modifier_invulnerable", {})
+	-- thisEntity:AddNewModifier(thisEntity, nil, "modifier_invulnerable", {})
 	thisEntity:AddNewModifier(thisEntity, nil, "modifier_item_aghanims_shard", {})
 	thisEntity:AddNewModifier(thisEntity, nil, "modifier_item_ultimate_scepter", {})
 
@@ -31,21 +31,24 @@ function NeutralThink()
 		thisEntity.vInitialSpawnPos = thisEntity:GetOrigin()
 		thisEntity.fMaxDist = thisEntity:GetAcquisitionRange()
 		thisEntity.bInitialized = true
+		thisEntity.agro = false
     end
-
     if not thisEntity:IsAlive() or GameRules:IsGamePaused() or thisEntity:IsChanneling() or thisEntity:IsDisarmed() then
         return 0.5
     end
-
-    local enemies = FindUnitsInRadius(thisEntity:GetTeamNumber(), thisEntity:GetOrigin(), nil, thisEntity:GetAcquisitionRange(), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_CLOSEST, false)
+	local search_radius = thisEntity.fMaxDist
+    if thisEntity.agro then
+        search_radius = thisEntity.fMaxDist * 2
+    end
+    local enemies = FindUnitsInRadius(thisEntity:GetTeamNumber(), thisEntity:GetOrigin(), nil, search_radius + 50, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_CLOSEST, false)
 	if #enemies == 0 then
-        RetreatHome()   
+		if thisEntity.agro then
+            RetreatHome() 
+        end 
         return 0.5
     end
-	
 	local target = enemies[RandomInt(1, #enemies)]
 	local abilities = {}
-
     for _, abilityName in ipairs(thisEntity.spells) do
         local ability = thisEntity:FindAbilityByName(abilityName)
         if ability and ability:IsFullyCastable() then
@@ -108,7 +111,40 @@ function NeutralThink()
 			ability:ToggleAbility()
 		end
     end
+	if thisEntity.agro then     
+        AttackMove(thisEntity, target)
+    else
+        local allies = FindUnitsInRadius( 
+			thisEntity:GetTeamNumber(),
+                thisEntity.vInitialSpawnPos,
+                nil,
+                thisEntity.fMaxDist,
+                DOTA_UNIT_TARGET_TEAM_FRIENDLY,
+                DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,
+                DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE,
+                FIND_CLOSEST,
+                false )
+              
+        for i=1,#allies do  
+            local ally = allies[i]
+			thisEntity.agro = true
+			AttackMove(ally, target)
+        end 
+    end 
     return 0.5
+end
+
+function AttackMove( unit, enemy )
+    if enemy == nil then
+        return
+    end
+    ExecuteOrderFromTable({
+        UnitIndex = unit:entindex(),       
+        OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,   
+        Position = enemy:GetOrigin(),         
+        Queue = false,
+    })
+    return 1
 end
 
 function SearchForSpells()
@@ -125,6 +161,7 @@ function SearchForSpells()
 end
 
 function RetreatHome()
+	thisEntity.agro = false
     ExecuteOrderFromTable({
         UnitIndex = thisEntity:entindex(),
         OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION,

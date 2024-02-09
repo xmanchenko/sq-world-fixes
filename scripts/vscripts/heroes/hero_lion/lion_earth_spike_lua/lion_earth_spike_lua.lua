@@ -5,6 +5,7 @@ LinkLuaModifier( "modifier_lion_soul_collector", "heroes/hero_lion/lion_soul_col
 
 
 function lion_earth_spike_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
 	return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 

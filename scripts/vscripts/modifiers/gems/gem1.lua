@@ -82,8 +82,7 @@ function modifier_gem1:OnTakeDamage( keys )
 			self.lifesteal_pfx = ParticleManager:CreateParticle("particles/items3_fx/octarine_core_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, keys.attacker)
 			ParticleManager:SetParticleControl(self.lifesteal_pfx, 0, keys.attacker:GetAbsOrigin())
 			ParticleManager:ReleaseParticleIndex(self.lifesteal_pfx)
-
-			keys.attacker:HealWithParams(math.min(keys.damage * self:OnTooltip() * 0.01, self:GetAbility(), 2^30), true, true, keys.attacker, true)
+			keys.attacker:HealWithParams(math.min(keys.damage * self:OnTooltip() * 0.01, 2^30), self:GetAbility(), true, true, keys.attacker, true)
 			if self:GetParent():HasModifier("modifier_wisp_tether_lua") then
 				local modifier = self:GetParent():FindModifierByName("modifier_wisp_tether_lua")
 				modifier.heal = modifier.heal + heal
@@ -96,7 +95,7 @@ function modifier_gem1:OnTakeDamage( keys )
 				ParticleManager:SetParticleControl(self.lifesteal_pfx, 0, keys.attacker:GetAbsOrigin())
 				ParticleManager:ReleaseParticleIndex(self.lifesteal_pfx)
 				
-				keys.attacker:HealWithParams(math.min(keys.damage * self:OnTooltip() * 0.01, self:GetAbility(), 2^30), true, true, keys.attacker, false)
+				keys.attacker:HealWithParams(math.min(keys.damage * self:OnTooltip() * 0.01, 2^30), self:GetAbility(), true, true, keys.attacker, false)
 				if self:GetParent():HasModifier("modifier_wisp_tether_lua") then
 					local modifier = self:GetParent():FindModifierByName("modifier_wisp_tether_lua")
 					modifier.heal = modifier.heal + heal

@@ -14,7 +14,7 @@ end
 -- particles/dev/curlnoise_test.vpcf
 function modifier_following_effect_8:OnCreated( kv )
 	self.caster = self:GetCaster()
-	self.particleLeader = ParticleManager:CreateParticle( "particles/econ/courier/courier_roshan_darkmoon/courier_roshan_darkmoon.vpcf", PATTACH_POINT_FOLLOW, self.caster )
+	self.particleLeader = ParticleManager:CreateParticle( "particles/effects/courier_roshan_darkmoon.vpcf", PATTACH_POINT_FOLLOW, self.caster )
 	ParticleManager:SetParticleControlEnt( self.particleLeader, PATTACH_OVERHEAD_FOLLOW, self.caster, PATTACH_OVERHEAD_FOLLOW, "PATTACH_OVERHEAD_FOLLOW", self.caster:GetAbsOrigin(), true )
 end
 

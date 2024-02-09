@@ -4,6 +4,7 @@ LinkLuaModifier( "modifier_bloodseeker_bloodrage_lua_proc", "heroes/hero_bloodse
 bloodseeker_bloodrage_lua = class({})
 
 function bloodseeker_bloodrage_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
 	return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 

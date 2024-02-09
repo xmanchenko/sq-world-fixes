@@ -7,6 +7,7 @@ LinkLuaModifier("modifier_cd", "heroes/hero_luna/luna_moon/luna_moon", LUA_MODIF
 luna_moon = class({})
 
 function luna_moon:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
     return 150 + math.min(65000, self:GetCaster():GetIntellect() / 30)
 end
 

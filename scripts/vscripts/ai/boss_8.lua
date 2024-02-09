@@ -76,6 +76,46 @@ function NeutralThink()
 				end
 			end
 		end	
+		enemy = enemies[1]  
+		for _, T in ipairs(creep_ability) do
+			local ability = thisEntity:FindAbilityByName(T)
+			if ability then
+				behavior = ability:GetBehaviorInt()
+				if bit.band(behavior, DOTA_ABILITY_BEHAVIOR_AUTOCAST) == DOTA_ABILITY_BEHAVIOR_AUTOCAST then
+					ability.Behavior = "auto"
+					if not ability:GetAutoCastState() then 
+						ability:ToggleAutoCast()
+					end
+					return 0.5
+				elseif bit.band(behavior, DOTA_ABILITY_BEHAVIOR_UNIT_TARGET) == DOTA_ABILITY_BEHAVIOR_UNIT_TARGET then
+					ability.Behavior = "target"
+					if ability:GetAbilityTargetTeam() == DOTA_UNIT_TARGET_TEAM_FRIENDLY then
+						local friendly = FindUnitsInRadius(thisEntity:GetTeamNumber(), thisEntity:GetOrigin(), nil, thisEntity:GetAcquisitionRange(), DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC, DOTA_UNIT_TARGET_FLAG_NONE, FIND_CLOSEST, false)
+						local target = friendly[RandomInt(1, #friendly)]
+						Cast(ability, target)
+					else
+						if enemy and not enemy:HasModifier("modifier_item_lotus_orb_active") then
+							Cast(ability, enemy)
+						end
+					end
+				elseif bit.band(behavior, DOTA_ABILITY_BEHAVIOR_NO_TARGET) == DOTA_ABILITY_BEHAVIOR_NO_TARGET then
+					ability.Behavior = "no_target"
+					if enemy then
+						Cast(ability, enemy)
+					end
+				elseif bit.band(behavior, DOTA_ABILITY_BEHAVIOR_POINT) == DOTA_ABILITY_BEHAVIOR_POINT then
+					ability.Behavior = "point"
+					if enemy then
+						Cast(ability, enemy)
+					end
+				elseif bit.band(behavior, DOTA_ABILITY_BEHAVIOR_TOGGLE) == DOTA_ABILITY_BEHAVIOR_TOGGLE then
+					ability.Behavior = "toggle"		
+					if not ability:GetToggleState() then 
+						ability:ToggleAbility()
+					end
+				end
+			end
+		end	
 		if thisEntity.ItemAbility and thisEntity.ItemAbility:IsFullyCastable() then
 			return UseItem()
 		end	

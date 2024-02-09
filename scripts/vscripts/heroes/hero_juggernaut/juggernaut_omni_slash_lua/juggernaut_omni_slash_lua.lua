@@ -47,6 +47,7 @@ function juggernaut_omni_slash_lua:OnAbilityPhaseStart()
 end
 
 function juggernaut_omni_slash_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
     return 150 + math.min(65000, self:GetCaster():GetIntellect()/ 30)
 end
 

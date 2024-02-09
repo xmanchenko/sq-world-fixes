@@ -7,6 +7,7 @@ function alchemist_acid_spray_lua:GetAOERadius()
 end
 
 function alchemist_acid_spray_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
 	return 100 + math.min(65000, self:GetCaster():GetIntellect()/100)
 end
 

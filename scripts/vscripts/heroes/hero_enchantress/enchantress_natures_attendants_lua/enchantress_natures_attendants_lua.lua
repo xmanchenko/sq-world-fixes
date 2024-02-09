@@ -4,6 +4,7 @@ LinkLuaModifier( "modifier_resist", "heroes/hero_enchantress/enchantress_natures
 
 
 function enchantress_natures_attendants_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_enchantress_int8")  ~= nil then 
 		return (100 + math.min(65000, self:GetCaster():GetIntellect() / 200)) / 2
 	end

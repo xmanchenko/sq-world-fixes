@@ -9,6 +9,7 @@ function jakiro_dual_breath_lua:GetIntrinsicModifierName()
 	return "modifier_jakiro_dual_breath_intrinsic_lua"
 end
 function jakiro_dual_breath_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
     return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 function jakiro_dual_breath_lua:GetCastRange(location, target)

@@ -7,7 +7,7 @@ function item_golden_egg_lua:GetAbilityTextureName()
 	if self:GetSecondaryCharges() == 0 then
 		return "all/item_golden_egg_lua" .. level
 	else
-		return "gem" .. self:GetSecondaryCharges() .. "/item_golden_egg_lua" .. level
+		return "gem" .. self:GetSecondaryCharges() .. "/item_golden_egg_lua" .. level .. "_" .. "gem" .. self:GetSecondaryCharges()
 	end
 end
 

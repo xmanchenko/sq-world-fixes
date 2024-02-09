@@ -7,6 +7,7 @@ LinkLuaModifier( "modifier_axe_berserkers_call_lua_debuff", "heroes/hero_axe/axe
 
 
 function axe_berserkers_call_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
     return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 

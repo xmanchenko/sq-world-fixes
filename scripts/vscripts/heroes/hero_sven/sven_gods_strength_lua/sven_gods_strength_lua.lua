@@ -12,6 +12,7 @@ function sven_gods_strength_lua:GetIntrinsicModifierName()
 end
 
 function sven_gods_strength_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
 	if self:GetCaster():FindAbilityByName("special_bonus_unique_npc_dota_hero_sven_str50") then
 		return 0.0
 	end

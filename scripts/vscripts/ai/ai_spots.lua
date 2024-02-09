@@ -57,7 +57,39 @@ function NeutralThink()
         end     
         return 0.5
     end 
-    local enemy = enemies[1]  
+    local enemy = enemies[1]
+    for _, T in ipairs(creep_ability) do
+        local Spell = thisEntity:FindAbilityByName(T)
+        if Spell then
+            local Behavior = Spell:GetBehaviorInt()
+            if bit.band( Behavior, DOTA_ABILITY_BEHAVIOR_UNIT_TARGET ) == DOTA_ABILITY_BEHAVIOR_UNIT_TARGET then
+                Spell.Behavior = "target"
+                Cast( Spell, enemy )
+            elseif bit.band( Behavior, DOTA_ABILITY_BEHAVIOR_NO_TARGET ) == DOTA_ABILITY_BEHAVIOR_NO_TARGET then
+                Spell.Behavior = "no_target"
+                if Spell:GetSpecialValueFor("radius") == 0 then
+                    Cast( Spell, enemy )
+                elseif ( enemy:GetOrigin()- thisEntity:GetOrigin() ):Length2D() < Spell:GetSpecialValueFor("radius") then
+                    Cast( Spell, enemy )
+                end
+            elseif bit.band( Behavior, DOTA_ABILITY_BEHAVIOR_POINT ) == DOTA_ABILITY_BEHAVIOR_POINT then
+                Spell.Behavior = "point"
+                Cast( Spell, enemy )
+            elseif bit.band( Behavior, DOTA_ABILITY_BEHAVIOR_TOGGLE ) == DOTA_ABILITY_BEHAVIOR_POINT then
+                Spell.Behavior = "toggle"
+                if not Spell:GetToggleState() then 
+                    Spell:ToggleAbility()
+                end
+            elseif bit.band( Behavior, DOTA_ABILITY_BEHAVIOR_AUTOCAST ) == DOTA_ABILITY_BEHAVIOR_AUTOCAST then
+                Spell.Behavior = "autocast"
+                if not Spell:GetAutoCastState() then 
+                    Spell:ToggleAutoCast()
+                end
+            elseif bit.band( Behavior, DOTA_ABILITY_BEHAVIOR_PASSIVE ) == DOTA_ABILITY_BEHAVIOR_PASSIVE then
+                Spell.Behavior = "passive"
+            end
+        end
+    end	
     if npc.agro then     
         AttackMove(npc, enemy)
     else
@@ -74,8 +106,8 @@ function NeutralThink()
               
         for i=1,#allies do  
             local ally = allies[i]
-				ally.agro = true  
-				AttackMove(ally, enemy) 
+				ally.agro = true
+				AttackMove(ally, enemy)
         end 
     end 
     return 1
@@ -102,4 +134,28 @@ function RetreatHome()
         OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION,
         Position = thisEntity.vInitialSpawnPos     
     })
+end
+
+function Cast( Spell , enemy )
+	local order_type
+	local vTargetPos = enemy:GetOrigin()
+	
+    if Spell.Behavior == "target" then
+        order_type = DOTA_UNIT_ORDER_CAST_TARGET
+    elseif Spell.Behavior == "no_target" then
+        order_type = DOTA_UNIT_ORDER_CAST_NO_TARGET
+    elseif Spell.Behavior == "point" then
+        order_type = DOTA_UNIT_ORDER_CAST_POSITION
+    elseif Spell.Behavior == "passive" then
+        return
+    end
+
+	ExecuteOrderFromTable({
+		UnitIndex = thisEntity:entindex(),
+		OrderType = order_type,
+		Position = vTargetPos,
+		TargetIndex = enemy:entindex(),  
+		AbilityIndex = Spell:entindex(),
+		Queue = false,
+	})
 end

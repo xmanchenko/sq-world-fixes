@@ -1349,6 +1349,7 @@ function CAddonAdvExGameMode:OnEntityKilled( keys )
 			FindClearSpaceForUnit(forest, point, false)
 			forest:Stop()
 			forest:RespawnUnit()
+			difficality_modifier(forest)
 		end)
 		return
 	end	
@@ -1365,6 +1366,7 @@ function CAddonAdvExGameMode:OnEntityKilled( keys )
 			FindClearSpaceForUnit(village, point, false)
 			village:Stop()
 			village:RespawnUnit()
+			difficality_modifier(village)
 		end)
 		return
 	end	
@@ -1381,6 +1383,7 @@ function CAddonAdvExGameMode:OnEntityKilled( keys )
 			FindClearSpaceForUnit(mines, point, false)
 			mines:Stop()
 		 	mines:RespawnUnit()
+			 difficality_modifier(mines)
 		end)
 		return
 	end	
@@ -1397,6 +1400,7 @@ function CAddonAdvExGameMode:OnEntityKilled( keys )
 			FindClearSpaceForUnit(dust, point, false)
 			dust:Stop()
 			dust:RespawnUnit()
+			difficality_modifier(dust)
 		end)
 		return
 	end	
@@ -1410,6 +1414,7 @@ function CAddonAdvExGameMode:OnEntityKilled( keys )
 			FindClearSpaceForUnit(cemetery, point, false)
 			cemetery:Stop()
 			cemetery:RespawnUnit()
+			difficality_modifier(cemetery)
 		end)
 		return
 	end	
@@ -1426,6 +1431,7 @@ function CAddonAdvExGameMode:OnEntityKilled( keys )
 			FindClearSpaceForUnit(swamp, point, false)
 			swamp:Stop()
 		 	swamp:RespawnUnit()
+			difficality_modifier(swamp)
 		end)
 		return
 	end	
@@ -1442,6 +1448,7 @@ function CAddonAdvExGameMode:OnEntityKilled( keys )
 			FindClearSpaceForUnit(snow, point, false)
 			snow:Stop()
 			snow:RespawnUnit()
+			difficality_modifier(snow)
 		end)
 		return
 	end	
@@ -1449,13 +1456,14 @@ function CAddonAdvExGameMode:OnEntityKilled( keys )
 	if killedUnit:GetUnitName() == "npc_boss_location8"  then
 		add_soul(killedUnit:GetUnitName())
 		add_feed(killerEntity_playerID)
-		local snow = killedUnit
+		local location8 = killedUnit
 		Timers:CreateTimer(diff_wave.respawn, function()
 			local ent = Entities:FindByName( nil, "last_boss_point")
 			local point = ent:GetAbsOrigin()
-			FindClearSpaceForUnit(snow, point, false)
-			snow:Stop()
-			snow:RespawnUnit()
+			FindClearSpaceForUnit(location8, point, false)
+			location8:Stop()
+			location8:RespawnUnit()
+			difficality_modifier(location8)
 		end)
 		return
 	end	
@@ -1477,12 +1485,13 @@ function CAddonAdvExGameMode:OnEntityKilled( keys )
 	if killedUnit:GetUnitName() == "npc_boss_magma"  then
 		add_soul(killedUnit:GetUnitName())
 		add_feed(killerEntity_playerID)
-		local snow = killedUnit
+		local magma = killedUnit
 		Timers:CreateTimer(diff_wave.respawn, function()
 			local point = Vector(11302, -6631, 389)
-			FindClearSpaceForUnit(snow, point, false)
-			snow:Stop()
-			snow:RespawnUnit()
+			FindClearSpaceForUnit(magma, point, false)
+			magma:Stop()
+			magma:RespawnUnit()
+			difficality_modifier(magma)
 		end)
 		return
 	end	

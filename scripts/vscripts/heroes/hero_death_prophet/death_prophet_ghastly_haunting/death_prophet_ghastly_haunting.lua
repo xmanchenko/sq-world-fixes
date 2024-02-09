@@ -8,6 +8,7 @@ function death_prophet_ghastly_haunting:GetAOERadius()
 	return self:GetSpecialValueFor("radius")
 end
 function death_prophet_ghastly_haunting:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
     return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 function death_prophet_ghastly_haunting:OnSpellStart()

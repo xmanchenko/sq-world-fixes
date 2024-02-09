@@ -12,6 +12,7 @@ function necrolyte_ghost_shroud_lua:GetAbilityTextureName()
 	return "necrolyte_sadist"
 end
 function necrolyte_ghost_shroud_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
     return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 function necrolyte_ghost_shroud_lua:GetCooldown(level)

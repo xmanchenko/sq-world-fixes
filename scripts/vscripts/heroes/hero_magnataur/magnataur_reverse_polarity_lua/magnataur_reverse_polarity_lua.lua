@@ -30,6 +30,7 @@ function magnataur_reverse_polarity_lua:GetCooldown( level )
 end
 
 function magnataur_reverse_polarity_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
     return 150 + math.min(65000, self:GetCaster():GetIntellect() / 30)
 end
 

@@ -13,6 +13,7 @@ function ursa_overpower_lua:GetBehavior()
 end
 
 function ursa_overpower_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_ursa_int7") then
 		return 0
 	end

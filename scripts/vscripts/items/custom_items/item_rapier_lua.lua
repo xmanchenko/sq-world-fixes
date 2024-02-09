@@ -5,7 +5,7 @@ function item_rapier_lua:GetAbilityTextureName()
 	if self:GetSecondaryCharges() == 0 then
 		return "all/item_rapier_lua" .. level
 	else
-		return "gem" .. self:GetSecondaryCharges() .. "/item_rapier_lua" .. level
+		return "gem" .. self:GetSecondaryCharges() .. "/item_rapier_lua" .. level .. "_" .. "gem" .. self:GetSecondaryCharges()
 	end
 end
 

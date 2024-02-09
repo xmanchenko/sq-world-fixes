@@ -3,6 +3,7 @@ LinkLuaModifier("modifier_ancient_apparition_cold_feet_lua_freeze", "heroes/hero
 ancient_apparition_cold_feet_lua = class({})
 
 function ancient_apparition_cold_feet_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
 	return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 

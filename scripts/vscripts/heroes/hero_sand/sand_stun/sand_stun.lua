@@ -4,6 +4,7 @@ LinkLuaModifier( "modifier_sand_damage_incoming", "heroes/hero_sand/sand_stun/sa
 LinkLuaModifier( "modifier_sand_caustic_debuff", "heroes/hero_sand/sand_caustic/modifier_sand_caustic_debuff", LUA_MODIFIER_MOTION_NONE )
 
 function sand_stun:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
     return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 

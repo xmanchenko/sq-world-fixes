@@ -16,6 +16,7 @@ end
 
 
 function lion_finger_of_death_lua:GetCooldown( level )
+	if not self:GetCaster():IsRealHero() then return 0 end 
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_lion_str_last") ~= nil then 
 		return  self.BaseClass.GetCooldown( self, level ) - 20
 	end
@@ -137,7 +138,7 @@ end
 function modifier_lion_finger_of_death_intrinsic_lua:OnAttack(params)
     self.caster = self:GetCaster()
     self.ability = self:GetAbility()
-    if params.attacker == self:GetParent() and self.caster:FindAbilityByName("special_bonus_unique_npc_dota_hero_lion_int50") and RandomInt(1, 100) <= 10 then
+    if params.attacker == self:GetParent() and self.caster:FindAbilityByName("special_bonus_unique_npc_dota_hero_lion_int50") and RandomInt(1, 100) <= 20 then
 		self.caster:SetCursorCastTarget( params.target )
         self.ability:OnSpellStart()
     end

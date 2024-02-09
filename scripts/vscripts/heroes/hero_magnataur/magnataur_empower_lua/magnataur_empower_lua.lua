@@ -19,6 +19,7 @@ function magnataur_empower_lua:GetBehavior()
 end
 
 function magnataur_empower_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
 	if self:GetCaster():HasModifier("modifier_hero_magnataur_buff_1") then
 		return 0
 	end

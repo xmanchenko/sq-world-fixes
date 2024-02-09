@@ -4,6 +4,7 @@ LinkLuaModifier( "modifier_silencer_global_silence_damage_lua", "heroes/hero_sil
 silencer_global_silence_lua = {}
 
 function silencer_global_silence_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
     return 150 + math.min(65000, self:GetCaster():GetIntellect() / 30)
 end
 

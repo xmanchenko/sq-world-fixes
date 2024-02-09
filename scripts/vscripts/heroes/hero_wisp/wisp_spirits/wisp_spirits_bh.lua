@@ -190,6 +190,9 @@ function modifier_wisp_spirits_bh_wisp:OnCreated(table)
 		self.endDamage = self:GetAbility():GetSpecialValueFor("damage_end")
 
 		self.collisionRadius = self:GetAbility():GetSpecialValueFor("hit_radius")
+		if caster:FindAbilityByName("special_bonus_unique_npc_dota_hero_wisp_int50") ~= nil then
+			self.collisionRadius = self.collisionRadius + 100
+		end
 
 		self.endRadius = self:GetAbility():GetSpecialValueFor("explode_radius")
 

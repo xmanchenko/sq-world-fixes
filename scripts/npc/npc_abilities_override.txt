@@ -131,6 +131,7 @@
 "item_recipe_rapier"					    "REMOVED"
 "item_disperser"					        "REMOVED"
 "item_recipe_disperser"					    "REMOVED"
+"item_eternal_shroud"					    "REMOVED"
 
     "item_tpscroll"
       {

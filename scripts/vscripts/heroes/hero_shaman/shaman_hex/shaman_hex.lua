@@ -8,7 +8,8 @@ function shaman_hex:GetCooldown(level)
 	return self.BaseClass.GetCooldown( self, level )
 end
 
-function shaman_hex:GetManaCost(iLevel)        
+function shaman_hex:GetManaCost(iLevel)     
+    if not self:GetCaster():IsRealHero() then return 0 end    
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_shadow_shaman_int7")    ~= nil then 
         return 50 + math.min(65000, self:GetCaster():GetIntellect()/200)
     end

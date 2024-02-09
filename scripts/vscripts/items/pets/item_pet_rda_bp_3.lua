@@ -54,6 +54,7 @@ function modifier_item_pet_rda_bp_3:DeclareFunctions()
 		MODIFIER_PROPERTY_MODEL_SCALE_ANIMATE_TIME,
 		MODIFIER_PROPERTY_MODEL_SCALE_USE_IN_OUT_EASE,
 		MODIFIER_EVENT_ON_ATTACK,
+		MODIFIER_EVENT_ON_ATTACK_LANDED,
 	}
 end
 
@@ -98,16 +99,19 @@ function modifier_item_pet_rda_bp_3:OnAttack(keys)
 			end
 		end
 	end
-	if params.attacker == self:GetParent() and ( not self:GetParent():IsIllusion() ) and not self:GetParent():IsRangedAttacker() then
-		local target = params.target
+end
+
+function modifier_item_pet_rda_bp_3:OnAttackLanded( keys )
+	if keys.attacker == self:GetParent() and ( not self:GetParent():IsIllusion() ) and not self:GetParent():IsRangedAttacker() then
+		local target = keys.target
 		if target ~= nil and target:GetTeamNumber() ~= self:GetParent():GetTeamNumber() then
 		
 			local abil = self:GetCaster():FindAbilityByName("npc_dota_hero_sven_int7")
 			if abil ~= nil then 
-			params.target:AddNewModifier(self:GetCaster(), ability, "modifier_magic_debuff", {duration = 2})
+				keys.target:AddNewModifier(self:GetCaster(), ability, "modifier_magic_debuff", {duration = 2})
 			end
 			
-			DoCleaveAttack( self:GetParent(), target, self:GetAbility(), params.damage / 100 * self:GetAbility():GetSpecialValueFor("cleave_damage"), 440, 150, 360, "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf" )
+			DoCleaveAttack( self:GetParent(), target, self:GetAbility(), keys.damage / 100 * self:GetAbility():GetSpecialValueFor("cleave_damage"), 440, 150, 360, "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf" )
 		end
 	end
 end

@@ -10,6 +10,7 @@ function jakiro_ice_path_lua:GetIntrinsicModifierName()
 	return "modifier_jakiro_ice_path_intrinsic_lua"
 end
 function jakiro_ice_path_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
     return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 function jakiro_ice_path_lua:UseAbility(dir, startpoint, endpoint)

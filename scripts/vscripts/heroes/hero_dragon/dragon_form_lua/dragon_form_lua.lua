@@ -5,6 +5,7 @@ LinkLuaModifier( "modifier_dragon_form_lua_frost", "heroes/hero_dragon/dragon_fo
 
 
 function dragon_form_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
     return 150 + math.min(65000, self:GetCaster():GetIntellect()/30)
 end
 

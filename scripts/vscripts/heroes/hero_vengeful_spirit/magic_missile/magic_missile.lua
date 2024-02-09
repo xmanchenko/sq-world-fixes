@@ -10,6 +10,7 @@ end
 
 --------------------------------------------------------------------------------
 function vengeful_spirit_magic_missile:GetManaCost(iLevel)
+    if not self:GetCaster():IsRealHero() then return 0 end 
     return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 function vengeful_spirit_magic_missile:OnSpellStart(Target)

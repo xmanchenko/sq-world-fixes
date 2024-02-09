@@ -21,6 +21,7 @@ function razor_eye_of_the_storm_lua:Precache( context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_razor/razor_eye_of_the_storm.vpcf", context )
 end
 function razor_eye_of_the_storm_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_razor_str10") then
 		return math.min(65000, 1 + self:GetCaster():GetIntellect() / 100)
 	end

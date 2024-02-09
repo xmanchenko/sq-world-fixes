@@ -3,6 +3,7 @@ LinkLuaModifier( "modifier_dazzle_poison_touch_lua", "heroes/hero_dazzle/dazzle_
 
 
 function dazzle_poison_touch_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_dazzle_int7") ~= nil	then 
 		return 50 + math.min(65000, self:GetCaster():GetIntellect()/200)
 	end

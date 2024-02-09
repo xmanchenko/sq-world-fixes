@@ -65,6 +65,7 @@ function viper_viper_strike_lua:OnSpellStart()
 end
 
 function viper_viper_strike_lua:GetManaCost()
+    if not self:GetCaster():IsRealHero() then return 0 end
     if self:GetCaster():FindAbilityByName("npc_dota_hero_viper_int11") then
         return 0
     end

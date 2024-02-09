@@ -73,12 +73,11 @@ function modifier_item_pet_rda_bp_1:GetModifierSpellAmplify_PercentageUnique()
 end
 
 function modifier_item_pet_rda_bp_1:OnIntervalThink()
+	local gold = self:GetParent():GetGold()
 	local totalgold = self:GetParent():GetTotalGold()
-	local gold = totalgold/100*self:GetAbility():GetSpecialValueFor("gold")
-	-- if gold > self:GetAbility():GetSpecialValueFor("gold_limit") then
-	-- 	gold = self:GetAbility():GetSpecialValueFor("gold_limit")
-	-- end
-	self:GetParent():ModifyGoldFiltered(gold, true, 0)
+	local bonus = self:GetAbility():GetSpecialValueFor("gold")
+	local add = (gold / 100 * bonus) + ((totalgold - gold) / 100 * bonus / 2)
+	self:GetParent():ModifyGoldFiltered(add, true, 0)
 end
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------

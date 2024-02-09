@@ -13,6 +13,7 @@ function leshrac_pulse_nova_lua:OnSpellStart()
 	local caster = self:GetCaster()
 end
 function leshrac_pulse_nova_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
     return 40 + math.min(65000, self:GetCaster():GetIntellect() / 300)
 end
 function leshrac_pulse_nova_lua:GetCastRange(vLocation, hTarget)

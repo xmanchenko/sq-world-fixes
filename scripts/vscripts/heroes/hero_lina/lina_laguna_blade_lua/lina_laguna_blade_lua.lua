@@ -1,6 +1,7 @@
 lina_laguna_blade_lua = lina_laguna_blade_lua or class({})
  
 function lina_laguna_blade_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_lina_int7") ~= nil then 
 		return 50 + math.min(65000, self:GetCaster():GetIntellect() / 200)
 	end

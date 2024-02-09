@@ -1774,6 +1774,7 @@
 #base "../vscripts/heroes/hero_luna/luna_talents.txt"
 #base "../vscripts/heroes/hero_luna/luna_moon_glaive_lua/luna_moon_glaive_lua.txt"
 #base "../vscripts/heroes/hero_luna/luna_starfall/luna_starfall.txt"
+#base "../vscripts/heroes/hero_luna/luna_starfall/luna_starfall_lua.txt"
 #base "../vscripts/heroes/hero_luna/luna_lunar_blessing_lua/luna_lunar_blessing_lua.txt"
 #base "../vscripts/heroes/hero_luna/luna_moon/luna_moon.txt"
 

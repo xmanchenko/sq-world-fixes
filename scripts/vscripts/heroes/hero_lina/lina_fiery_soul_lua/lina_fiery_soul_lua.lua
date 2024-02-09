@@ -72,7 +72,7 @@ function modifier_lina_fiery_soul_lua:DeclareFunctions()
 end
 
 function modifier_lina_fiery_soul_lua:OnTakeDamage(keys)
-local abil = self:GetCaster():FindAbilityByName("npc_dota_hero_lina_str10")	
+	local abil = self:GetCaster():FindAbilityByName("npc_dota_hero_lina_str10")	
 		if abil == nil then return end
 		if self:GetCaster():FindAbilityByName("special_bonus_unique_npc_dota_hero_lina_str50") then return end
 		if IsServer() and self:GetAbility() then
@@ -255,7 +255,7 @@ function modifier_lina_flame2:OnCreated( kv )
 		attacker = self:GetCaster(),
 		damage = damage,
 		damage_type = damage_type,
-		ability = self, --Optional.
+		ability = self:GetAbility(), --Optional.
 	}
 
 	self:StartIntervalThink( 0.5 )

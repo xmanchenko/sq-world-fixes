@@ -46,7 +46,7 @@ function modifier_impossible:GetModifierIncomingDamage_Percentage()
 end
 
 function modifier_impossible:GetModifierExtraHealthPercentage()
-if self:GetCaster():GetMaxHealth() >= 2000000000 then return 0 end
+	if self:GetCaster():GetMaxHealth() >= 2000000000 then return 0 end
 	return self.health
 end
 

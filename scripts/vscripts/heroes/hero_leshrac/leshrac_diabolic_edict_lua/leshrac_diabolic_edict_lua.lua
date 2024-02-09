@@ -7,6 +7,7 @@ function leshrac_diabolic_edict_lua:GetIntrinsicModifierName()
 	return "modifier_leshrac_diabolic_edict_intrinsic_lua"
 end
 function leshrac_diabolic_edict_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
     return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 function leshrac_diabolic_edict_lua:OnSpellStart()

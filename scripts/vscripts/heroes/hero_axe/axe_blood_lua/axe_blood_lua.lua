@@ -31,9 +31,8 @@ function modifier_axe_blood_lua:OnRefresh( kv )
 	self.mag_armor = self:GetAbility():GetSpecialValueFor( "mag_armor" )
 	self.regen = self:GetAbility():GetSpecialValueFor( "bonus_health_regen" )	
 	
-	if self:GetCaster():FindAbilityByName("npc_dota_hero_axe_str7") ~= nil then 
-		bonus = abil:GetSpecialValueFor( "value" )
-		self.regen = self.regen + bonus
+	if self:GetCaster():FindAbilityByName("npc_dota_hero_axe_str7") ~= nil then
+		self.regen = self.regen + 2
 	end
 end
 

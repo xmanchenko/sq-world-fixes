@@ -12,6 +12,7 @@ function riki_smoke_screen_lua:GetAOERadius()
 	return self:GetSpecialValueFor("radius")
 end
 function riki_smoke_screen_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_riki_int9") then
 		return 0
 	end

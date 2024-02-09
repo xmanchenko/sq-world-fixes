@@ -12,7 +12,7 @@ function item_disperser_lua:GetAbilityTextureName()
 	if self:GetSecondaryCharges() == 0 then
 		return "all/item_disperser_lua" .. level
 	else
-		return "gem" .. self:GetSecondaryCharges() .. "/item_disperser_lua" .. level
+		return "gem" .. self:GetSecondaryCharges() .. "/item_disperser_lua" .. level .. "_" .. "gem" .. self:GetSecondaryCharges()
 	end
 end
 

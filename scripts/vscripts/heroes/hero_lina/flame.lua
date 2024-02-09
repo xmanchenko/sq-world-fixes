@@ -68,6 +68,7 @@ if IsServer() then
 			attacker = self:GetCaster(),
 			damage = damage,
 			damage_type = DAMAGE_TYPE_MAGICAL,
+			damage_flags = DOTA_DAMAGE_FLAG_NONE,
 			ability = self:GetAbility(), --Optional.
 		}
 		self:StartIntervalThink( 0.5 )

@@ -4,6 +4,7 @@ LinkLuaModifier( "modifier_alchemist_bkb", "heroes/hero_alchemist/alchemist_chem
 LinkLuaModifier( "modifier_alchemist_chemical_rage_cleave", "heroes/hero_alchemist/alchemist_chemical_rage_lua/alchemist_chemical_rage_lua", LUA_MODIFIER_MOTION_NONE )
 
 function alchemist_chemical_rage_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
     return 150 + math.min(65000, self:GetCaster():GetIntellect() / 30)
 end
 

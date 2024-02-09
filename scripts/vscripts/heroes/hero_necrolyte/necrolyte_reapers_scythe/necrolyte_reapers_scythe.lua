@@ -13,6 +13,7 @@ function necrolyte_reapers_scythe_lua:GetIntrinsicModifierName()
 	return "modifier_necrolyte_reapers_scythe_intrinsic_lua"
 end
 function necrolyte_reapers_scythe_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
     return 200 + math.min(65000, self:GetCaster():GetIntellect() / 20)
 end
 function necrolyte_reapers_scythe_lua:GetBehavior()

@@ -18,6 +18,7 @@ function slark_shadow_dance_lua:GetBehavior()
 end
 
 function slark_shadow_dance_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
 	if self:GetCaster():FindAbilityByName("npc_dota_hero_slark_int6") ~= nil	then 
 		return 50 + math.min(65000, self:GetCaster():GetIntellect()/ 60)
 	end

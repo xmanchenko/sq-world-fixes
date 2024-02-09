@@ -5,6 +5,7 @@ LinkLuaModifier( "modifier_generic_stunned_lua", "heroes/generic/modifier_generi
 
 
 function phantom_assassin_phantom_strike_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
     return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 

@@ -2611,7 +2611,7 @@
 //=======================================================================================================FOREST	CREEPS
 	"forest_creep_mini_1"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/heroes/lone_druid/spirit_bear.vmdl"											
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -2660,7 +2660,7 @@
 
 	"forest_creep_big_1"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/items/lone_druid/bear/spirit_of_the_atniw/spirit_of_the_atniw.vmdl"
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -2710,7 +2710,7 @@
 		
 	"forest_creep_mini_2"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/items/lycan/wolves/frostivus2018_lycan_winter_snow_wolf_wolves/frostivus2018_lycan_winter_snow_wolf_wolves.vmdl"
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -2759,7 +2759,7 @@
 		
 	"forest_creep_big_2"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/items/beastmaster/boar/fotw_wolf/fotw_wolf.vmdl" //"models/creeps/knoll_1/werewolf_boss.vmdl"
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -2810,7 +2810,7 @@
 
 	"forest_creep_mini_3"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_berserker.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -2859,7 +2859,7 @@
 		
 	"forest_creep_big_3"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_high_priest.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Ranged"
@@ -2913,7 +2913,7 @@
 
 	"village_creep_1"
 		{
-			"vscripts"					"ai/ai_roamer.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/npc/npc_dingus/dingus.vmdl"
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -2962,7 +2962,7 @@
 		
 	"village_creep_2"
 		{
-			"vscripts"					"ai/ai_roamer.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/thief/thief_01.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -3023,7 +3023,7 @@
 		
 	"village_creep_3"
 		{
-			"vscripts"					"ai/ai_roamer.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/thief/thief_01_archer.vmdl"
 			"SoundSet"					"Hero_DrowRanger"
 			"BaseClass"					"npc_dota_creature"
@@ -3089,7 +3089,7 @@
 
 	"mines_creep_1"
 		{
-			"vscripts"					"ai/ai_roamer.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/mega_greevil/mega_greevil.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -3139,7 +3139,7 @@
 	
 	"mines_creep_2"
 		{
-			"vscripts"					"ai/ai_roamer.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/neutral_creeps/n_creep_eimermole/n_creep_eimermole.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -3189,7 +3189,7 @@
 	
 	"mines_creep_3"
 		{
-			"vscripts"					"ai/ai_roamer.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/darkreef/gaoler/darkreef_gaoler.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -3253,7 +3253,7 @@
 		
 	"dust_creep_1"
 		{	
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/neutral_creeps/n_creep_golem_b/n_creep_golem_b.vmdl"								
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -3303,7 +3303,7 @@
 
 	"dust_creep_2"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/neutral_creeps/n_creep_golem_a/neutral_creep_golem_a.vmdl"											
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"Hero_NyxAssassin"
@@ -3353,7 +3353,7 @@
 			
 	"dust_creep_3"
 		{	
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl"						
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Ranged"
@@ -3405,7 +3405,7 @@
 		
 	"dust_creep_4"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl"										
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Ranged"
@@ -3470,7 +3470,7 @@
 		
 	"dust_creep_5"
 		{	
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/items/tiny/burning_stone_giant/burning_stone_giant_03.vmdl"								
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -3519,7 +3519,7 @@
 		
 	"dust_creep_6"
 		{	
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/items/tiny/tiny_bad_to_the_bone_back/tiny_bad_to_the_bone_back.vmdl"								
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"n_creep_Melee"
@@ -3571,7 +3571,7 @@
 	
 	"cemetery_creep_1"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/npc/munaiyi_gjs/munaiyi_gjs.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"Hero_hoodwink"
@@ -3622,7 +3622,7 @@
 		
 	"cemetery_creep_2"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/npc/munaiyi/munaiyi.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"Hero_Undying"
@@ -3672,7 +3672,7 @@
 
 	"cemetery_creep_3"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/heroes/life_stealer/life_stealer.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"Hero_LifeStealer"
@@ -3723,7 +3723,7 @@
 		
 	"cemetery_creep_4"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/npc/fashi/fashi.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"Hero_Necrolyte"
@@ -3779,7 +3779,7 @@
 
 	"swamp_creep_1"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/heroes/slark/slark.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"Hero_Slark"
@@ -3836,7 +3836,7 @@
 		
 	"swamp_creep_2"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/darkreef/blob/darkreef_blob_02_small.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"Hero_Morphling"
@@ -3889,7 +3889,7 @@
 		
 	"swamp_creep_3"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/creeps/darkreef/meranth_guard/meranth_guard.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"Hero_NagaSiren"
@@ -3940,7 +3940,7 @@
 
 	"swamp_creep_4"
 		{
-			"vscripts"					"ai/ai_spots.lua"
+			"vscripts"					"ai/npc_mega_boss.lua"
 			"Model"						"models/heroes/morphling/morphling.vmdl"	// Model.
 			"BaseClass"					"npc_dota_creature"
 			"SoundSet"					"Hero_Morphling"
@@ -3994,7 +3994,7 @@
 
 "snow_creep_1"
 	{
-		"vscripts"					"ai/ai_spots.lua"
+		"vscripts"					"ai/npc_mega_boss.lua"
 		"Model"						"models/creeps/ice_biome/tuskfolk/tuskfolk001a_f.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_Winter_Wyvern"
@@ -4043,7 +4043,7 @@
 	
 "snow_creep_3"
 	{
-		"vscripts"					"ai/ai_spots.lua"
+		"vscripts"					"ai/npc_mega_boss.lua"
 		"Model"						"models/heroes/ancient_apparition/ancient_apparition.vmdl"	// Model.
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"Hero_ancient_apparition"
@@ -4094,7 +4094,7 @@
 	
 "snow_creep_2"
 	{
-		"vscripts"					"ai/ai_spots.lua"
+		"vscripts"					"ai/npc_mega_boss.lua"
 		"Model"						"models/items/lone_druid/true_form/elemental_curse_set_elemental_curse_true_form/elemental_curse_set_elemental_curse_true_form.vmdl"	// Model.
 		"SoundSet"					"Hero_spirit_breaker"
 		"BaseClass"					"npc_dota_creature"
@@ -4144,7 +4144,7 @@
 	
 "snow_creep_4"
 	{
-		"vscripts"					"ai/ai_spots.lua"
+		"vscripts"					"ai/npc_mega_boss.lua"
 		"Model"						"models/creeps/ice_biome/relict/relict.vmdl"												// crab
 		"SoundSet"					"Hero_ArcWarden"
 		"BaseClass"					"npc_dota_creature"
@@ -4199,7 +4199,7 @@
 
 "last_creep_1"
 	{
-		"vscripts"					"ai/ai_spots.lua"
+		"vscripts"					"ai/npc_mega_boss.lua"
 		"Model"						"models/creeps/neutral_creeps/n_creep_ogre_lrg/n_creep_ogre_lrg.vmdl"
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
@@ -4248,7 +4248,7 @@
 	
 "last_creep_2"
 	{
-		"vscripts"					"ai/ai_spots.lua"
+		"vscripts"					"ai/npc_mega_boss.lua"
 		"Model"						"models/creeps/neutral_creeps/n_creep_ogre_med/n_creep_ogre_med.vmdl"
 		"SoundSet"					"n_creep_Melee"
 		"BaseClass"					"npc_dota_creature"
@@ -4310,7 +4310,7 @@
 	
 "last_creep_3"
 	{
-		"vscripts"					"ai/ai_spots.lua"
+		"vscripts"					"ai/npc_mega_boss.lua"
 		"Model"						"models/creeps/neutral_creeps/n_creep_dragonspawn_b/n_creep_dragonspawn_b.vmdl"
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Melee"
@@ -4361,7 +4361,7 @@
 	
 "last_creep_4"
 	{
-		"vscripts"					"ai/ai_spots.lua"
+		"vscripts"					"ai/npc_mega_boss.lua"
 		"Model"						"models/creeps/neutral_creeps/n_creep_satyr_spawn_a/n_creep_satyr_spawn_b.vmdl"
 		"SoundSet"					"n_creep_Melee"
 		"BaseClass"					"npc_dota_creature"

@@ -88,7 +88,7 @@ function modifier_the_swarm_intrinsic:OnAttackLanded(params)
                         target_entindex = target:entindex()
                     }
             )
-            beetle:AddNewModifier(self:GetCaster(), self, "modifier_pips", {pips_count = 8})
+            beetle:AddNewModifier(self:GetCaster(), self:GetAbility(), "modifier_pips", {pips_count = 8})
             target:AddNewModifier(
                     self:GetCaster(),
                     self:GetAbility(),

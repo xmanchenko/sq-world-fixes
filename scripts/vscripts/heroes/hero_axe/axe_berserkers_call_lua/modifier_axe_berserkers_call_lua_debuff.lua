@@ -21,6 +21,7 @@ end
 --------------------------------------------------------------------------------
 -- Initializations
 function modifier_axe_berserkers_call_lua_debuff:OnCreated( kv )
+	self.caster = self:GetCaster()
 	if IsServer() then
 		-- two not working...?
 		-- self:GetParent():SetAggroTarget( self:GetCaster() )
@@ -44,8 +45,15 @@ end
 
 function modifier_axe_berserkers_call_lua_debuff:DeclareFunctions()
 	return {
-		MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT
+		MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
+		MODIFIER_EVENT_ON_DEATH,
 	}
+end
+
+function modifier_axe_berserkers_call_lua_debuff:OnDeath(params)
+	if params.unit == self.caster then
+		self:OnDestroy()
+	end
 end
 
 function modifier_axe_berserkers_call_lua_debuff:GetModifierAttackSpeedBonus_Constant()

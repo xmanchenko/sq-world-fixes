@@ -4,6 +4,7 @@ function death_prophet_exorcism_bh:GetIntrinsicModifierName()
 	return "modifier_death_prophet_exorcism_bh_talent"
 end
 function death_prophet_exorcism_bh:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end
     return 150 + math.min(65000, self:GetCaster():GetIntellect() / 30)
 end
 function death_prophet_exorcism_bh:OnUpgrade()

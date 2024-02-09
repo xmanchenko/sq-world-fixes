@@ -88,6 +88,25 @@ function modifier_item_pet_rda_roshan_2:OnAbilityFullyCast(keys)
 	if keys.ability:IsItem() then
 		self.cast = 1
 	end
+	if IsServer() then
+		if keys.unit ~= self:GetParent() then
+			return 0
+		end
+		local ability = keys.ability
+		if ability == nil then
+			return 0
+		end
+		if RandomInt(1,100) <= self:GetAbility():GetSpecialValueFor("chance") then
+			if not string.find(ability:GetName(), "octarine_core") then
+				ability:EndCooldown()
+				local nFXIndex = ParticleManager:CreateParticle( "particles/units/heroes/hero_ogre_magi/ogre_magi_multicast.vpcf", PATTACH_OVERHEAD_FOLLOW, self:GetParent() )
+				ParticleManager:SetParticleControl( nFXIndex, 1, Vector( 1, 2, 1 ) )
+				ParticleManager:ReleaseParticleIndex( nFXIndex )
+				EmitSoundOn( "Bogduggs.LuckyFemur", self:GetParent() )
+			end
+		end
+	end
+	return 0
 end
 
 function modifier_item_pet_rda_roshan_2:GetModifierTotalDamageOutgoing_Percentage(keys)

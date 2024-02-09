@@ -10,6 +10,7 @@ function leshrac_split_earth_lua:GetAOERadius()
 	return self:GetSpecialValueFor("radius")
 end
 function leshrac_split_earth_lua:GetManaCost(iLevel)
+	if not self:GetCaster():IsRealHero() then return 0 end 
     return 100 + math.min(65000, self:GetCaster():GetIntellect() / 100)
 end
 function leshrac_split_earth_lua:GetIntrinsicModifierName()
