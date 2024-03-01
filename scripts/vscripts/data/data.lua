@@ -316,10 +316,10 @@ Ability_Impossible = {
 	["vengeful_spirit_magic_missile"] = {"npc_dota_hero_vengefulspirit_agi10","npc_dota_hero_vengefulspirit_int11","npc_dota_hero_vengefulspirit_int12","npc_dota_hero_vengefulspirit_int13"},
 	["vengeful_spirit_command_aura"] = {"npc_dota_hero_vengefulspirit_str10","npc_dota_hero_vengefulspirit_agi13"},
 } 
-for key,_ in pairs(Ability_Impossible) do
-	table.insert(bosses_ability, key)
-	table.insert(creep_ability, key)
-end
+-- for key,_ in pairs(Ability_Impossible) do
+-- 	table.insert(bosses_ability, key)
+-- 	table.insert(creep_ability, key)
+-- end
 function GetRandomAbilities()
 	local abilities = {}
 	while table.count(abilities) < 6 do

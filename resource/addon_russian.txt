@@ -6948,6 +6948,8 @@
     "DOTA_Tooltip_ability_item_rapier_lua_bonus_damage"							"+$damage"
     "DOTA_Tooltip_ability_item_rapier_lua_description"                          "Носитель предмета получает на %incoming_damage%%% больше урона."
     "dota_hud_error_max_golems" "Макс големов"
+    "DOTA_Tooltip_modifier_mars_atrophy_aura_lua"		"Atrophy Mars Aura"
+    "DOTA_Tooltip_modifier_mars_atrophy_aura_lua_Description"		"Урон увеличен на %dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE%"
 // ---- END OF FILE ----
     }
 }

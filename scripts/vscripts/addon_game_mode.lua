@@ -1713,7 +1713,7 @@ Convars:RegisterCommand( "chek_localize", function( cmd )
 Convars:RegisterCommand( "addmod", function( cmd )
 	local hHero = PlayerResource:GetSelectedHeroEntity(0)
 	if hHero then
-		hHero:AddAbility("neutral_slot_ability")
+		hHero:AddAbility("special_bonus_unique_npc_dota_hero_wisp_int50")
 	end
     end, "chek_localize", FCVAR_CHEAT
 )

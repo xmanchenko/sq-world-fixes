@@ -94,19 +94,13 @@ function modifier_dragon_fire_ball_lua_thinker:OnIntervalThink()
 end
 
 function modifier_dragon_fire_ball_lua_thinker:PlayEffects()
-	local particle_cast =  "particles/dk.vpcf"
+	local particle_cast =  "particles/units/heroes/hero_dragon_knight/dragon_knight_shard_fireball.vpcf"
 	self.sound_cast =  "hero_jakiro.macropyre"
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_WORLDORIGIN, nil )
 	ParticleManager:SetParticleControl( effect_cast, 0, self:GetParent():GetOrigin() )
-	ParticleManager:SetParticleControl( effect_cast, 1, Vector( self.radius, 0, 0 ) )
-	self:AddParticle(
-		effect_cast,
-		false, -- bDestroyImmediately
-		false, -- bStatusEffect
-		-1, -- iPriority
-		false, -- bHeroEffect
-		false -- bOverheadEffect
-	)
+	ParticleManager:SetParticleControl( effect_cast, 1, self:GetAbility():GetCursorPosition() )
+	ParticleManager:SetParticleControl( effect_cast, 2, Vector( self.radius, 0, 0 ) )
+	self:AddParticle(effect_cast,true,false,-1,false,false)
 
 	EmitSoundOn( self.sound_cast, self:GetParent() )
 end

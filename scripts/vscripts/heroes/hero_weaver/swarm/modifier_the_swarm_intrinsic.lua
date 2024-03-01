@@ -69,7 +69,7 @@ function modifier_the_swarm_intrinsic:OnAttackLanded(params)
     local target = params.target
 	if params.attacker ~= self:GetParent() then return end
     if not self:GetCaster():FindAbilityByName("npc_dota_hero_weaver_str11") then return end
-    if not target:HasModifier("modifier_the_swarm_debuff") then
+    if not target:HasModifier("modifier_the_swarm_debuff") and target ~= nil and target:IsAlive() then
         target:EmitSound("Hero_Weaver.SwarmAttach")
             local target_position = target:GetAbsOrigin()
             local beetle = CreateUnitByName(

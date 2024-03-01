@@ -109,7 +109,7 @@ function modifier_mars_atrophy_aura_lua:OnDeath( params )
 	
 	local abil = self:GetCaster():FindAbilityByName("special_bonus_unique_npc_dota_hero_mars_agi50")
 	if abil ~= nil then 
-		self.duration = -1
+		self.duration = 99999
 	end
 
 	-- check if has modifier

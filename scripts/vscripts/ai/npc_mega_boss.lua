@@ -7,7 +7,7 @@ function Spawn(entityKeyValues)
         return
     end
 	
-	-- thisEntity:AddNewModifier(thisEntity, nil, "modifier_invulnerable", {})
+	thisEntity:AddNewModifier(thisEntity, nil, "modifier_invulnerable", {})
 	thisEntity:AddNewModifier(thisEntity, nil, "modifier_item_aghanims_shard", {})
 	thisEntity:AddNewModifier(thisEntity, nil, "modifier_item_ultimate_scepter", {})
 
